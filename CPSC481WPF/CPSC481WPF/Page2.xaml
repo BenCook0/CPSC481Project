@@ -12,19 +12,20 @@
         <Grid>
             <TabControl Grid.Column="1" Grid.ColumnSpan="5">
                 <TabItem Header="Recent Data">
-                    <Grid Background="#FFE5E5E5">
+                    <Grid Background="Beige">
                     </Grid>
                 </TabItem>
                 <TabItem Header="Graphs">
-                    <Grid Background="#FFE5E5E5">
+                    <Grid Background="AliceBlue">
+
                     </Grid>
                 </TabItem>
-                <TabItem Header="Set Goals">
+                <TabItem Header="Goals">
                     <Grid Background="#FFE5E5E5">
                     </Grid>
                 </TabItem>
                 <TabItem Header="Settings">
-                    <Grid Background="#FFE5E5E5">
+                    <Grid Background="Red">
                     </Grid>
                 </TabItem>
             </TabControl>
