@@ -7,28 +7,26 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page2">
-
     <Grid>
-        <Grid>
-            <TabControl Grid.Column="1" Grid.ColumnSpan="5">
-                <TabItem Header="Recent Data">
-                    <Grid Background="Beige">
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Graphs">
-                    <Grid Background="AliceBlue">
+        <TabControl Margin="0,60,0,0">
+            <TabItem Header="Recent Data">
+                <Grid Background="Beige">
+                </Grid>
+            </TabItem>
+            <TabItem Header="Graphs">
+                <Grid Background="AliceBlue">
 
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Goals">
-                    <Grid Background="#FFE5E5E5">
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Settings">
-                    <Grid Background="Red">
-                    </Grid>
-                </TabItem>
-            </TabControl>
-        </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Goals">
+                <Grid Background="#FFE5E5E5">
+                </Grid>
+            </TabItem>
+            <TabItem Header="Settings">
+                <Grid Background="Red">
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button Content="Log Out" HorizontalAlignment="Right" Margin="727,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.053,-1.116" Click="LogOutButtonClick"/>
     </Grid>
 </Page>

@@ -22,5 +22,10 @@ namespace CPSC481WPF
         {
             InitializeComponent();
         }
+        private void LogOutButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Page1());
+            this.NavigationService.RemoveBackEntry();
+        }
     }
 }

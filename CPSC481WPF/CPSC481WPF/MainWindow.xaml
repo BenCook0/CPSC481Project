@@ -6,5 +6,5 @@
         xmlns:local="clr-namespace:CPSC481WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Frame x:Name="frame" Content="Frame" Margin="42,10,42,29" Source="/Page1.xaml"></Frame>
+    <Frame x:Name="frame" Content="Frame" Margin="0,0,0,-6" Source="/Page1.xaml"></Frame>
 </Window>

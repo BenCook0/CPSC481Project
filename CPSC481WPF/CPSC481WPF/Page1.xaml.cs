@@ -22,9 +22,10 @@ namespace CPSC481WPF
         {
             InitializeComponent();
         }
-        private void button_click(object sender, RoutedEventArgs e)
+        private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Page2());
+            this.NavigationService.RemoveBackEntry();
         }
     }
 }
