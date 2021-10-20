@@ -6,4 +6,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Bitfit Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Bitfit Logo.png" />
+  </ItemGroup>
+
 </Project>

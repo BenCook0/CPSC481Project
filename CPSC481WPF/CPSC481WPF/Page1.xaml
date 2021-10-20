@@ -11,6 +11,6 @@
         <TextBox Name ="usernameField" HorizontalAlignment="Left" Margin="283,243,0,0" Text="Username" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <PasswordBox Name="passwordField"  HorizontalAlignment="Left" Margin="283,295,0,0"  VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <Button Name ="loginButton" Content="Login" HorizontalAlignment="Left" Margin="326,339,0,0" VerticalAlignment="Top" Grid.Column="1" Click="LoginButtonClick"/>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="94" Margin="260,159,0,0" VerticalAlignment="Top" Width="166" Source="/Bitfit Logo.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="265,154,0,0" VerticalAlignment="Top" Width="156" Source="/Bitfit Logo.png"/>
     </Grid>
 </Page>
