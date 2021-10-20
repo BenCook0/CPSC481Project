@@ -1,5 +1,5 @@
 ﻿CPSC481WPF
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 \\Mac\Home\Desktop\CPSC 481\CPSC481Project\CPSC481Project\CPSC481WPF\CPSC481WPF\App.xaml
 2-137920652
 
-61909676053
+4-1853954029
 192-1533232326
 LandingPage.xaml;MainWindow.xaml;
 
-True
+False
 
