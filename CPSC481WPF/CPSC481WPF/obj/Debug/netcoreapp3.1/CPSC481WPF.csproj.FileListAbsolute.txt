@@ -18,5 +18,7 @@
 \\Mac\Home\Desktop\CPSC 481\CPSC481Project\CPSC481Project\CPSC481WPF\CPSC481WPF\obj\Debug\netcoreapp3.1\CPSC481WPF.dll
 \\Mac\Home\Desktop\CPSC 481\CPSC481Project\CPSC481Project\CPSC481WPF\CPSC481WPF\obj\Debug\netcoreapp3.1\CPSC481WPF.pdb
 \\Mac\Home\Desktop\CPSC 481\CPSC481Project\CPSC481Project\CPSC481WPF\CPSC481WPF\obj\Debug\netcoreapp3.1\CPSC481WPF.genruntimeconfig.cache
-\\Mac\Home\Desktop\CPSC 481\CPSC481Project\CPSC481Project\CPSC481WPF\CPSC481WPF\obj\Debug\netcoreapp3.1\LandingPage.g.cs
-\\Mac\Home\Desktop\CPSC 481\CPSC481Project\CPSC481Project\CPSC481WPF\CPSC481WPF\obj\Debug\netcoreapp3.1\LandingPage.baml
+\\Mac\Home\Desktop\CPSC 481\CPSC481Project\CPSC481Project\CPSC481WPF\CPSC481WPF\obj\Debug\netcoreapp3.1\Page1.g.cs
+\\Mac\Home\Desktop\CPSC 481\CPSC481Project\CPSC481Project\CPSC481WPF\CPSC481WPF\obj\Debug\netcoreapp3.1\Page1.baml
+\\Mac\Home\Desktop\CPSC 481\CPSC481Project\CPSC481Project\CPSC481WPF\CPSC481WPF\obj\Debug\netcoreapp3.1\Page2.g.cs
+\\Mac\Home\Desktop\CPSC 481\CPSC481Project\CPSC481Project\CPSC481WPF\CPSC481WPF\obj\Debug\netcoreapp3.1\Page2.baml

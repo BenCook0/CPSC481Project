@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 \\Mac\Home\Desktop\CPSC 481\CPSC481Project\CPSC481Project\CPSC481WPF\CPSC481WPF\App.xaml
-2-137920652
+31765690356
 
-61909676053
+71778573544
 192-1533232326
-LandingPage.xaml;MainWindow.xaml;
+MainWindow.xaml;Page1.xaml;Page2.xaml;
 
 True
 
