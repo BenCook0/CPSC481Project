@@ -27,5 +27,11 @@ namespace CPSC481WPF
             this.NavigationService.Navigate(new Page1());
             this.NavigationService.RemoveBackEntry();
         }
+
+        //goals functions below
+        private void setGoalButtonClick(object sender, RoutedEventArgs e)
+        {
+            setGoalPopup.IsOpen = true;
+        }
     }
 }

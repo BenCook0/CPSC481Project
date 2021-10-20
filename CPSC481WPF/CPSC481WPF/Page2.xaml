@@ -19,7 +19,18 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Goals">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
+                    <Button Content="Set New Goal" HorizontalAlignment="Left" Margin="352,100,0,0" VerticalAlignment="Top" Click="setGoalButtonClick"/>
+                    <Popup Margin="10,10,0,13" Name="setGoalPopup" HorizontalAlignment="Left"   
+                        VerticalAlignment="Top" Width="194" Height="200" IsOpen="False">
+                        <StackPanel>
+                            <TextBlock Name="McTextBlock"   
+                                Background="LightBlue" >  
+                                This is popup text
+                            </TextBlock>
+                            <Button Content="This is button on a Pupup" />
+                        </StackPanel>
+                    </Popup>
                 </Grid>
             </TabItem>
             <TabItem Header="Settings">
