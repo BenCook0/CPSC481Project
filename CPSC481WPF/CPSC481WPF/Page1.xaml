@@ -7,10 +7,17 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page1">
-    <Grid Margin="5,0,0,1">
-        <TextBox Name ="usernameField" HorizontalAlignment="Left" Margin="283,243,0,0" Text="Username" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <PasswordBox Name="passwordField"  HorizontalAlignment="Left" Margin="283,295,0,0"  VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <Button Name ="loginButton" Content="Login" HorizontalAlignment="Left" Margin="326,339,0,0" VerticalAlignment="Top" Grid.Column="1" Click="LoginButtonClick"/>
-        <Image HorizontalAlignment="Left" Height="80" Margin="265,154,0,0" VerticalAlignment="Top" Width="156" Source="/Bitfit Logo.png"/>
+    <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".2*"/>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Name ="usernameField" Margin="0,243,0,0" Text="Username" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+        <PasswordBox Name="passwordField" Margin="0,299,0,0"  VerticalAlignment="Top" Grid.Column="1" Grid.RowSpan="2"/>
+        <Button Name ="loginButton" Content="Login" Margin="0,337,0,0" VerticalAlignment="Top" Click="LoginButtonClick" Grid.Column="1"/>
+        <Image HorizontalAlignment="Center" Height="233" Margin="0,132,0,0" VerticalAlignment="Top" Width="368" Source="/Bitfit Logo.png" Grid.Column="3" Grid.RowSpan="2"/>
+        <Rectangle Stroke="#44acc2" Fill="#44acc2" HorizontalAlignment="Stretch" Grid.Column="0"/>
     </Grid>
 </Page>
