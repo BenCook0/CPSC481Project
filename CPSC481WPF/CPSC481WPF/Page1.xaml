@@ -10,24 +10,21 @@
     <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width=".2*"/>
-            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".7*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        <Grid Margin ="0,0,0,0" Grid.Column="1" HorizontalAlignment="Stretch">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="0.13*"/>
-                <RowDefinition Height="0.17*"/>
-                <RowDefinition Height="0.13*"/>
-                <RowDefinition Height="0.17*"/>
-                <RowDefinition Height="0.13*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-            <TextBox Name ="usernameField" Text="Username" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1"/>
-            <PasswordBox Name="passwordField"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="3"/>
-            <Button Name ="loginButton" Content="Login" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="LoginButtonClick" Grid.Row="5"/>
-        </Grid>
-        <Image HorizontalAlignment="Center" Height="233" Margin="0,132,0,0" VerticalAlignment="Top" Width="368" Source="/Bitfit Logo.png" Grid.Column="3" Grid.RowSpan="2"/>
         <Rectangle Stroke="#44acc2" Fill="#44acc2" HorizontalAlignment="Stretch" Grid.Column="0"/>
+        <Viewbox Grid.Column="1">
+            <DockPanel LastChildFill="True">
+                <TextBox DockPanel.Dock="Top" Name ="usernameField" Text="Username" TextWrapping="NoWrap" Width="60" Height="20" Margin="0,0,0,10"/>
+                <PasswordBox DockPanel.Dock="Top" Name ="passwordField" Width="60" Height="20" Margin="0,0,0,10"/>
+                <Button  DockPanel.Dock="Top" Name="loginButton" Content="Login" Click="LoginButtonClick" Margin="0,0,0,10"/>
+            </DockPanel>
+        </Viewbox>
+        <Viewbox Grid.Column="3">
+            <Image HorizontalAlignment="Center" Height="233" Margin="0,30,0,0" VerticalAlignment="Top" Width="368" Source="/Bitfit Logo.png" Grid.Column="3" Grid.RowSpan="2"/>
+        </Viewbox>
+
+
     </Grid>
 </Page>
