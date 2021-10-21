@@ -11,6 +11,11 @@
         <TabControl Margin="0,60,0,0">
             <TabItem Header="Recent Data">
                 <Grid Background="Beige">
+                    <Viewbox>
+                        <TextBlock>
+                            test
+                        </TextBlock>
+                    </Viewbox>
                 </Grid>
             </TabItem>
             <TabItem Header="Graphs">
