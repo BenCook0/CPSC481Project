@@ -16,6 +16,7 @@ namespace CPSC481WPF
     /// <summary>
     /// Interaction logic for Page1.xaml
     /// </summary>
+    /// HELLO 
     public partial class Page1 : Page
     {
         public Page1()
