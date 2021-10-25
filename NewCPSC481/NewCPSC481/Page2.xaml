@@ -13,23 +13,23 @@
             <TabItem Header="Welcome" FontSize="40">
                 <Grid>
                     <TextBlock FontSize="60"
-                        HorizontalAlignment="Center" Margin="0,50,0,0" 
+                        HorizontalAlignment="Center" Margin="0,20,0,0" 
                                Text="Welcome To Your Personal Fitness Breakdown!" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <TextBlock FontSize="50"
-                        HorizontalAlignment="Center" Margin="0,222,0,0" 
+                        HorizontalAlignment="Center" Margin="0,120,0,0" 
                                Text="Begin by Choosing What you Want to View!" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
 
                     <Button Content="Take a look at your recent fitness data"
                             FontSize="40"
-                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,360,0,0"/>
+                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,250,0,0"/>
                     <Button Content="View a graphical breakdown of your fitness data"
                             FontSize="40"
-                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,560,0,0"/>
+                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,450,0,0"/>
                     <Button Content="Set a goal or view your current progress"
                             FontSize="40"
-                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,760,0,0"/>
+                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,650,0,0"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Recent Data" FontSize="40">
@@ -40,18 +40,15 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Goals" FontSize="40">
+            <TabItem Header="Goals" FontSize="40" HorizontalAlignment="Left" Margin="-2,-2,0,0" Width="114">
                 <Grid>
                     <Button Content="Set New Goal" HorizontalAlignment="Left" Margin="352,100,0,0" VerticalAlignment="Top" Click="setGoalButtonClick"/>
-                    <Popup Margin="10,10,0,13" Name="setGoalPopup" HorizontalAlignment="Left"   
-                        VerticalAlignment="Top" Width="194" Height="200" IsOpen="False">
-                        <StackPanel>
-                            <TextBlock Name="McTextBlock"   
-                                Background="LightBlue" >  
-                                This is popup text
-                            </TextBlock>
-                            <Button Content="This is button on a Pupup" />
-                        </StackPanel>
+                    <Popup Margin="0,0,0,0" Name="setGoalPopup" HorizontalAlignment="Left"   
+                        VerticalAlignment="Top" Width="450" Height="800" Placement="Center" IsOpen="False">
+                        <Grid>
+                            <Frame Source="SetGoalPopup.xaml">
+                            </Frame>
+                        </Grid>
                     </Popup>
                 </Grid>
             </TabItem>
