@@ -11,7 +11,11 @@
         <TabControl Margin="0,60,0,0">
             <TabItem Header="Recent Data">
                 <Grid Background="Beige">
-                    <Viewbox>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="105*"/>
+                        <ColumnDefinition Width="689*"/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Grid.ColumnSpan="2">
                         <TextBlock>
                             test
                         </TextBlock>
