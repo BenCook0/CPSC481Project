@@ -12,22 +12,22 @@
             Text="Enter Goal Name"
             FontSize="20"
             HorizontalAlignment="Center" Margin="0,51,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="608" Height="34" TextChanged="TextBox_TextChanged"/>
-        <DatePickerTextBox 
+        <DatePicker 
             Text="Start Date"
             FontSize="20"
-            HorizontalAlignment="Left" Margin="96,130,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="254" Height="34" TextChanged="TextBox_TextChanged"/>
-        <DatePickerTextBox 
+            HorizontalAlignment="Left" Margin="96,130,0,0" VerticalAlignment="Top" Width="254" Height="34"/>
+        <DatePicker 
             Text="End Date"
             FontSize="20"
-            HorizontalAlignment="Left" Margin="450,130,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="254" Height="34" TextChanged="TextBox_TextChanged"/>
+            HorizontalAlignment="Left" Margin="450,130,0,0" VerticalAlignment="Top" Width="254" Height="34" />
         <TextBox 
             Text="Current Value"
             FontSize="20"
-            HorizontalAlignment="Left" Margin="96,0,0,0"  TextWrapping="Wrap" VerticalAlignment="Center" Width="254" Height="34" TextChanged="TextBox_TextChanged"/>
+            HorizontalAlignment="Left" Margin="96,0,0,0"  TextWrapping="Wrap" VerticalAlignment="Center" Width="254" Height="34"/>
         <TextBox 
             Text="Goal Value"
             FontSize="20"
-            HorizontalAlignment="Left" Margin="450,0,0,0"  TextWrapping="Wrap" VerticalAlignment="Center" Width="254" Height="34" TextChanged="TextBox_TextChanged"/>
+            HorizontalAlignment="Left" Margin="450,0,0,0"  TextWrapping="Wrap" VerticalAlignment="Center" Width="254" Height="34"/>
         <CheckBox 
             FontSize=" 20"
             Content="Add Progress Bar" HorizontalAlignment="Center" Margin="0,280,0,0" VerticalAlignment="Top" Height="31" Width="608"/>
