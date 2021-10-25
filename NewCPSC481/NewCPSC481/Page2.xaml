@@ -44,7 +44,7 @@
                 <Grid>
                     <Button Content="Set New Goal" HorizontalAlignment="Left" Margin="352,100,0,0" VerticalAlignment="Top" Click="setGoalButtonClick"/>
                     <Popup Margin="0,0,0,0" Name="setGoalPopup" HorizontalAlignment="Left"   
-                        VerticalAlignment="Top" Width="450" Height="800" Placement="Center" IsOpen="False">
+                        VerticalAlignment="Top" Width="800" Height="450" Placement="Center" IsOpen="False">
                         <Grid>
                             <Frame Source="SetGoalPopup.xaml">
                             </Frame>
