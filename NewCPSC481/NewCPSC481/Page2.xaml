@@ -5,29 +5,42 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NewCPSC481"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Page2">
     <Grid>
-        <TabControl Margin="0,60,0,0">
-            <TabItem Header="Recent Data">
-                <Grid Background="Beige">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="105*"/>
-                        <ColumnDefinition Width="689*"/>
-                    </Grid.ColumnDefinitions>
-                    <Viewbox Grid.ColumnSpan="2">
-                        <TextBlock>
-                            test
-                        </TextBlock>
-                    </Viewbox>
+        <Rectangle Stroke="#44acc2" Fill="#44acc2" HorizontalAlignment="Stretch" Grid.Column="0"/>
+        <TabControl Margin="0,100,0,0">
+            <TabItem Header="Welcome" FontSize="40">
+                <Grid>
+                    <TextBlock FontSize="60"
+                        HorizontalAlignment="Center" Margin="0,50,0,0" 
+                               Text="Welcome To Your Personal Fitness Breakdown!" 
+                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBlock FontSize="50"
+                        HorizontalAlignment="Center" Margin="0,222,0,0" 
+                               Text="Begin by Choosing What you Want to View!" 
+                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+                    <Button Content="Take a look at your recent fitness data"
+                            FontSize="40"
+                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,360,0,0"/>
+                    <Button Content="View a graphical breakdown of your fitness data"
+                            FontSize="40"
+                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,560,0,0"/>
+                    <Button Content="Set a goal or view your current progress"
+                            FontSize="40"
+                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,760,0,0"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Graphs">
+            <TabItem Header="Recent Data" FontSize="40">
+                <Grid Background="Beige"/>
+            </TabItem>
+            <TabItem Header="Graphs" FontSize="40">
                 <Grid Background="AliceBlue">
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Goals">
+            <TabItem Header="Goals" FontSize="40">
                 <Grid>
                     <Button Content="Set New Goal" HorizontalAlignment="Left" Margin="352,100,0,0" VerticalAlignment="Top" Click="setGoalButtonClick"/>
                     <Popup Margin="10,10,0,13" Name="setGoalPopup" HorizontalAlignment="Left"   
@@ -42,11 +55,12 @@
                     </Popup>
                 </Grid>
             </TabItem>
-            <TabItem Header="Settings">
+            <TabItem Header="Settings" FontSize="40">
                 <Grid Background="Red">
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Content="Log Out" HorizontalAlignment="Right" Margin="727,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.053,-1.116" Click="LogOutButtonClick"/>
+        <Button FontSize="40"
+            Content="Log Out" HorizontalAlignment="Right" Margin="0,35,24,0" VerticalAlignment="Top" RenderTransformOrigin="1.053,-1.116" Click="LogOutButtonClick" Height="60" Width="154"/>
     </Grid>
 </Page>

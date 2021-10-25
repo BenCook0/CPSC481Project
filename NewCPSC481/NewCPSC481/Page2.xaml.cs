@@ -33,5 +33,10 @@ namespace CPSC481WPF
         {
             setGoalPopup.IsOpen = true;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
