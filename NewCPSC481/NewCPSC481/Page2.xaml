@@ -98,6 +98,51 @@
                         HorizontalAlignment="Left" Margin="405,670,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <!---->
+                    <TextBlock FontSize="60"
+                        HorizontalAlignment="Left" Margin="1250,160,0,0" 
+                               Text="Daily" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+
+                    <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="1250,250,0,0" 
+                               Text="Steps Taken" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <!-- will replace the blue rectangles with images-->
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="1300,320,0,0" 
+                               Fill="Blue"
+                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="1305,420,0,0" 
+                               Text="1234" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+
+                    <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="1530,250,0,0" 
+                               Text="Calories Burned" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <!-- will replace the blue rectangles with images-->
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="1600,320,0,0" 
+                               Fill="Blue"
+                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="1605,420,0,0" 
+                               Text="1234" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+
+                    <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="1420,500,0,0" 
+                               Text="Heartrate" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <!-- will replace the blue rectangles with images-->
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="1450,570,0,0" 
+                               Fill="Blue"
+                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="1455,670,0,0" 
+                               Text="1234" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+
                 </Grid>
             </TabItem>
             <TabItem Header="Graphs" FontSize="40">
