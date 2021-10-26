@@ -12,28 +12,54 @@
         <TabControl Margin="0,100,0,0">
             <TabItem Header="Welcome" FontSize="40">
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="251*"/>
+                        <ColumnDefinition Width="1663*"/>
+                    </Grid.ColumnDefinitions>
                     <TextBlock FontSize="60"
-                        HorizontalAlignment="Center" Margin="0,20,0,0" 
+                        HorizontalAlignment="Left" Margin="95,20,0,0" 
                                Text="Welcome To Your Personal Fitness Breakdown!" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
                     <TextBlock FontSize="50"
-                        HorizontalAlignment="Center" Margin="0,120,0,0" 
+                        HorizontalAlignment="Left" Margin="224,120,0,0" 
                                Text="Begin by Choosing What you Want to View!" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
 
                     <Button Content="Take a look at your recent fitness data"
                             FontSize="40"
-                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,250,0,0"/>
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="224,250,0,0" Grid.Column="1"/>
                     <Button Content="View a graphical breakdown of your fitness data"
                             FontSize="40"
-                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,450,0,0"/>
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="224,450,0,0" Grid.Column="1"/>
                     <Button Content="Set a goal or view your current progress"
                             FontSize="40"
-                            HorizontalAlignment="Center" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="0,650,0,0"/>
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="224,650,0,0" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Recent Data" FontSize="40">
-                <Grid Background="Beige"/>
+                <Grid Background="White">
+                    <TextBlock FontSize="70"
+                        HorizontalAlignment="Left" Margin="50,50,0,0" 
+                               Text="Recent Data" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBlock FontSize="60"
+                        HorizontalAlignment="Left" Margin="50,160,0,0" 
+                               Text="Daily" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="50,250,0,0" 
+                               Text="Steps Taken" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <!-- will replace the blue rectangles with images-->
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="100,320,0,0" 
+                               Fill="Blue"
+                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="105,420,0,0" 
+                               Text="1234" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                </Grid>
+
             </TabItem>
             <TabItem Header="Graphs" FontSize="40">
                 <Grid Background="AliceBlue">
