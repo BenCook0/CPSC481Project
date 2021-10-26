@@ -35,10 +35,12 @@
             FontSize=" 20"
             Content="Add Percentage Display Towards Goal" HorizontalAlignment="Center" Margin="0,324,0,0" VerticalAlignment="Top" Height="31" Width="608"/>
         <Button 
+            FontSize="20"
             Content="Cancel" 
             HorizontalAlignment="Left" Margin="160,382,0,0" VerticalAlignment="Top" Height="41" Width="126"/>
         <Button 
-            Content="Cancel" 
+            FontSize="20"
+            Content="Set Goal" 
             HorizontalAlignment="Left" Margin="475,382,0,0" VerticalAlignment="Top" Height="41" Width="126"/>
     </Grid>
 </Page>
