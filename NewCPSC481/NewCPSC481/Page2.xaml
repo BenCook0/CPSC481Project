@@ -273,11 +273,11 @@
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <TextBox HorizontalAlignment="Left" Margin="136,87,0,0" Text="Graphs" TextWrapping="Wrap" VerticalAlignment="Top" Width="373" TextChanged="TextBox_TextChanged_1" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}"/>
-                    <TextBox HorizontalAlignment="Left" Margin="598,193,0,0" Text="1D" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" TextChanged="TextBox_TextChanged_2" RenderTransformOrigin="0.983,0.703" Background="{x:Null}" BorderBrush="{x:Null}"/>
-                    <TextBox HorizontalAlignment="Left" Margin="678,193,0,0" Text="3D" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" TextChanged="TextBox_TextChanged_2" RenderTransformOrigin="0.983,0.703" Background="{x:Null}" BorderBrush="{x:Null}"/>
-                    <TextBox HorizontalAlignment="Left" Margin="758,193,0,0" Text="1W" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" TextChanged="TextBox_TextChanged_2" RenderTransformOrigin="0.983,0.703" Background="{x:Null}" BorderBrush="{x:Null}"/>
-                    <TextBox HorizontalAlignment="Left" Margin="840,193,0,0" Text="1M" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" TextChanged="TextBox_TextChanged_2" RenderTransformOrigin="0.983,0.703" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="136,87,0,0" Text="Graphs" TextWrapping="Wrap" VerticalAlignment="Top" Width="373"  FontSize="100" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="598,193,0,0" Text="1D" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="678,193,0,0" Text="3D" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="758,193,0,0" Text="1W" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="840,193,0,0" Text="1M" TextWrapping="Wrap" VerticalAlignment="Top" Width="76"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
                     <Button Content="?" HorizontalAlignment="Left" Margin="1011,210,0,0" VerticalAlignment="Top" Background="{x:Null}" Height="50" Width="50" BorderBrush="{x:Null}" >
                         <Button.Template>
                             <ControlTemplate TargetType="{x:Type Button}">
@@ -289,8 +289,8 @@
                         </Button.Template>
                     </Button>
                     <Image HorizontalAlignment="Left" Height="366" Margin="395,349,0,0" VerticalAlignment="Top" Source="/bitfitGraph.png" Width="663"/>
-                    <TextBox HorizontalAlignment="Left" Margin="237,500,0,0" Text="Value" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="{x:Null}"/>
-                    <TextBox HorizontalAlignment="Left" Margin="561,720,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="272,497,0,0" Text="Value" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="586,720,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Goals" FontSize="40" HorizontalAlignment="Left" Margin="-2,-2,0,0" Width="114">
