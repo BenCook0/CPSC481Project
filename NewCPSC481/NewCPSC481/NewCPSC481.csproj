@@ -8,16 +8,14 @@
 
   <ItemGroup>
     <None Remove="Bitfit Logo.png" />
+    <None Remove="bitfitGraph.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Bitfit Logo.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="bitfitGraph.png">
+    <Resource Include="bitfitGraph.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
 
 </Project>
