@@ -42,5 +42,6 @@
             FontSize="20"
             Content="Set Goal" 
             HorizontalAlignment="Left" Margin="475,382,0,0" VerticalAlignment="Top" Height="41" Width="126"/>
+        <Border BorderThickness="1" BorderBrush="Black"/>
     </Grid>
 </Page>

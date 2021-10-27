@@ -14,4 +14,10 @@
     <Resource Include="Bitfit Logo.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="bitfitGraph.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
