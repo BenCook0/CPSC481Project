@@ -21,8 +21,8 @@
                 <Button  DockPanel.Dock="Top" Name="loginButton" Content="Login" Click="LoginButtonClick" Margin="0,0,0,10"/>
             </DockPanel>
         </Viewbox>
-        <Viewbox Grid.Column="3">
-            <Image HorizontalAlignment="Center" Height="233" Margin="0,30,0,0" VerticalAlignment="Top" Width="368" Source="/Bitfit Logo.png" Grid.Column="3" Grid.RowSpan="2"/>
+        <Viewbox Grid.Column="3" Margin="0,0,0,0">
+            <Image HorizontalAlignment="Center" Height="132" VerticalAlignment="Top" Width="368" Source="/Bitfit Logo.png" Grid.Column="3" Grid.RowSpan="2"/>
         </Viewbox>
 
 
