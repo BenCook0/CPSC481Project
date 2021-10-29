@@ -99,7 +99,7 @@
     </Page.Resources>
     <Grid>
         <Rectangle Stroke="#44acc2" Fill="#44acc2" HorizontalAlignment="Stretch" Grid.Column="0"/>
-        <TabControl Margin="0,100,0,0" SelectionChanged="TabControl_SelectionChanged" BorderBrush="#FF343537">
+        <TabControl Margin="0,100,0,0" BorderBrush="#FF343537">
             <TabItem Header="Welcome" FontSize="40">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -354,7 +354,7 @@
                         Text="Progress" 
                         TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="214" Grid.Column="1"/>
 
-                    <ProgressBar x:Name="myProgress" Margin="229,452,52,395" ValueChanged="myProgress_ValueChanged" Value="67" Grid.Column="1" Width="441"/>
+                    <ProgressBar x:Name="myProgress" Margin="229,452,52,395" Value="67" Grid.Column="1" Width="441"/>
                     <TextBlock FontSize="25"
                         HorizontalAlignment="Left" Margin="155,458,0,0" 
                         TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Height="45" Grid.Column="1"><Run Text="170lb"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
@@ -365,7 +365,7 @@
                     <TextBlock FontSize="30"
                         HorizontalAlignment="Left" Margin="153,514,0,0" 
                         TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Height="39" Grid.Column="1"><Run Text="Current"/><LineBreak/><Run/></TextBlock>
-                    <TextBox Text="160lb" TextWrapping="Wrap" Margin="152,557,374,305" Opacity="0.75" BorderBrush="#FF373737" FontSize="25" TextChanged="TextBox_TextChanged_4" TextAlignment="Center" Grid.Column="1"/>
+                    <TextBox Text="160lb" TextWrapping="Wrap" Margin="152,557,374,305" Opacity="0.75" BorderBrush="#FF373737" FontSize="25" TextAlignment="Center" Grid.Column="1"/>
                     <TextBlock FontSize="25"
                         HorizontalAlignment="Left" Margin="431,454,0,0" 
                         TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Grid.Column="1"><Run Text="67%"/><LineBreak/><Run/></TextBlock>
@@ -393,7 +393,7 @@
                     <TextBlock HorizontalAlignment="Left" Margin="380,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Text="Old Password"/>
                     <PasswordBox HorizontalAlignment="Left" Margin="379,528,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1"/>
                     <TextBlock HorizontalAlignment="Left" Margin="753,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Text="New E-Mail Address"/>
-                    <TextBox HorizontalAlignment="Left" Margin="753,348,0,0" Text="E-Mail" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged_3" Grid.Column="1" Opacity="0.6"/>
+                    <TextBox HorizontalAlignment="Left" Margin="753,348,0,0" Text="E-Mail" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" Grid.Column="1" Opacity="0.6"/>
 
 
                 </Grid>
