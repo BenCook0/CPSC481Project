@@ -8,22 +8,70 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Page1">
     <Grid Margin="0,0,0,0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".2*"/>
-            <ColumnDefinition Width=".7*"/>
-            <ColumnDefinition Width="4*"/>
-        </Grid.ColumnDefinitions>
-        <Rectangle Stroke="#44acc2" Fill="#44acc2" HorizontalAlignment="Stretch" Grid.Column="0"/>
-        <Viewbox Grid.Column="1">
-            <DockPanel LastChildFill="True">
-                <TextBox DockPanel.Dock="Top" Name ="usernameField" Text="Username" TextWrapping="NoWrap" Width="60" Height="20" Margin="0,0,0,10"/>
-                <PasswordBox DockPanel.Dock="Top" Name ="passwordField" Width="60" Height="20" Margin="0,0,0,10"/>
-                <Button  DockPanel.Dock="Top" Name="loginButton" Content="Login" Click="LoginButtonClick" Margin="0,0,0,10"/>
-            </DockPanel>
-        </Viewbox>
-        <Viewbox Grid.Column="3" Margin="0,0,0,0">
-            <Image HorizontalAlignment="Center" Height="132" VerticalAlignment="Top" Width="368" Source="/Bitfit Logo.png" Grid.Column="3" Grid.RowSpan="2"/>
-        </Viewbox>
+
+        <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="0,0,1857,0"/>
+        <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="316,0,1573,0"/>
+
+        <TextBox Name ="usernameField" Text="Device ID" TextWrapping="NoWrap" Margin="63,288,1604,731" FontSize="30"/>
+
+        <PasswordBox x:Name="passwordField" HorizontalAlignment="Left" Margin="63,447,0,565" Width="251"/>
+
+        <Button Name="loginButton" Content="Login" Click="LoginButtonClick" Margin="63,607,1602,407" FontSize="30" RenderTransformOrigin="0.5,0.5">
+        </Button>
+
+        <TextBlock FontSize="60"
+                        HorizontalAlignment="Left" Margin="735,288,0,0" 
+                               Text="Track your Fitness Today!" 
+                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+        <TextBlock FontSize="50"
+                        HorizontalAlignment="Left" Margin="450,448,0,0" 
+                               Text="View your Bitfit Data:" 
+                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+        <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="554,584,0,0" 
+                               Text="Steps Taken" 
+                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <!-- will replace the blue rectangles with images-->
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="604,654,0,0" 
+                               Fill="Blue"
+                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+
+        <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="1034,584,0,0" 
+                               Text="Calories Burned" 
+                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <!-- will replace the blue rectangles with images-->
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="1104,654,0,0" 
+                               Fill="Blue"
+                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+
+        <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="1564,584,0,0" 
+                               Text="Heartrate" 
+                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <!-- will replace the blue rectangles with images-->
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="1604,654,0,0" 
+                               Fill="Blue"
+                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+
+
+        <Image Height="88" VerticalAlignment="Top" Source="/Bitfit Logo.png" Margin="14,131,1549,0"/>
+        <Rectangle Stroke="#44acc2" Fill="#44acc2" Grid.Column="0" Margin="20,0,0,1000"/>
+        <Image Margin="63,1001,1606,0" Stretch="Fill" Source="/Hyfic Logo.png"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="68,958,0,84" Text="Developed by" TextWrapping="Wrap" FontSize ="20" Width="214"/>
+        <Image Height="62" Source="/Bitfit Logo.png" Margin="-7,4,1725,1014"/>
+
+        <Ellipse HorizontalAlignment="Left" Height="50" Margin="990,990,0,40" Stroke="#44acc2" Fill="#44acc2" Width="50"/>
+        <Ellipse HorizontalAlignment="Left" Height="50" Margin="1063,990,0,40" Stroke="#44acc2" Width="50"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="71,250,0,792" Text="Device ID Number" TextWrapping="Wrap" FontSize ="20" Width="214"/>
+        <TextBlock HorizontalAlignment="Left" Margin="71,414,0,628" Text="Device Password" TextWrapping="Wrap" FontSize ="20" Width="214"/>
+
+
+
 
 
     </Grid>
