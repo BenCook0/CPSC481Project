@@ -69,6 +69,7 @@
         
         <TextBlock HorizontalAlignment="Left" Margin="71,250,0,792" Text="Device ID Number" TextWrapping="Wrap" FontSize ="20" Width="214"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,414,0,628" Text="Device Password" TextWrapping="Wrap" FontSize ="20" Width="214"/>
+        <Image Width="40" Height="40" Source="/question.png" Margin="252,236,1618,794"/>
 
 
 
