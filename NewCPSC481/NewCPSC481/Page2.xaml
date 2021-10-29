@@ -237,18 +237,22 @@
             </TabItem>
             <TabItem Header="Graphs" FontSize="40" Height="57" VerticalAlignment="Top">
                 <Grid Background="AliceBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="117*"/>
+                        <ColumnDefinition Width="202*"/>
+                    </Grid.ColumnDefinitions>
 
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="Steps" HorizontalAlignment="Left" Margin="1042,378,0,0" VerticalAlignment="Top" Height="20" Width="100" Checked="CheckBox_Checked" FontSize="12">
+                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="Steps" HorizontalAlignment="Left" Margin="340,378,0,0" VerticalAlignment="Top" Height="20" Width="100" Checked="CheckBox_Checked" FontSize="12" Grid.Column="1">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="Calories" HorizontalAlignment="Left" Margin="1042,460,0,0" VerticalAlignment="Top" Height="20" Width="100" Checked="CheckBox_Checked" FontSize="12">
+                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="Calories" HorizontalAlignment="Left" Margin="340,460,0,0" VerticalAlignment="Top" Height="20" Width="100" Checked="CheckBox_Checked" FontSize="12" Grid.Column="1">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="Heartrate" HorizontalAlignment="Left" Margin="1042,542,0,0" VerticalAlignment="Top" Height="20" Width="100" Checked="CheckBox_Checked" FontSize="12">
+                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="Heartrate" HorizontalAlignment="Left" Margin="340,542,0,0" VerticalAlignment="Top" Height="20" Width="100" Checked="CheckBox_Checked" FontSize="12" Grid.Column="1">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
@@ -263,22 +267,22 @@
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="" HorizontalAlignment="Left" Margin="838,248,0,0" VerticalAlignment="Top" Height="20" Width="20" Checked="CheckBox_Checked" FontSize="12">
+                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="" HorizontalAlignment="Left" Margin="136,248,0,0" VerticalAlignment="Top" Height="20" Width="20" Checked="CheckBox_Checked" FontSize="12" Grid.Column="1">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="" HorizontalAlignment="Left" Margin="758,248,0,0" VerticalAlignment="Top" Height="20" Width="20" Checked="CheckBox_Checked" FontSize="12" RenderTransformOrigin="5.125,-0.215">
+                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="" HorizontalAlignment="Left" Margin="56,248,0,0" VerticalAlignment="Top" Height="20" Width="20" Checked="CheckBox_Checked" FontSize="12" RenderTransformOrigin="5.125,-0.215" Grid.Column="1">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
                     <TextBlock HorizontalAlignment="Left" Margin="136,87,0,0" Text="Graphs" TextWrapping="Wrap" VerticalAlignment="Top" Width="373"  FontSize="100" Background="{x:Null}"/>
                     <TextBlock HorizontalAlignment="Left" Margin="598,193,0,0" Text="1D" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="678,193,0,0" Text="3D" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="758,193,0,0" Text="1W" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="840,193,0,0" Text="1M" TextWrapping="Wrap" VerticalAlignment="Top" Width="76"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
-                    <Button Content="?" HorizontalAlignment="Left" Margin="1011,210,0,0" VerticalAlignment="Top" Background="{x:Null}" Height="50" Width="50" BorderBrush="{x:Null}" >
+                    <TextBlock HorizontalAlignment="Left" Margin="678,193,0,0" Text="3D" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="56,193,0,0" Text="1W" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="138,193,0,0" Text="1M" TextWrapping="Wrap" VerticalAlignment="Top" Width="76"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}" Grid.Column="1"/>
+                    <Button Content="?" HorizontalAlignment="Left" Margin="309,210,0,0" VerticalAlignment="Top" Background="{x:Null}" Height="50" Width="50" BorderBrush="{x:Null}" Grid.Column="1" >
                         <Button.Template>
                             <ControlTemplate TargetType="{x:Type Button}">
                                 <Grid>
@@ -288,9 +292,9 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    <Image HorizontalAlignment="Left" Height="366" Margin="395,349,0,0" VerticalAlignment="Top" Source="/bitfitGraph.png" Width="663"/>
+                    <Image HorizontalAlignment="Left" Height="366" Margin="395,349,0,0" VerticalAlignment="Top" Source="/bitfitGraph.png" Width="663" Grid.ColumnSpan="2"/>
                     <TextBlock HorizontalAlignment="Left" Margin="272,497,0,0" Text="Value" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="586,720,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="586,720,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}" Grid.ColumnSpan="2"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Goals" FontSize="40" HorizontalAlignment="Left" Margin="-2,-2,0,0" Width="114">
@@ -307,7 +311,20 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Settings" FontSize="40">
-                <Grid Background="Red">
+                <Grid Background="White">
+                    <TextBlock HorizontalAlignment="Left" Margin="136,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="783"  FontSize="100" Background="{x:Null}"><Run Language="en-ca" Text="Account Settings"/></TextBlock>
+                    <TextBox HorizontalAlignment="Left" Margin="136,333,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged_3"/>
+                    <TextBox HorizontalAlignment="Left" Margin="629,333,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged_3"/>
+                    <TextBox HorizontalAlignment="Left" Margin="136,540,0,0" Text="E-Mail" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged_3"/>
+                    <PasswordBox HorizontalAlignment="Left" Margin="629,540,0,0" VerticalAlignment="Top" Width="320"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="136,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="User Name"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="629,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="First and Last "/><Run Text="Name"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="136,482,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="E-Mail Address"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="629,482,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="New Password"/></TextBlock>
+                    <Button Content="Save Changes" HorizontalAlignment="Left" Margin="146,716,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+                    <Button Content="Cancel" HorizontalAlignment="Left" Margin="528,716,0,0" VerticalAlignment="Top"/>
+
+
                 </Grid>
             </TabItem>
         </TabControl>

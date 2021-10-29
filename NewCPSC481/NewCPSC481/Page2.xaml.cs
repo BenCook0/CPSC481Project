@@ -58,5 +58,15 @@ namespace CPSC481WPF
         {
 
         }
+
+        private void TextBox_TextChanged_3(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
