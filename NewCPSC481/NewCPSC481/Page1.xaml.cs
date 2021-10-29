@@ -28,5 +28,17 @@ namespace CPSC481WPF
             this.NavigationService.Navigate(new Page2());
             this.NavigationService.RemoveBackEntry();
         }
+
+        private void ToggleUsernamePopup(object sender, MouseButtonEventArgs e)
+        {
+            if (UsernameAndPasswordPopup.IsOpen)
+            {
+                UsernameAndPasswordPopup.IsOpen = false;
+            }
+            else
+            {
+                UsernameAndPasswordPopup.IsOpen = true;
+            }
+        }
     }
 }

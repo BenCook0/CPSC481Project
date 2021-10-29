@@ -12,7 +12,7 @@
         <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="0,0,1857,0"/>
         <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="316,0,1573,0"/>
 
-        <TextBox Name ="usernameField" Text="Device ID" TextWrapping="NoWrap" Margin="63,288,1604,731" FontSize="30"/>
+        <TextBox Name ="usernameField" Text="Device ID" TextWrapping="NoWrap" Margin="61,307,1606,712" FontSize="30"/>
 
         <PasswordBox x:Name="passwordField" HorizontalAlignment="Left" Margin="63,447,0,565" Width="251"/>
 
@@ -69,7 +69,17 @@
         
         <TextBlock HorizontalAlignment="Left" Margin="71,250,0,792" Text="Device ID Number" TextWrapping="Wrap" FontSize ="20" Width="214"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,414,0,628" Text="Device Password" TextWrapping="Wrap" FontSize ="20" Width="214"/>
-        <Image Width="40" Height="40" Source="/question.png" Margin="252,236,1618,794"/>
+
+        <Image Width="40" Height="40" Source="/question.png" Margin="252,236,1618,794"  MouseDown="ToggleUsernamePopup"/>
+        
+        <Popup Margin="252,236,1618,794" Name="UsernameAndPasswordPopup"  
+                         Width="200" Height="200" Placement="Center" IsOpen="False">
+            <Grid Background="Beige">
+                <TextBlock TextWrapping="Wrap">
+                    This is an example of an information popup, it looks crappy and is an awkward color just to illustrate and experiment with the size and interaction. This will eventually be polished.
+                </TextBlock>
+            </Grid>
+        </Popup>
 
 
 
