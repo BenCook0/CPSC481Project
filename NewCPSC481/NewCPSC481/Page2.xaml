@@ -99,7 +99,7 @@
     </Page.Resources>
     <Grid>
         <Rectangle Stroke="#44acc2" Fill="#44acc2" HorizontalAlignment="Stretch" Grid.Column="0"/>
-        <TabControl Margin="0,100,0,0">
+        <TabControl Margin="0,100,0,0" SelectionChanged="TabControl_SelectionChanged" BorderBrush="#FF343537">
             <TabItem Header="Welcome" FontSize="40">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -128,108 +128,112 @@
             </TabItem>
             <TabItem Header="Recent Data" FontSize="40">
                 <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="65*"/>
+                        <ColumnDefinition Width="1849*"/>
+                    </Grid.ColumnDefinitions>
                     <TextBlock FontSize="70"
                         HorizontalAlignment="Left" Margin="50,50,0,0" 
                                Text="Recent Data" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
                     <TextBlock FontSize="60"
                         HorizontalAlignment="Left" Margin="50,160,0,0" 
                                Text="Daily" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
 
                     <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="50,250,0,0" 
                                Text="Steps Taken" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
                     <!-- will replace the blue rectangles with images-->
-                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="100,320,0,0" 
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="35,320,0,0" 
                                Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+                               Stroke="Blue" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="105,420,0,0" 
+                        HorizontalAlignment="Left" Margin="40,420,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
 
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="330,250,0,0" 
+                        HorizontalAlignment="Left" Margin="265,250,0,0" 
                                Text="Calories Burned" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
                     <!-- will replace the blue rectangles with images-->
-                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="400,320,0,0" 
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="335,320,0,0" 
                                Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+                               Stroke="Blue" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="405,420,0,0" 
+                        HorizontalAlignment="Left" Margin="340,420,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
 
                     <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="50,500,0,0" 
                                Text="Next Goal" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
                     <!-- will replace the blue rectangles with images-->
-                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="100,570,0,0" 
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="35,570,0,0" 
                                Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+                               Stroke="Blue" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="105,670,0,0" 
+                        HorizontalAlignment="Left" Margin="40,670,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
 
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="330,500,0,0" 
+                        HorizontalAlignment="Left" Margin="265,500,0,0" 
                                Text="Calories Burned" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
                     <!-- will replace the blue rectangles with images-->
-                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="400,570,0,0" 
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="335,570,0,0" 
                                Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+                               Stroke="Blue" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="405,670,0,0" 
+                        HorizontalAlignment="Left" Margin="340,670,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
                     <!---->
                     <TextBlock FontSize="60"
-                        HorizontalAlignment="Left" Margin="1250,160,0,0" 
+                        HorizontalAlignment="Left" Margin="1185,160,0,0" 
                                Text="Daily" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
 
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="1250,250,0,0" 
+                        HorizontalAlignment="Left" Margin="1185,250,0,0" 
                                Text="Steps Taken" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
                     <!-- will replace the blue rectangles with images-->
-                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="1300,320,0,0" 
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="1235,320,0,0" 
                                Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+                               Stroke="Blue" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="1305,420,0,0" 
+                        HorizontalAlignment="Left" Margin="1240,420,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
 
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="1530,250,0,0" 
+                        HorizontalAlignment="Left" Margin="1465,250,0,0" 
                                Text="Calories Burned" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
                     <!-- will replace the blue rectangles with images-->
-                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="1600,320,0,0" 
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="1535,320,0,0" 
                                Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+                               Stroke="Blue" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="1605,420,0,0" 
+                        HorizontalAlignment="Left" Margin="1540,420,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
 
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="1420,500,0,0" 
+                        HorizontalAlignment="Left" Margin="1355,500,0,0" 
                                Text="Heartrate" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
                     <!-- will replace the blue rectangles with images-->
-                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="1450,570,0,0" 
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="1385,570,0,0" 
                                Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+                               Stroke="Blue" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="1455,670,0,0" 
+                        HorizontalAlignment="Left" Margin="1390,670,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
 
@@ -297,37 +301,105 @@
                     <TextBlock HorizontalAlignment="Left" Margin="586,720,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}" Grid.ColumnSpan="2"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Goals" FontSize="40" HorizontalAlignment="Left" Margin="-2,-2,0,0" Width="114">
+            <TabItem Header="Goals" FontSize="40" HorizontalAlignment="Left" Margin="-2,-2,0,2" Width="114">
                 <Grid>
-                    <Button Content="Set New Goal" HorizontalAlignment="Left" Margin="352,100,0,0" VerticalAlignment="Top" Click="setGoalButtonClick"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="13*"/>
+                        <ColumnDefinition Width="361*"/>
+                        <ColumnDefinition Width="583*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Set New Goal" HorizontalAlignment="Center" Margin="0,428,0,0" VerticalAlignment="Top" Click="setGoalButtonClick" Grid.Column="2" Height="92" Width="282"/>
                     <Popup Margin="0,0,0,0" Name="setGoalPopup" HorizontalAlignment="Left"   
-                        VerticalAlignment="Top" Width="800" Height="450" Placement="Center" IsOpen="False">
+                        VerticalAlignment="Top" Width="800" Height="450" Placement="Center" IsOpen="False" Grid.ColumnSpan="3">
                         <Grid>
                             <Frame Source="SetGoalPopup.xaml">
                             </Frame>
                         </Grid>
                     </Popup>
+                    <TextBlock 
+                        HorizontalAlignment="Left" Margin="44,27,0,0" 
+                            TextWrapping="Wrap" VerticalAlignment="Top" Width="306"  
+                                FontSize="100" 
+                                    Background="{x:Null}" Grid.Column="1"><Run Language="en-ca" Text="Goals"/></TextBlock>
+                    <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="107,206,0,0" 
+                               Text="1. Lose weight" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBlock FontSize="30"
+                        HorizontalAlignment="Left" Margin="140,272,0,0" 
+                               Text="Start" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Grid.Column="1"/>
+                    <TextBlock FontSize="30"
+                        HorizontalAlignment="Left" Margin="395,272,0,0" 
+                               Text="End" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Grid.Column="1"/>
+                    <TextBlock FontSize="40"
+                        HorizontalAlignment="Left" Margin="107,626,0,0" 
+                               Text="2. Steps Taken" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBlock FontSize="30"
+                        HorizontalAlignment="Left" Margin="140,702,0,0" 
+                               Text="Start" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBlock FontSize="30"
+                        HorizontalAlignment="Left" Margin="395,702,0,0" 
+                               Text="End" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBox Text="start date" TextWrapping="Wrap" Margin="137,317,366,537" Opacity="0.75" BorderBrush="#FF373737" FontSize="25" Grid.Column="1"/>
+                    <TextBox Text="end date" TextWrapping="Wrap" Margin="392,317,111,537" Opacity="0.75" FontSize="25" BorderBrush="#FF373737" Grid.Column="1"/>
+                    <TextBox Text="start date" TextWrapping="Wrap" Margin="137,744,366,110" Opacity="0.75" BorderBrush="#FF373737" FontSize="25" Grid.Column="1"/>
+                    <TextBox Text="end date" TextWrapping="Wrap" Margin="392,744,111,110" Opacity="0.75" FontSize="25" BorderBrush="#FF373737" Grid.Column="1"/>
+                    <TextBlock FontSize="35"
+                        HorizontalAlignment="Left" Margin="135,400,0,0" 
+                        Text="Progress" 
+                        TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="214" Grid.Column="1"/>
+
+                    <ProgressBar x:Name="myProgress" Margin="229,452,52,395" ValueChanged="myProgress_ValueChanged" Value="67" Grid.Column="1" Width="441"/>
+                    <TextBlock FontSize="25"
+                        HorizontalAlignment="Left" Margin="155,458,0,0" 
+                        TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Height="45" Grid.Column="1"><Run Text="170lb"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+                    <TextBlock FontSize="25"
+                        HorizontalAlignment="Left" Margin="682,458,0,0" 
+                        Text="155lb" 
+                        TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Grid.ColumnSpan="2" Grid.Column="1"/>
+                    <TextBlock FontSize="30"
+                        HorizontalAlignment="Left" Margin="153,514,0,0" 
+                        TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Height="39" Grid.Column="1"><Run Text="Current"/><LineBreak/><Run/></TextBlock>
+                    <TextBox Text="160lb" TextWrapping="Wrap" Margin="152,557,374,305" Opacity="0.75" BorderBrush="#FF373737" FontSize="25" TextChanged="TextBox_TextChanged_4" TextAlignment="Center" Grid.Column="1"/>
+                    <TextBlock FontSize="25"
+                        HorizontalAlignment="Left" Margin="431,454,0,0" 
+                        TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Grid.Column="1"><Run Text="67%"/><LineBreak/><Run/></TextBlock>
                 </Grid>
             </TabItem>
             <TabItem Header="Settings" FontSize="40">
                 <Grid Background="White">
-                    <TextBlock HorizontalAlignment="Left" Margin="136,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="783"  FontSize="100" Background="{x:Null}"><Run Language="en-ca" Text="Account Settings"/></TextBlock>
-                    <TextBox HorizontalAlignment="Left" Margin="136,333,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged_3"/>
-                    <TextBox HorizontalAlignment="Left" Margin="629,333,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged_3"/>
-                    <TextBox HorizontalAlignment="Left" Margin="136,540,0,0" Text="E-Mail" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged_3"/>
-                    <PasswordBox HorizontalAlignment="Left" Margin="629,540,0,0" VerticalAlignment="Top" Width="320"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="136,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="User Name"/></TextBlock>
-                    <TextBlock HorizontalAlignment="Left" Margin="629,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="First and Last "/><Run Text="Name"/></TextBlock>
-                    <TextBlock HorizontalAlignment="Left" Margin="136,482,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="E-Mail Address"/></TextBlock>
-                    <TextBlock HorizontalAlignment="Left" Margin="629,482,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="New Password"/></TextBlock>
-                    <Button Content="Save Changes" HorizontalAlignment="Left" Margin="146,716,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-                    <Button Content="Cancel" HorizontalAlignment="Left" Margin="528,716,0,0" VerticalAlignment="Top"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="197*"/>
+                        <ColumnDefinition Width="441*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" Margin="480,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="591"  FontSize="75" Background="{x:Null}" Grid.Column="1" Text="Change Info"/>
+                    <TextBox HorizontalAlignment="Left" Margin="168,348,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged_3" Opacity="0.6"/>
+                    <TextBox HorizontalAlignment="Left" Margin="340,348,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged_3" Grid.Column="1" Opacity="0.6"/>
+                    <TextBox HorizontalAlignment="Left" Margin="168,531,0,0" Text="E-Mail" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged_3" Opacity="0.6"/>
+                    <PasswordBox HorizontalAlignment="Left" Margin="713,528,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="168,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="User Name"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="339,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"><Run Language="en-ca" Text="First and Last "/><Run Text="Name"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="169,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="E-Mail Address"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="714,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"><Run Language="en-ca" Text="New Password"/></TextBlock>
+                    <Button Content="Save Changes" HorizontalAlignment="Left" Margin="443,677,0,0" VerticalAlignment="Top" Click="Button_Click_1" Grid.Column="1"/>
+                    <Button Content="Cancel" HorizontalAlignment="Left" Margin="730,677,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="177,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="591"  FontSize="75" Background="{x:Null}" Grid.ColumnSpan="2" Text="Account Info"/>
+                    <Button Content="Your Data" HorizontalAlignment="Left" Margin="168,659,0,0" VerticalAlignment="Top" Click="Button_Click_1" Width="224"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="380,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Text="Old Password"/>
+                    <PasswordBox HorizontalAlignment="Left" Margin="379,528,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="753,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Text="New E-Mail Address"/>
+                    <TextBox HorizontalAlignment="Left" Margin="753,348,0,0" Text="E-Mail" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="TextBox_TextChanged_3" Grid.Column="1" Opacity="0.6"/>
 
 
                 </Grid>
             </TabItem>
         </TabControl>
         <Button FontSize="40"
-            Content="Log Out" HorizontalAlignment="Right" Margin="0,35,24,0" VerticalAlignment="Top" RenderTransformOrigin="1.053,-1.116" Click="LogOutButtonClick" Height="60" Width="154"/>
+            Content="Log Out" Margin="1742,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.053,-1.116" Click="LogOutButtonClick" Height="60" HorizontalAlignment="Left" Width="154"/>
     </Grid>
 </Page>
