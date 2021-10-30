@@ -195,8 +195,7 @@
                     <!---->
                     <TextBlock FontSize="60"
                         HorizontalAlignment="Left" Margin="1185,160,0,0" 
-                               Text="Daily" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"><Run Language="en-ca" Text="Weekly"/></TextBlock>
 
                     <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="1185,250,0,0" 
