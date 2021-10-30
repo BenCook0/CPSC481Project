@@ -70,11 +70,11 @@
         <TextBlock HorizontalAlignment="Left" Margin="71,250,0,792" Text="Device ID Number" TextWrapping="Wrap" FontSize ="20" Width="214"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,414,0,628" Text="Device Password" TextWrapping="Wrap" FontSize ="20" Width="214"/>
 
-        <Image Width="40" Height="40" Source="/question.png" Margin="252,236,1618,794"  MouseDown="ToggleUsernamePopup"/>
+        <Image Width="40" Height="40" Source="/question.png" Margin="252,236,1618,794"  MouseDown="ToggleUsernamePopup" RenderTransformOrigin="0.523,0.5"/>
         
         <Popup Margin="252,236,1618,794" Name="UsernameAndPasswordPopup"  
                          Width="200" Height="200" Placement="Center" IsOpen="False">
-            <Grid Background="Beige">
+            <Grid Background="LightGray">
                 <TextBlock TextWrapping="Wrap">
                     This is an example of an information popup, it looks crappy and is an awkward color just to illustrate and experiment with the size and interaction. This will eventually be polished.
                 </TextBlock>
