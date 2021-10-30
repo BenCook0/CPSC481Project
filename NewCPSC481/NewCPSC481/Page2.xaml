@@ -236,6 +236,9 @@
                         HorizontalAlignment="Left" Margin="1390,670,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="72,796,0,0" 
+                             Text="Click to view workouts" 
+                             TextWrapping="Wrap" VerticalAlignment="Top" Width="448"/>
 
                 </Grid>
             </TabItem>
@@ -266,7 +269,7 @@
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="" HorizontalAlignment="Left" Margin="678,248,0,0" VerticalAlignment="Top" Height="20" Width="20" Checked="CheckBox_Checked" FontSize="12" RenderTransformOrigin="5.363,-1.265">
+                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="" HorizontalAlignment="Left" Margin="683,250,0,0" VerticalAlignment="Top" Height="20" Width="20" Checked="CheckBox_Checked" FontSize="12" RenderTransformOrigin="5.363,-1.265" Grid.ColumnSpan="2">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
