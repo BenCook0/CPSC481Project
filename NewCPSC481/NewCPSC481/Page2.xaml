@@ -99,7 +99,7 @@
     </Page.Resources>
     <Grid>
         <Rectangle Stroke="#44acc2" Fill="#44acc2" HorizontalAlignment="Stretch" Grid.Column="0"/>
-        <TabControl Margin="0,100,0,0" BorderBrush="#FF343537">
+        <TabControl Name="MainTabControl" Margin="0,100,0,0" BorderBrush="#FF343537">
             <TabItem Header="Welcome" FontSize="40">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -117,16 +117,16 @@
 
                     <Button Content="Take a look at your recent fitness data"
                             FontSize="40"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="224,250,0,0" Grid.Column="1"/>
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="RecentDataButtonClick" Margin="224,250,0,0" Grid.Column="1"/>
                     <Button Content="View a graphical breakdown of your fitness data"
                             FontSize="40"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="224,450,0,0" Grid.Column="1"/>
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="GraphicalDataButtonClick" Margin="224,450,0,0" Grid.Column="1"/>
                     <Button Content="Set a goal or view your current progress"
                             FontSize="40"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="Button_Click" Margin="224,650,0,0" Grid.Column="1"/>
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="SetGoalButtonClick" Margin="224,650,0,0" Grid.Column="1"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Recent Data" FontSize="40">
+            <TabItem Name ="RecentDataTab" Header="Recent Data" FontSize="40">
                 <Grid Background="White">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="65*"/>

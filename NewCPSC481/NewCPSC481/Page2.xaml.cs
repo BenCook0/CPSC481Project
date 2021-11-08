@@ -30,6 +30,21 @@ namespace CPSC481WPF
             this.NavigationService.RemoveBackEntry();
         }
 
+        //welcome page click functions
+        private void RecentDataButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainTabControl.SelectedIndex = 1;
+        }
+
+        private void GraphicalDataButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainTabControl.SelectedIndex = 2;
+        }
+        private void SetGoalButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainTabControl.SelectedIndex = 3;
+        }
+
         //goals functions below
         private void setGoalButtonClick(object sender, RoutedEventArgs e)
         {
