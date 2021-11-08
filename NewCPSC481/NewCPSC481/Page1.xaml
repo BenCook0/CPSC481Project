@@ -21,7 +21,7 @@
 
         <Button Name="loginButton" Content="Login" Click="LoginButtonClick" Margin="63,607,1602,407" FontSize="30" RenderTransformOrigin="0.5,0.5"/>
 
-        <StackPanel  Margin="352,85,0,103" Name="FrontPagePanel" Background="AliceBlue"/>
+        <StackPanel  Margin="347,80,0,0" Name="FrontPagePanel" Background="AliceBlue"/>
         <!-- will replace the blue rectangles with images-->
         <!-- will replace the blue rectangles with images-->
         <!-- will replace the blue rectangles with images-->
