@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewCPSC481;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -19,10 +20,13 @@ namespace CPSC481WPF
     /// HELLO 
     public partial class Page1 : Page
     {
+        //test for now
+
         public Page1()
         {
             InitializeComponent();
         }
+
         private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Page2());

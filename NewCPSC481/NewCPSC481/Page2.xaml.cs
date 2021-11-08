@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewCPSC481;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +19,7 @@ namespace CPSC481WPF
     /// </summary>
     public partial class Page2 : Page
     {
+        GoalUserControl GoalUserCOntrol = new GoalUserControl();
         public Page2()
         {
             InitializeComponent();
@@ -32,6 +34,13 @@ namespace CPSC481WPF
         private void setGoalButtonClick(object sender, RoutedEventArgs e)
         {
             setGoalPopup.IsOpen = true;
+        }
+
+        private void GoalListBoxSelection(object sender, SelectionChangedEventArgs e)
+        {
+            testTextbox.Text = (String)((ListBoxItem)GoalListBox.SelectedItem).Content;
+            CurrentGoalStackPanel.Children.Clear();
+            CurrentGoalStackPanel.Children.Add(GoalUserCOntrol);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
