@@ -391,8 +391,10 @@
                     </ListBox>
                     <TextBox Name="testTextbox" Text="TextBox" TextWrapping="Wrap" Margin="879,71,345,750"/>
                     <StackPanel Margin="672,165,68,103" Name="CurrentGoalStackPanel" Background="AliceBlue"/>
+                    <Button Content="Set New Goal" FontSize="23" HorizontalAlignment="Left" Margin="160,790,0,0" VerticalAlignment="Top" Click="setGoalButtonClick" Height="82" Width="162"/>
+                    <Button Content="Delete Goal" FontSize="23" HorizontalAlignment="Left" Margin="322,790,0,0" VerticalAlignment="Top" Click="deleteGoalButtonClick" Height="82" Width="162"/>
                 </Grid>
-                
+
             </TabItem>
 
 

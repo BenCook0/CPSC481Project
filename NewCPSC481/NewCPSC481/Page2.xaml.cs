@@ -51,9 +51,18 @@ namespace CPSC481WPF
             setGoalPopup.IsOpen = true;
         }
 
+        private void deleteGoalButtonClick(object sender, RoutedEventArgs e)
+        {  
+            if(GoalListBox.Items.IndexOf(GoalListBox.SelectedItem) != -1)
+            {
+                GoalListBox.Items.RemoveAt(GoalListBox.Items.IndexOf(GoalListBox.SelectedItem));
+            }
+
+        }
+
         private void GoalListBoxSelection(object sender, SelectionChangedEventArgs e)
         {
-            testTextbox.Text = (String)((ListBoxItem)GoalListBox.SelectedItem).Content;
+            //testTextbox.Text = (String)((ListBoxItem)GoalListBox.SelectedItem).Content;
             CurrentGoalStackPanel.Children.Clear();
             CurrentGoalStackPanel.Children.Add(GoalUserCOntrol);
         }
