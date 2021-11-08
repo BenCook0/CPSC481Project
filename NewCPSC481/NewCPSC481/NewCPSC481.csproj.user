@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="FrontPageFirst.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontPageSecond.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="GoalUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -21,6 +27,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="FrontPageFirst.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontPageSecond.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="GoalUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
