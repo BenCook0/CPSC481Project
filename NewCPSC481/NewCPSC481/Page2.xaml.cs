@@ -55,14 +55,20 @@ namespace CPSC481WPF
         {  
             if(GoalListBox.Items.IndexOf(GoalListBox.SelectedItem) != -1)
             {
+                testTextbox.Text = "Item Just Got Deleted";
                 GoalListBox.Items.RemoveAt(GoalListBox.Items.IndexOf(GoalListBox.SelectedItem));
+                CurrentGoalStackPanel.Children.Clear();
             }
 
         }
 
         private void GoalListBoxSelection(object sender, SelectionChangedEventArgs e)
         {
-            //testTextbox.Text = (String)((ListBoxItem)GoalListBox.SelectedItem).Content;
+            if(GoalListBox.SelectedItem != null)
+            {
+                testTextbox.Text = (String)((ListBoxItem)GoalListBox.SelectedItem).Content;
+            }
+
             CurrentGoalStackPanel.Children.Clear();
             CurrentGoalStackPanel.Children.Add(GoalUserCOntrol);
         }
