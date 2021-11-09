@@ -241,6 +241,8 @@
 
             </TabItem>
             <TabItem Header="Graphs" FontSize="40" Height="57" VerticalAlignment="Top">
+                
+                
                 <Grid Background="AliceBlue">
                     <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="Steps" HorizontalAlignment="Left" Margin="1042,378,0,0" VerticalAlignment="Top" Height="20" Width="100" Checked="CheckBox_Checked" FontSize="12">
                         <CheckBox.LayoutTransform>
