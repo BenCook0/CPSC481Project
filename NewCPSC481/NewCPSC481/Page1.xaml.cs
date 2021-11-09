@@ -63,11 +63,15 @@ namespace CPSC481WPF
         private void elipse1MouseDown(object sender, MouseButtonEventArgs e)
         {
             seconds = 9;
+            FrontPagePanel.Children.Clear();
+            FrontPagePanel.Children.Add(first);
         }
 
         private void elipse2MouseDown(object sender, MouseButtonEventArgs e)
         {
             seconds = 4;
+            FrontPagePanel.Children.Clear();
+            FrontPagePanel.Children.Add(second);
         }
 
         private void LoginButtonClick(object sender, RoutedEventArgs e)
