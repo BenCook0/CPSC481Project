@@ -19,6 +19,7 @@ namespace CPSC481WPF
     /// </summary>
     public partial class Page2 : Page
     {
+        //stubbed for now, will build one each later
         GoalUserControl GoalUserCOntrol = new GoalUserControl();
         public Page2()
         {
@@ -43,6 +44,18 @@ namespace CPSC481WPF
         private void SetGoalButtonClick(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 3;
+        }
+
+        //workout functions below
+        private void WorkoutListBoxSelection(object sender, SelectionChangedEventArgs e)
+        {
+            if (WorkoutsListBox.SelectedItem != null)
+            {
+                workoutTestTextbox.Text = (String)((ListBoxItem)GoalListBox.SelectedItem).Content;
+            }
+
+            WorkoutListStackPanel.Children.Clear();
+            WorkoutListStackPanel.Children.Add(GoalUserCOntrol);
         }
 
         //goals functions below

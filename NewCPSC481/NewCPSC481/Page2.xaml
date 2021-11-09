@@ -231,11 +231,24 @@
                         HorizontalAlignment="Left" Margin="1455,670,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Margin="137,796,0,0" 
-                             Text="Click to view workouts" 
-                             TextWrapping="Wrap" VerticalAlignment="Top" Width="448"/>
 
                 </Grid>
+            </TabItem>
+            <TabItem Header="Workouts" FontSize="40" Height="57" VerticalAlignment="Top">
+                <Grid>
+                    <TextBlock 
+                        HorizontalAlignment="Left" Margin="44,27,0,0" 
+                            TextWrapping="Wrap" VerticalAlignment="Top" Width="440"  
+                                FontSize="100" 
+                                    Background="{x:Null}"><Run Language="en-ca" Text="Workouts"/></TextBlock>
+                    <ListBox Name="WorkoutsListBox" Margin="160,165,1430,130" SelectionChanged="GoalListBoxSelection">
+                        <ListBoxItem Background="Yellow" Content="1"/>
+                        <ListBoxItem Background="#FFF13131" Content="awd809"/>
+                    </ListBox>
+                    <TextBox Name="workoutTestTextbox" Text="TextBox" TextWrapping="Wrap" Margin="879,71,345,750"/>
+                    <StackPanel Margin="672,165,68,103" Name="WorkoutListStackPanel" Background="AliceBlue"/>
+                </Grid>
+
             </TabItem>
             <TabItem Header="Graphs" FontSize="40" Height="57" VerticalAlignment="Top">
                 <Grid Background="AliceBlue">
