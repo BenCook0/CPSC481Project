@@ -43,5 +43,6 @@
         <Rectangle HorizontalAlignment="Left" Height="100" Margin="641,257,0,0" 
                                Fill="Blue"
                                Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+        
     </Grid>
 </UserControl>

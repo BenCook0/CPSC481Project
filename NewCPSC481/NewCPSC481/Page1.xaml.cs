@@ -46,16 +46,28 @@ namespace CPSC481WPF
             seconds++;
             if(seconds % 10 == 0)
             {
+                elipse1.Fill = (SolidColorBrush)new BrushConverter().ConvertFrom("#44acc2") ;
+                elipse2.Fill = (SolidColorBrush)new BrushConverter().ConvertFrom("#FFFFFF");
                 FrontPagePanel.Children.Clear();
                 FrontPagePanel.Children.Add(first);
             }
             if(seconds % 10 == 5)
             {
+                elipse2.Fill = (SolidColorBrush)new BrushConverter().ConvertFrom("#44acc2");
+                elipse1.Fill = (SolidColorBrush)new BrushConverter().ConvertFrom("#FFFFFF");
                 FrontPagePanel.Children.Clear();
                 FrontPagePanel.Children.Add(second);
             }
+        }
 
+        private void elipse1MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            seconds = 9;
+        }
 
+        private void elipse2MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            seconds = 4;
         }
 
         private void LoginButtonClick(object sender, RoutedEventArgs e)
