@@ -295,72 +295,8 @@
                     <TextBlock HorizontalAlignment="Left" Margin="586,720,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
                 </Grid>
             </TabItem>
+
             <TabItem Header="Goals" FontSize="40" HorizontalAlignment="Left" Margin="-2,-2,0,2" Width="114">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="13*"/>
-                        <ColumnDefinition Width="361*"/>
-                        <ColumnDefinition Width="583*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button Content="Set New Goal" HorizontalAlignment="Left" Margin="431,94,0,0" VerticalAlignment="Top" Click="setGoalButtonClick" Grid.Column="1" Height="92" Width="282"/>
-                   
-                    <TextBlock 
-                        HorizontalAlignment="Left" Margin="44,27,0,0" 
-                            TextWrapping="Wrap" VerticalAlignment="Top" Width="306"  
-                                FontSize="100" 
-                                    Background="{x:Null}" Grid.Column="1"><Run Language="en-ca" Text="Goals"/></TextBlock>
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="107,206,0,0" 
-                               Text="1. Lose weight" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBlock FontSize="30"
-                        HorizontalAlignment="Left" Margin="140,272,0,0" 
-                               Text="Start" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Grid.Column="1"/>
-                    <TextBlock FontSize="30"
-                        HorizontalAlignment="Left" Margin="395,272,0,0" 
-                               Text="End" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Grid.Column="1"/>
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="107,626,0,0" 
-                               Text="2. Steps Taken" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBlock FontSize="30"
-                        HorizontalAlignment="Left" Margin="140,702,0,0" 
-                               Text="Start" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBlock FontSize="30"
-                        HorizontalAlignment="Left" Margin="395,702,0,0" 
-                               Text="End" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBox Text="start date" TextWrapping="Wrap" Margin="137,317,366,537" Opacity="0.75" BorderBrush="#FF373737" FontSize="25" Grid.Column="1"/>
-                    <TextBox Text="end date" TextWrapping="Wrap" Margin="392,317,111,537" Opacity="0.75" FontSize="25" BorderBrush="#FF373737" Grid.Column="1"/>
-                    <TextBox Text="start date" TextWrapping="Wrap" Margin="137,744,366,110" Opacity="0.75" BorderBrush="#FF373737" FontSize="25" Grid.Column="1"/>
-                    <TextBox Text="end date" TextWrapping="Wrap" Margin="392,744,111,110" Opacity="0.75" FontSize="25" BorderBrush="#FF373737" Grid.Column="1"/>
-                    <TextBlock FontSize="35"
-                        HorizontalAlignment="Left" Margin="135,400,0,0" 
-                        Text="Progress" 
-                        TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="214" Grid.Column="1"/>
-
-                    <ProgressBar x:Name="myProgress" Margin="229,452,52,395" Value="67" Grid.Column="1" Width="441"/>
-                    <TextBlock FontSize="25"
-                        HorizontalAlignment="Left" Margin="155,458,0,0" 
-                        TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Height="45" Grid.Column="1"><Run Text="170lb"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-                    <TextBlock FontSize="25"
-                        HorizontalAlignment="Left" Margin="682,458,0,0" 
-                        Text="155lb" 
-                        TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Grid.ColumnSpan="2" Grid.Column="1"/>
-                    <TextBlock FontSize="30"
-                        HorizontalAlignment="Left" Margin="153,514,0,0" 
-                        TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Height="39" Grid.Column="1"><Run Text="Current"/><LineBreak/><Run/></TextBlock>
-                    <TextBox Text="160lb" TextWrapping="Wrap" Margin="152,557,374,305" Opacity="0.75" BorderBrush="#FF373737" FontSize="25" TextAlignment="Center" Grid.Column="1"/>
-                    <TextBlock FontSize="25"
-                        HorizontalAlignment="Left" Margin="431,454,0,0" 
-                        TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Grid.Column="1"><Run Text="67%"/><LineBreak/><Run/></TextBlock>
-                </Grid>
-            </TabItem>
-
-            <TabItem Header="newGoals" FontSize="40" HorizontalAlignment="Left" Margin="-2,-2,0,2" Width="114">
                 
                 <Grid>
                     <TextBlock 
