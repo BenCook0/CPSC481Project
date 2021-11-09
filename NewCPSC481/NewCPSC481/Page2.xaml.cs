@@ -38,13 +38,18 @@ namespace CPSC481WPF
             MainTabControl.SelectedIndex = 1;
         }
 
-        private void GraphicalDataButtonClick(object sender, RoutedEventArgs e)
+        private void WorkoutsButtonClick(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 2;
         }
-        private void SetGoalButtonClick(object sender, RoutedEventArgs e)
+
+        private void GraphicalDataButtonClick(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 3;
+        }
+        private void SetGoalButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainTabControl.SelectedIndex = 4;
         }
 
         //workout functions below
