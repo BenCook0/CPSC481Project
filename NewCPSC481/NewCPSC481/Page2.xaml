@@ -97,6 +97,7 @@
             </Setter>
         </Style>
     </Page.Resources>
+    <Viewbox>
     <Grid>
         <Rectangle Stroke="#44acc2" Fill="#44acc2" HorizontalAlignment="Stretch" Grid.Column="0"/>
         <TabControl Name="MainTabControl" Margin="0,100,0,0" BorderBrush="#FF343537">
@@ -302,13 +303,7 @@
                         <ColumnDefinition Width="583*"/>
                     </Grid.ColumnDefinitions>
                     <Button Content="Set New Goal" HorizontalAlignment="Left" Margin="431,94,0,0" VerticalAlignment="Top" Click="setGoalButtonClick" Grid.Column="1" Height="92" Width="282"/>
-                    <Popup Margin="0,0,0,0" Name="setGoalPopup" HorizontalAlignment="Left"   
-                        VerticalAlignment="Top" Width="800" Height="450" Placement="Center" IsOpen="False" Grid.ColumnSpan="3">
-                        <Grid>
-                            <Frame Source="SetGoalPopup.xaml">
-                            </Frame>
-                        </Grid>
-                    </Popup>
+                   
                     <TextBlock 
                         HorizontalAlignment="Left" Margin="44,27,0,0" 
                             TextWrapping="Wrap" VerticalAlignment="Top" Width="306"  
@@ -366,6 +361,7 @@
             </TabItem>
 
             <TabItem Header="newGoals" FontSize="40" HorizontalAlignment="Left" Margin="-2,-2,0,2" Width="114">
+                
                 <Grid>
                     <TextBlock 
                         HorizontalAlignment="Left" Margin="44,27,0,0" 
@@ -384,6 +380,14 @@
                     <StackPanel Margin="672,165,68,103" Name="CurrentGoalStackPanel" Background="AliceBlue"/>
                     <Button Content="Set New Goal" FontSize="23" HorizontalAlignment="Left" Margin="160,790,0,0" VerticalAlignment="Top" Click="setGoalButtonClick" Height="82" Width="162"/>
                     <Button Content="Delete Goal" FontSize="23" HorizontalAlignment="Left" Margin="322,790,0,0" VerticalAlignment="Top" Click="deleteGoalButtonClick" Height="82" Width="162"/>
+
+                    <Popup Margin="0,0,0,0" Name="setGoalPopup" HorizontalAlignment="Left"   
+                        VerticalAlignment="Top" Width="800" Height="450" Placement="Center" IsOpen="False" Grid.ColumnSpan="3">
+                        <Grid>
+                            <Frame Source="SetGoalPopup.xaml">
+                            </Frame>
+                        </Grid>
+                    </Popup>
                 </Grid>
 
             </TabItem>
@@ -422,4 +426,5 @@
         <Button FontSize="40"
             Content="Log Out" Margin="1742,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.053,-1.116" Click="LogOutButtonClick" Height="60" HorizontalAlignment="Left" Width="154"/>
     </Grid>
+    </Viewbox>
 </Page>
