@@ -21,6 +21,7 @@ namespace CPSC481WPF
     {
         //stubbed for now, will build one each later
         GoalUserControl GoalUserCOntrol = new GoalUserControl();
+        WorkoutUserControl WorkoutUserControl = new WorkoutUserControl();
         public Page2()
         {
             InitializeComponent();
@@ -51,11 +52,11 @@ namespace CPSC481WPF
         {
             if (WorkoutsListBox.SelectedItem != null)
             {
-                workoutTestTextbox.Text = (String)((ListBoxItem)GoalListBox.SelectedItem).Content;
+                workoutTestTextbox.Text = (String)((ListBoxItem)WorkoutsListBox.SelectedItem).Content;
             }
 
             WorkoutListStackPanel.Children.Clear();
-            WorkoutListStackPanel.Children.Add(GoalUserCOntrol);
+            WorkoutListStackPanel.Children.Add(WorkoutUserControl);
         }
 
         //goals functions below

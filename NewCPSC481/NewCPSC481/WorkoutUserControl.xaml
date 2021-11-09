@@ -7,12 +7,39 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
+    <Viewbox>
         <Grid>
-        <TextBlock FontSize="40"
+            <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="40,38,0,0" 
                                Text="2021/03/02" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock FontSize="30"
+                        HorizontalAlignment="Left" Margin="40,96,0,0" 
+                               Text="Exercise" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+            <TextBlock FontSize="20"
+                        HorizontalAlignment="Left" Margin="40,157,0,0" 
+                               Text="Pushups" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
 
-    </Grid>
+            <TextBlock FontSize="30"
+            HorizontalAlignment="Left" Margin="376,104,0,0" 
+            Text="Sets" 
+            TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+            <TextBlock FontSize="20"
+                        HorizontalAlignment="Left" Margin="375,157,0,0" 
+                               Text="5" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
 
+            <TextBlock FontSize="30"
+            HorizontalAlignment="Left" Margin="655,104,0,0" 
+            Text="Avg Reps" 
+            TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+            <TextBlock FontSize="20"
+                        HorizontalAlignment="Left" Margin="654,157,0,0" 
+                               Text="12" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+
+        </Grid>
+    </Viewbox>
 </UserControl>

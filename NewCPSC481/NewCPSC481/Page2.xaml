@@ -228,7 +228,7 @@
                             TextWrapping="Wrap" VerticalAlignment="Top" Width="440"  
                                 FontSize="100" 
                                     Background="{x:Null}"><Run Language="en-ca" Text="Workouts"/></TextBlock>
-                        <ListBox Name="WorkoutsListBox" Margin="160,165,1430,130" SelectionChanged="GoalListBoxSelection">
+                    <ListBox Name="WorkoutsListBox" Margin="160,165,1430,130" SelectionChanged="WorkoutListBoxSelection">
                             <ListBoxItem Background="Yellow" Content="1"/>
                             <ListBoxItem Background="#FFF13131" Content="awd809"/>
                         </ListBox>
