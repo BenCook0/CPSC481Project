@@ -162,30 +162,17 @@
                         HorizontalAlignment="Left" Margin="405,420,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <!-- will replace the blue rectangles with images-->
 
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="50,500,0,0" 
-                               Text="Next Goal" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+                        HorizontalAlignment="Left" Margin="236,500,0,0" 
+                               TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="Heartrate"/><LineBreak/><Run Language="en-ca"/></TextBlock>
                     <!-- will replace the blue rectangles with images-->
-                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="100,570,0,0" 
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="271,570,0,0" 
                                Fill="Blue"
                                Stroke="Blue" VerticalAlignment="Top" Width="100"/>
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="105,670,0,0" 
-                               Text="1234" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
-
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="330,500,0,0" 
-                               Text="Calories Burned" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <!-- will replace the blue rectangles with images-->
-                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="400,570,0,0" 
-                               Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="405,670,0,0" 
+                        HorizontalAlignment="Left" Margin="276,670,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!---->

@@ -9,7 +9,23 @@
     <Grid>
         <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="40,38,0,0" 
-                               Text="1. Lose weight" 
+                               Text="Lose weight" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock FontSize="30"
+                        HorizontalAlignment="Left" Margin="40,96,0,0" 
+                               Text="Start" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+        <TextBlock FontSize="20"
+                        HorizontalAlignment="Left" Margin="40,141,0,0" 
+                               Text="2021/02/01" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+        <TextBlock FontSize="30"
+            HorizontalAlignment="Center" Margin="0,104,0,0" 
+            Text="End" 
+            TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+        <TextBlock FontSize="20"
+                        HorizontalAlignment="Left" Margin="375,141,0,0" 
+                               Text="2021/02/07" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
     </Grid>
 </UserControl>

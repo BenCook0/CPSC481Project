@@ -8,18 +8,25 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SetGoalPopup">
     <Grid Background="White">
+        <Border BorderThickness="1" BorderBrush="Black" Margin="450,147,96,270">
+            <ComboBox FontSize="20">
+                <ComboBoxItem  Content="Calories"/>
+                <ComboBoxItem  Content="Calories"/>
+                <ComboBoxItem  Content="Calories"/>
+            </ComboBox>
+        </Border>
         <TextBox 
             Text="Enter Goal Name"
             FontSize="20"
-            HorizontalAlignment="Center" Margin="0,51,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="608" Height="34" TextChanged="TextBox_TextChanged"/>
+            HorizontalAlignment="Center" Margin="0,20,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="608" Height="34" TextChanged="TextBox_TextChanged"/>
         <DatePicker 
             Text="Start Date"
             FontSize="20"
-            HorizontalAlignment="Left" Margin="96,130,0,0" VerticalAlignment="Top" Width="254" Height="34"/>
+            HorizontalAlignment="Left" Margin="96,93,0,0" VerticalAlignment="Top" Width="254" Height="34"/>
         <DatePicker 
             Text="End Date"
             FontSize="20"
-            HorizontalAlignment="Left" Margin="450,130,0,0" VerticalAlignment="Top" Width="254" Height="34" />
+            HorizontalAlignment="Left" Margin="450,93,0,0" VerticalAlignment="Top" Width="254" Height="34" />
         <TextBox 
             Text="Current Value"
             FontSize="20"
@@ -42,6 +49,8 @@
             FontSize="20"
             Content="Set Goal" 
             HorizontalAlignment="Left" Margin="475,382,0,0" VerticalAlignment="Top" Height="41" Width="126"/>
-        <Border BorderThickness="1" BorderBrush="Black"/>
+        <TextBlock FontSize="20"
+            HorizontalAlignment="Left" Margin="96,153,0,0" Text="Choose a Goal Metric:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
     </Grid>
 </Page>
