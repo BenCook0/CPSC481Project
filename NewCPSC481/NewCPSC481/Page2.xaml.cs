@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewCPSC481;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +19,7 @@ namespace CPSC481WPF
     /// </summary>
     public partial class Page2 : Page
     {
+        GoalUserControl GoalUserCOntrol = new GoalUserControl();
         public Page2()
         {
             InitializeComponent();
@@ -28,10 +30,47 @@ namespace CPSC481WPF
             this.NavigationService.RemoveBackEntry();
         }
 
+        //welcome page click functions
+        private void RecentDataButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainTabControl.SelectedIndex = 1;
+        }
+
+        private void GraphicalDataButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainTabControl.SelectedIndex = 2;
+        }
+        private void SetGoalButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainTabControl.SelectedIndex = 3;
+        }
+
         //goals functions below
         private void setGoalButtonClick(object sender, RoutedEventArgs e)
         {
             setGoalPopup.IsOpen = true;
+        }
+
+        private void deleteGoalButtonClick(object sender, RoutedEventArgs e)
+        {  
+            if(GoalListBox.Items.IndexOf(GoalListBox.SelectedItem) != -1)
+            {
+                testTextbox.Text = "Item Just Got Deleted";
+                GoalListBox.Items.RemoveAt(GoalListBox.Items.IndexOf(GoalListBox.SelectedItem));
+                CurrentGoalStackPanel.Children.Clear();
+            }
+
+        }
+
+        private void GoalListBoxSelection(object sender, SelectionChangedEventArgs e)
+        {
+            if(GoalListBox.SelectedItem != null)
+            {
+                testTextbox.Text = (String)((ListBoxItem)GoalListBox.SelectedItem).Content;
+            }
+
+            CurrentGoalStackPanel.Children.Clear();
+            CurrentGoalStackPanel.Children.Add(GoalUserCOntrol);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

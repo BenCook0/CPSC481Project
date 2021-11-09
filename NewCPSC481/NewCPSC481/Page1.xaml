@@ -8,6 +8,9 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Page1">
     <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
         <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="0,0,1857,0"/>
         <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="316,0,1573,0"/>
@@ -16,45 +19,12 @@
 
         <PasswordBox x:Name="passwordField" HorizontalAlignment="Left" Margin="63,447,0,565" Width="251"/>
 
-        <Button Name="loginButton" Content="Login" Click="LoginButtonClick" Margin="63,607,1602,407" FontSize="30" RenderTransformOrigin="0.5,0.5">
-        </Button>
+        <Button Name="loginButton" Content="Login" Click="LoginButtonClick" Margin="63,607,1602,407" FontSize="30" RenderTransformOrigin="0.5,0.5"/>
 
-        <TextBlock FontSize="60"
-                        HorizontalAlignment="Left" Margin="735,288,0,0" 
-                               Text="Track your Fitness Today!" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
-
-        <TextBlock FontSize="50"
-                        HorizontalAlignment="Left" Margin="450,448,0,0" 
-                               Text="View your Bitfit Data:" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
-
-        <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="554,584,0,0" 
-                               Text="Steps Taken" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <StackPanel  Margin="347,80,0,0" Name="FrontPagePanel" Background="AliceBlue"/>
         <!-- will replace the blue rectangles with images-->
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="604,654,0,0" 
-                               Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
-
-        <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="1034,584,0,0" 
-                               Text="Calories Burned" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
         <!-- will replace the blue rectangles with images-->
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="1104,654,0,0" 
-                               Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
-
-        <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="1564,584,0,0" 
-                               Text="Heartrate" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
         <!-- will replace the blue rectangles with images-->
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="1604,654,0,0" 
-                               Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
 
 
         <Image Height="88" VerticalAlignment="Top" Source="/Bitfit Logo.png" Margin="14,131,1549,0"/>
@@ -64,15 +34,15 @@
         <TextBlock HorizontalAlignment="Left" Margin="68,958,0,84" Text="Developed by" TextWrapping="Wrap" FontSize ="20" Width="214"/>
         <Image Height="62" Source="/Bitfit Logo.png" Margin="-7,4,1725,1014"/>
 
-        <Ellipse HorizontalAlignment="Left" Height="50" Margin="990,990,0,40" Stroke="#44acc2" Fill="#44acc2" Width="50"/>
-        <Ellipse HorizontalAlignment="Left" Height="50" Margin="1063,990,0,40" Stroke="#44acc2" Width="50"/>
-        
+        <Ellipse Name="elipse1" HorizontalAlignment="Left" Height="50" Margin="990,990,0,40" Stroke="#44acc2" Fill="#44acc2" Width="50" MouseDown="elipse1MouseDown"/>
+        <Ellipse Name="elipse2" HorizontalAlignment="Left" Height="50" Margin="1063,990,0,40" Stroke="#44acc2" Width="50" MouseDown="elipse2MouseDown"/>
+
         <TextBlock HorizontalAlignment="Left" Margin="71,250,0,792" Text="Device ID Number" TextWrapping="Wrap" FontSize ="20" Width="214"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,414,0,628" Text="Device Password" TextWrapping="Wrap" FontSize ="20" Width="214"/>
 
-        <Image Width="40" Height="40" Source="/question.png" Margin="252,236,1618,794"  MouseDown="ToggleUsernamePopup" RenderTransformOrigin="0.523,0.5"/>
-        
-        <Popup Margin="252,236,1618,794" Name="UsernameAndPasswordPopup"  
+        <Image Width="40" Height="40" Source="/question.png" Margin="257,241,1623,799"  MouseDown="ToggleUsernamePopup" RenderTransformOrigin="0.523,0.5"/>
+
+        <Popup Margin="252,236,1468,644" Name="UsernameAndPasswordPopup"  
                          Width="200" Height="200" Placement="Center" IsOpen="False">
             <Grid Background="LightGray">
                 <TextBlock TextWrapping="Wrap">
@@ -80,6 +50,7 @@
                 </TextBlock>
             </Grid>
         </Popup>
+
 
 
 
