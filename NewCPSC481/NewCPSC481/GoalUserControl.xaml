@@ -6,26 +6,67 @@
              xmlns:local="clr-namespace:NewCPSC481"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock FontSize="40"
+    <Viewbox Margin="0,1,0,0">
+        <Grid Height="442">
+            <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="40,38,0,0" 
                                Text="Lose weight" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock FontSize="30"
+            <TextBlock FontSize="30"
                         HorizontalAlignment="Left" Margin="40,96,0,0" 
                                Text="Start" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
-        <TextBlock FontSize="20"
+            <TextBlock FontSize="20"
                         HorizontalAlignment="Left" Margin="40,141,0,0" 
                                Text="2021/02/01" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
-        <TextBlock FontSize="30"
-            HorizontalAlignment="Center" Margin="0,104,0,0" 
+            <TextBlock FontSize="30"
+            HorizontalAlignment="Left" Margin="376,104,0,0" 
+            Text="Today" 
+            TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+            <TextBlock FontSize="20"
+                        HorizontalAlignment="Left" Margin="375,141,0,0" 
+                               Text="2021/02/04" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+            <TextBlock FontSize="30"
+            HorizontalAlignment="Left" Margin="655,104,0,0" 
             Text="End" 
             TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
-        <TextBlock FontSize="20"
-                        HorizontalAlignment="Left" Margin="375,141,0,0" 
+            <TextBlock FontSize="20"
+                        HorizontalAlignment="Left" Margin="654,141,0,0" 
                                Text="2021/02/07" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
-    </Grid>
+
+            <TextBlock FontSize="35"
+                        HorizontalAlignment="Left" Margin="40,180,0,0" 
+                        Text="Progress" 
+                        TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="214"/>
+            <TextBlock FontSize="30"
+                        HorizontalAlignment="Left" Margin="40,253,0,0" 
+                        TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Height="39" Text="Start"/>
+            <TextBlock FontSize="20"
+                        HorizontalAlignment="Left" Margin="40,298,0,0" 
+                               Text="2021/02/01" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+            <TextBlock FontSize="30"
+                        HorizontalAlignment="Left" Margin="365,258,0,0" 
+                        TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Height="39" Text="Current"/>
+            <TextBlock FontSize="20"
+                        HorizontalAlignment="Left" Margin="365,298,0,0" 
+                               Text="2021/02/01" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+            <TextBlock FontSize="30"
+                        HorizontalAlignment="Left" Margin="655,258,0,0" 
+                        TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Height="39" Text="Goal"/>
+            <TextBlock FontSize="20"
+                        HorizontalAlignment="Left" Margin="655,303,0,0" 
+                               Text="2021/02/01" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75" Grid.RowSpan="2"/>
+            <ProgressBar Margin="195,373,164,39" Value="67" Height="30" Width="441"/>
+            <TextBlock FontSize="20"
+                        HorizontalAlignment="Left" Margin="128,373,0,0" 
+                               Text="67%" 
+                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+        </Grid>
+    </Viewbox>
 </UserControl>
