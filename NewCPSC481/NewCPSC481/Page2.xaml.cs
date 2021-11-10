@@ -28,12 +28,19 @@ namespace CPSC481WPF
         public Page2()
         {
             InitializeComponent();
+
+
+
         }
 
         public Page2(User user) : this()
         {
             this.user = user;
-            this.DataContext = user;
+            DataContext = user;
+
+            //fill recent data with user data
+            //user data is datetime date, int steps, float calories, float bpm
+            DailyStepsTaken.Text = user.collectedData[user.collectedData.Count-1].Item2.ToString();
         }
 
         private void LogOutButtonClick(object sender, RoutedEventArgs e)
@@ -46,6 +53,7 @@ namespace CPSC481WPF
         private void RecentDataButtonClick(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 1;
+                            MessageBox.Show("Invalid Credentials", user.collectedData[0].Item3.ToString(), MessageBoxButton.OK); //remove this just a test
         }
 
         private void WorkoutsButtonClick(object sender, RoutedEventArgs e)

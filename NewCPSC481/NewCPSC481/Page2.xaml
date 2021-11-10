@@ -148,7 +148,7 @@
                     <Rectangle HorizontalAlignment="Left" Height="100" Margin="100,320,0,0" 
                                Fill="Blue"
                                Stroke="Blue" VerticalAlignment="Top" Width="100"/>
-                    <TextBlock FontSize="40"
+                    <TextBlock Name="DailyStepsTaken" FontSize="40"
                         HorizontalAlignment="Left" Margin="105,420,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
