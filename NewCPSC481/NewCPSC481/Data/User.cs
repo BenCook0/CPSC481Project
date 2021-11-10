@@ -7,21 +7,19 @@ namespace NewCPSC481.Data
         public string DeviceId { get; set; }
         public string Password { get; set; }
 
+        //list of workouts, workout class is Datetime and an array of (string, int, int)
         public List<Workout> WorkoutHistory { get; set; }
 
+        //List of Goals
+        public List<Goal> Goals { get; set; }
 
-        public List<int> StepsTaken {get; set; }
-        
-        public User() => StepsTaken = new List<int>();
-
-        public static User Create(string deviceId, string password, int steps, List<Workout> workouts)
+        public static User Create(string deviceId, string password, List<Workout> workouts)
         {
             return new User
             {
                 DeviceId = deviceId,
                 Password = password,
-                StepsTaken = new List<int> { steps }
-                WorkoutHistory = workouts;
+                WorkoutHistory = workouts
             };
         }
     }

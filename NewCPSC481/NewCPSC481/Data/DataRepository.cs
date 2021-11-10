@@ -60,10 +60,11 @@ namespace NewCPSC481.Data
                     ("Situp", 8, 9),
             });
 
-
             List <Workout> User1Workouts = new List<Workout> { WorkoutA, WorkoutB, WorkoutC, WorkoutD };
             List<Workout> User2Workouts = new List<Workout> {WorkoutB, WorkoutD };
 
+
+            //add users to the repository
             repository.Add(User.Create("User1", "Pass1", User1Workouts));
             repository.Add(User.Create("User2", "Pass2", User2Workouts));
             return repository;
