@@ -33,14 +33,48 @@ namespace CPSC481WPF
 
         }
 
+
         public Page2(User user) : this()
         {
             this.user = user;
             DataContext = user;
 
             //fill recent data with user data
+
+            //Daily data
             //user data is datetime date, int steps, float calories, float bpm
+            InitalizeRecentData();
+            InitalizeWeeklyData();
+        }
+
+        //initalize pages function
+        private void InitalizeRecentData()
+        {
             DailyStepsTaken.Text = user.collectedData[user.collectedData.Count-1].Item2.ToString();
+            DailyCalories.Text = user.collectedData[user.collectedData.Count - 1].Item3.ToString();
+            DailyHeartRate.Text = user.collectedData[user.collectedData.Count - 1].Item4.ToString();
+        }
+
+        private void InitalizeWeeklyData()
+        {
+            float weeklyStepsAvg = 0;
+            float WeeklyCalorieAvg = 0;
+            float weeklyHeartRateAvg = 0;
+
+            //if this is a new user and they have less than 1 week of data then just count them, otherwise
+            for(int i = Math.Max(user.collectedData.Count -7,0); i < user.collectedData.Count; i++)
+            {
+                weeklyStepsAvg += user.collectedData[i].Item2;
+                WeeklyCalorieAvg += user.collectedData[i].Item3;
+                weeklyHeartRateAvg += user.collectedData[i].Item4;
+            }
+            weeklyStepsAvg = weeklyStepsAvg / (Math.Min(7, user.collectedData.Count));
+            WeeklyCalorieAvg = WeeklyCalorieAvg / Math.Min(7, user.collectedData.Count);
+            weeklyHeartRateAvg = weeklyHeartRateAvg / (Math.Min(7, user.collectedData.Count));
+
+            WeeklyStepsTaken.Text = weeklyStepsAvg.ToString();
+            WeeklyCalories.Text = WeeklyCalorieAvg.ToString();
+            WeeklyHeartRate.Text = weeklyHeartRateAvg.ToString();
         }
 
         private void LogOutButtonClick(object sender, RoutedEventArgs e)

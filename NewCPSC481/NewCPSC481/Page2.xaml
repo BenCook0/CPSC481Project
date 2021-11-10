@@ -154,7 +154,7 @@
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
 
                     <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="330,250,0,0" 
+                        HorizontalAlignment="Left" Margin="330,250,0,0"
                                Text="Calories Burned" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- will replace the blue rectangles with images-->
@@ -163,6 +163,7 @@
                                Stroke="Blue" VerticalAlignment="Top" Width="100"/>
                     <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="405,420,0,0" 
+                               Name="DailyCalories"
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- will replace the blue rectangles with images-->
@@ -175,6 +176,7 @@
                                Fill="Blue"
                                Stroke="Blue" VerticalAlignment="Top" Width="100"/>
                     <TextBlock FontSize="40"
+                        Name="DailyHeartRate"
                         HorizontalAlignment="Left" Margin="276,670,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
@@ -192,6 +194,7 @@
                                Fill="Blue"
                                Stroke="Blue" VerticalAlignment="Top" Width="100"/>
                     <TextBlock FontSize="40"
+                        Name="WeeklyStepsTaken"
                         HorizontalAlignment="Left" Margin="1305,420,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
@@ -205,6 +208,7 @@
                                Fill="Blue"
                                Stroke="Blue" VerticalAlignment="Top" Width="100"/>
                     <TextBlock FontSize="40"
+                        Name="WeeklyCalories"
                         HorizontalAlignment="Left" Margin="1605,420,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
@@ -218,6 +222,7 @@
                                Fill="Blue"
                                Stroke="Blue" VerticalAlignment="Top" Width="100"/>
                     <TextBlock FontSize="40"
+                        Name="WeeklyHeartRate"
                         HorizontalAlignment="Left" Margin="1455,670,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
