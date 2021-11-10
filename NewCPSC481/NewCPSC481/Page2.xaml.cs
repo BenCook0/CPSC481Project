@@ -80,8 +80,8 @@ namespace CPSC481WPF
 
         private void InitalizeWorkoutListBox()
         {
-            //add a listbox item for each workout
-            for(int i = 0; i < user.WorkoutHistory.Count; i++)
+            //puts them in reverse order by date
+            for (int i = user.WorkoutHistory.Count-1; i > -1; i--)
             {
                 ListBoxItem item = new ListBoxItem();
                 item.Content = user.WorkoutHistory[i].workoutDate.ToString();
