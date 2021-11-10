@@ -114,12 +114,21 @@ namespace NewCPSC481.Data
                 false
                 );
 
+            //set each users goals
             List<Goal> User1Goals = new List<Goal> { goalA, goalB, goalC, goalD };
             List<Goal> User2Goals = new List<Goal> { goalA, goalD };
 
+
+            List<(DateTime, int, float, float)> User1collectedData = new List<(DateTime, int, float, float)>()
+            {
+                (new DateTime(2021,11,01),2000,300,95)             //date, steps, calories burned, bpm heartrate
+            };
+
+            List<(DateTime, int, float, float)> User2collectedData = new List<(DateTime, int, float, float)>();
+
             //add users to the repository
-            repository.Add(User.Create("User1", "Pass1", User1Workouts, User1Goals));
-            repository.Add(User.Create("User2", "Pass2", User2Workouts, User2Goals));
+            repository.Add(User.Create("User1", "Pass1", User1Workouts, User1Goals, User1collectedData));
+            repository.Add(User.Create("User2", "Pass2", User2Workouts, User2Goals, User2collectedData));
             return repository;
         }
     }

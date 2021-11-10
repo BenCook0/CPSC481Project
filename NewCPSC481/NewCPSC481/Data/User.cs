@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace NewCPSC481.Data
 {
@@ -13,14 +14,18 @@ namespace NewCPSC481.Data
         //List of Goals
         public List<Goal> GoalList { get; set; }
 
-        public static User Create(string deviceId, string password, List<Workout> workouts, List<Goal> goals)
+        //collected data, each is made of "Datetime, int (steps taken), int (cals burned) and int (avg bpm)
+        public List<(DateTime, int, float, float)> collectedData;
+
+        public static User Create(string deviceId, string password, List<Workout> workouts, List<Goal> goals, List<(DateTime, int, float, float)> data)
         {
             return new User
             {
                 DeviceId = deviceId,
                 Password = password,
                 WorkoutHistory = workouts,
-                GoalList = goals
+                GoalList = goals,
+                collectedData = data
             };
         }
     }
