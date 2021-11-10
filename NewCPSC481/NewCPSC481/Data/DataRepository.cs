@@ -26,6 +26,7 @@ namespace NewCPSC481.Data
             return Instance.Users.FirstOrDefault(x => x.DeviceId == deviceId && x.Password == password);            
         }
 
+
         private static DataRepository InitializeData()
         {
             //initalize repository
@@ -74,8 +75,7 @@ namespace NewCPSC481.Data
                 128,
                 300,
                 true,
-                true,
-                128 / 300
+                true
                 );
 
             //no progress bar example
@@ -118,13 +118,23 @@ namespace NewCPSC481.Data
             List<Goal> User1Goals = new List<Goal> { goalA, goalB, goalC, goalD };
             List<Goal> User2Goals = new List<Goal> { goalA, goalD };
 
+            //user 1 - 60 days of random data
+            List<(DateTime, int, float, float)> User1collectedData = new List<(DateTime, int, float, float)>();
+            DateTime user1Start = new DateTime(2021, 10, 01);
 
-            List<(DateTime, int, float, float)> User1collectedData = new List<(DateTime, int, float, float)>()
+            Random rnd = new Random();
+
+            for (int i = 0; i < 60; i++)
             {
-                (new DateTime(2021,11,01),2000,300,95)             //date, steps, calories burned, bpm heartrate
-            };
+                //generatees 60 days of random data
+                User1collectedData.Add((user1Start, rnd.Next(600, 4000), rnd.Next(50, 600), rnd.Next(80, 140)));
+                user1Start.AddDays(1); //generate 60 days of data starting october 1st
+            }
 
-            List<(DateTime, int, float, float)> User2collectedData = new List<(DateTime, int, float, float)>();
+            List<(DateTime, int, float, float)> User2collectedData = new List<(DateTime, int, float, float)>()
+            {
+                (new DateTime(2021,11,01),2000,300,95),             //date, steps, calories burned, bpm heartrate
+            };
 
             //add users to the repository
             repository.Add(User.Create("User1", "Pass1", User1Workouts, User1Goals, User1collectedData));

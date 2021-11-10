@@ -14,7 +14,7 @@ namespace NewCPSC481.Data
         //List of Goals
         public List<Goal> GoalList { get; set; }
 
-        //collected data, each is made of "Datetime, int (steps taken), int (cals burned) and int (avg bpm)
+        //collected data, each is made of "Datetime, int (steps taken), float (cals burned) and float (avg bpm)
         public List<(DateTime, int, float, float)> collectedData;
 
         public static User Create(string deviceId, string password, List<Workout> workouts, List<Goal> goals, List<(DateTime, int, float, float)> data)
