@@ -46,6 +46,7 @@ namespace CPSC481WPF
             InitalizeRecentData();
             InitalizeWeeklyData();
             InitalizeWorkoutListBox();
+            InitalizeWorkoutGoalListBox();
         }
 
         //initalize page functions
@@ -86,6 +87,18 @@ namespace CPSC481WPF
                 ListBoxItem item = new ListBoxItem();
                 item.Content = user.WorkoutHistory[i].workoutDate.ToString();
                 WorkoutsListBox.Items.Add(item);
+            }
+
+        }
+
+        private void InitalizeWorkoutGoalListBox()
+        {
+            //puts them in reverse order by date
+            for (int i = user.GoalList.Count - 1; i > -1; i--)
+            {
+                ListBoxItem item = new ListBoxItem();
+                item.Content = user.GoalList[i].goalName;
+                GoalListBox.Items.Add(item);
             }
 
         }

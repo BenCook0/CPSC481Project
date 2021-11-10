@@ -104,12 +104,12 @@ namespace NewCPSC481.Data
 
             //no progress bar OR percent example
             Goal goalD = new Goal(
-                "Burn Extra Calories",
-                new DateTime(2021, 11, 10),
-                new DateTime(2021, 12, 15),
+                "Lose Weight",
+                new DateTime(2021, 10, 10),
+                new DateTime(2021, 12, 19),
                 "Calories",
                 128,
-                300,
+                400,
                 false,
                 false
                 );
