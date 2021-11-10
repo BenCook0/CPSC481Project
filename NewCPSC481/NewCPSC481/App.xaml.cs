@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using NewCPSC481.Data;
 
 namespace NewCPSC481
 {
@@ -12,7 +13,6 @@ namespace NewCPSC481
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
-    { 
-        
+    {
     }
 }

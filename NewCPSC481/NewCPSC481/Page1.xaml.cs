@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using NewCPSC481.Data;
 
 namespace CPSC481WPF
 {
@@ -37,7 +38,7 @@ namespace CPSC481WPF
             //setup timer for the swapping components
             timer = new DispatcherTimer();
             timer.Tick += timer_tick;
-            timer.Interval = System.TimeSpan.FromMilliseconds(1000);
+            timer.Interval = TimeSpan.FromMilliseconds(1000);
             timer.Start();
         }
 
@@ -76,7 +77,17 @@ namespace CPSC481WPF
 
         private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Page2());
+            var deviceId = this.deviceId.Text;
+            var psw = this.passwordField.Password;
+
+            var found = DataRepository.Login(deviceId, psw);
+            if (found == null)
+            {
+                MessageBox.Show("Invalid Credentials", "Login", MessageBoxButton.OK);
+                return;
+            }
+
+            this.NavigationService.Navigate(new Page2() {DataContext = found});
             this.NavigationService.RemoveBackEntry();
         }
 

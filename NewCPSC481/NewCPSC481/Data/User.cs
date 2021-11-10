@@ -2,7 +2,7 @@
 
 namespace NewCPSC481.Data
 {
-    public class User
+    public class User 
     {
         public string DeviceId { get; set; }
         public string Password { get; set; }

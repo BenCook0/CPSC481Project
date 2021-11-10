@@ -365,5 +365,6 @@
         </TabControl>
         <Button FontSize="40"
             Content="Log Out" Margin="1742,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.053,-1.116" Click="LogOutButtonClick" Height="60" HorizontalAlignment="Left" Width="154"/>
+        <TextBlock FontSize="30" HorizontalAlignment="Left" Margin="1515,65,0,0" Text="{Binding Path=DeviceId}" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>
 </Page>

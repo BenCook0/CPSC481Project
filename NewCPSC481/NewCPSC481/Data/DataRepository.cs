@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Threading;
+
 namespace NewCPSC481.Data
 {
     public class DataRepository
@@ -16,10 +20,16 @@ namespace NewCPSC481.Data
 
         public static DataRepository Instance => singleton ??= InitializeData();
 
+
+        public static User Login(string deviceId, string password)
+        {
+            return Instance.Users.FirstOrDefault(x => x.DeviceId == deviceId && x.Password == password);            
+        }
+
         private static DataRepository InitializeData()
         {
             var repository = new DataRepository();
-            repository.Add(User.Create("User1", "pass1", 10000))
+            repository.Add(User.Create("User1", "Pass1", 10000));
             return repository;
         }
     }

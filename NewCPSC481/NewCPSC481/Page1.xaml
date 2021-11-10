@@ -15,7 +15,7 @@
         <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="0,0,1857,0"/>
         <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="316,0,1573,0"/>
 
-        <TextBox Name ="usernameField" Text="Device ID" TextWrapping="NoWrap" Margin="61,307,1606,712" FontSize="30"/>
+        <TextBox Name ="deviceId" Text="Device ID" TextWrapping="NoWrap" Margin="61,307,1606,712" FontSize="30"/>
 
         <PasswordBox x:Name="passwordField" HorizontalAlignment="Left" Margin="63,447,0,565" Width="251"/>
 
