@@ -15,9 +15,10 @@ namespace NewCPSC481.Data
         public bool hasProgressBar;
 
         //nullable, if its not checked by the user
-        public float? percentTowardsGoal;
+        public bool hasPercentShown;
+        public float percentTowardsGoal;
 
-        public Goal(string goalName,  DateTime startDate,  DateTime endDate, string goalMetric, float current, float goal, bool hasProgressBar,float? percentTowardsGoal)
+        public Goal(string goalName,  DateTime startDate,  DateTime endDate, string goalMetric, float current, float goal, bool hasProgressBar, bool hasPercentShown)
         {
             this.goalName = goalName;
             this.startDate = startDate;
@@ -26,7 +27,8 @@ namespace NewCPSC481.Data
             this.current = current;
             this.goal = goal;
             this.hasProgressBar = hasProgressBar;
-            this.percentTowardsGoal = percentTowardsGoal;
+            this.hasPercentShown = hasPercentShown;
+            this.percentTowardsGoal = current/goal;
         }
     }
 }

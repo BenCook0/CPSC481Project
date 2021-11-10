@@ -11,15 +11,16 @@ namespace NewCPSC481.Data
         public List<Workout> WorkoutHistory { get; set; }
 
         //List of Goals
-        public List<Goal> Goals { get; set; }
+        public List<Goal> GoalList { get; set; }
 
-        public static User Create(string deviceId, string password, List<Workout> workouts)
+        public static User Create(string deviceId, string password, List<Workout> workouts, List<Goal> goals)
         {
             return new User
             {
                 DeviceId = deviceId,
                 Password = password,
-                WorkoutHistory = workouts
+                WorkoutHistory = workouts,
+                GoalList = goals
             };
         }
     }

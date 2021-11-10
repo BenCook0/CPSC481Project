@@ -61,12 +61,65 @@ namespace NewCPSC481.Data
             });
 
             List <Workout> User1Workouts = new List<Workout> { WorkoutA, WorkoutB, WorkoutC, WorkoutD };
-            List<Workout> User2Workouts = new List<Workout> {WorkoutB, WorkoutD };
+            List <Workout> User2Workouts = new List<Workout> {WorkoutB, WorkoutD };
 
+            //build goals
+
+            //standard goal example
+            Goal goalA = new Goal(
+                "Burn Extra Calories",
+                new DateTime(2021, 11, 10),
+                new DateTime(2021, 12, 15),
+                "Calories",
+                128,
+                300,
+                true,
+                true,
+                128 / 300
+                );
+
+            //no progress bar example
+            Goal goalB = new Goal(
+                "Do More Cardio",
+                new DateTime(2021, 12, 10),
+                new DateTime(2021, 12, 20),
+                "Avg HeartRate",
+                90,
+                110,
+                false,
+                true
+                );
+
+            //progress bar but no percent example
+            Goal goalC = new Goal(
+                "Run Longer Distances",
+                new DateTime(2021, 11, 10),
+                new DateTime(2021, 12, 15),
+                "Steps Taken",
+                30000,
+                40000,
+                true,
+                false
+                );
+
+            //no progress bar OR percent example
+            Goal goalD = new Goal(
+                "Burn Extra Calories",
+                new DateTime(2021, 11, 10),
+                new DateTime(2021, 12, 15),
+                "Calories",
+                128,
+                300,
+                false,
+                false
+                );
+
+            List<Goal> User1Goals = new List<Goal> { goalA, goalB, goalC, goalD };
+            List<Goal> User2Goals = new List<Goal> { goalA, goalD };
 
             //add users to the repository
-            repository.Add(User.Create("User1", "Pass1", User1Workouts));
-            repository.Add(User.Create("User2", "Pass2", User2Workouts));
+            repository.Add(User.Create("User1", "Pass1", User1Workouts, User1Goals));
+            repository.Add(User.Create("User2", "Pass2", User2Workouts, User2Goals));
             return repository;
         }
     }
