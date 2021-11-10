@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace CPSC481WPF
 {
     /// <summary>
@@ -19,7 +20,9 @@ namespace CPSC481WPF
     /// </summary>
     public partial class Page2 : Page
     {
+        //stubbed for now, will build one each later
         GoalUserControl GoalUserCOntrol = new GoalUserControl();
+        WorkoutUserControl WorkoutUserControl = new WorkoutUserControl();
         public Page2()
         {
             InitializeComponent();
@@ -36,13 +39,30 @@ namespace CPSC481WPF
             MainTabControl.SelectedIndex = 1;
         }
 
-        private void GraphicalDataButtonClick(object sender, RoutedEventArgs e)
+        private void WorkoutsButtonClick(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 2;
         }
-        private void SetGoalButtonClick(object sender, RoutedEventArgs e)
+
+        private void GraphicalDataButtonClick(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 3;
+        }
+        private void SetGoalButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainTabControl.SelectedIndex = 4;
+        }
+
+        //workout functions below
+        private void WorkoutListBoxSelection(object sender, SelectionChangedEventArgs e)
+        {
+            if (WorkoutsListBox.SelectedItem != null)
+            {
+                workoutTestTextbox.Text = (String)((ListBoxItem)WorkoutsListBox.SelectedItem).Content;
+            }
+
+            WorkoutListStackPanel.Children.Clear();
+            WorkoutListStackPanel.Children.Add(WorkoutUserControl);
         }
 
         //goals functions below

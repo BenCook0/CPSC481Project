@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="Bitfit Logo.png" />
+    <None Remove="BitfitFrontPicture.jpeg" />
     <None Remove="bitfitGraph.png" />
     <None Remove="Hyfic Logo.png" />
     <None Remove="Question.png" />
@@ -15,6 +16,7 @@
 
   <ItemGroup>
     <Resource Include="Bitfit Logo.png" />
+    <Resource Include="BitfitFrontPicture.jpeg" />
     <Resource Include="bitfitGraph.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
