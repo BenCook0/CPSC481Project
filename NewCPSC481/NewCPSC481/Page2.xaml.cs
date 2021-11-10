@@ -45,9 +45,10 @@ namespace CPSC481WPF
             //user data is datetime date, int steps, float calories, float bpm
             InitalizeRecentData();
             InitalizeWeeklyData();
+            InitalizeWorkoutListBox();
         }
 
-        //initalize pages function
+        //initalize page functions
         private void InitalizeRecentData()
         {
             DailyStepsTaken.Text = user.collectedData[user.collectedData.Count-1].Item2.ToString();
@@ -75,6 +76,18 @@ namespace CPSC481WPF
             WeeklyStepsTaken.Text = weeklyStepsAvg.ToString();
             WeeklyCalories.Text = WeeklyCalorieAvg.ToString();
             WeeklyHeartRate.Text = weeklyHeartRateAvg.ToString();
+        }
+
+        private void InitalizeWorkoutListBox()
+        {
+            //add a listbox item for each workout
+            for(int i = 0; i < user.WorkoutHistory.Count; i++)
+            {
+                ListBoxItem item = new ListBoxItem();
+                item.Content = user.WorkoutHistory[i].workoutDate.ToString();
+                WorkoutsListBox.Items.Add(item);
+            }
+
         }
 
         private void LogOutButtonClick(object sender, RoutedEventArgs e)
