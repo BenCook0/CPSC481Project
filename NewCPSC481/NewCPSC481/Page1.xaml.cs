@@ -87,7 +87,7 @@ namespace CPSC481WPF
                 return;
             }
 
-            this.NavigationService.Navigate(new Page2() {DataContext = found});
+            this.NavigationService.Navigate(new Page2(found));
             this.NavigationService.RemoveBackEntry();
         }
 

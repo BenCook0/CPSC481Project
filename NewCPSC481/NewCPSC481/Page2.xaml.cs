@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using NewCPSC481.Data;
 
 
 namespace CPSC481WPF
@@ -20,6 +21,7 @@ namespace CPSC481WPF
     /// </summary>
     public partial class Page2 : Page
     {
+        private User user;
         //stubbed for now, will build one each later
         GoalUserControl GoalUserCOntrol = new GoalUserControl();
         WorkoutUserControl WorkoutUserControl = new WorkoutUserControl();
@@ -27,6 +29,13 @@ namespace CPSC481WPF
         {
             InitializeComponent();
         }
+
+        public Page2(User user) : this()
+        {
+            this.user = user;
+            this.DataContext = user;
+        }
+
         private void LogOutButtonClick(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Page1());
