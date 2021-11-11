@@ -143,7 +143,7 @@ namespace CPSC481WPF
         {
             if (WorkoutsListBox.SelectedItem != null)
             {
-                workoutTestTextbox.Text = (String)((ListBoxItem)WorkoutsListBox.SelectedItem).Content;
+                workoutTestTextbox.Text = ((ListBoxItem)WorkoutsListBox.SelectedItem).Content.ToString();
             }
             WorkoutUserControl.Visibility = Visibility.Visible;
 
@@ -155,17 +155,18 @@ namespace CPSC481WPF
             setGoalPopup.IsOpen = true;
         }
 
-        private void GoalListBoxSelected(object sender, RoutedEventArgs e)
+        private void GoalsSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (GoalListBox.SelectedItem != null)
             {
-                testTextbox.Text = (String)((ListBoxItem)GoalListBox.SelectedItem).Content;
+                testTextbox.Text = ((ListBoxItem)GoalListBox.SelectedItem).Content.ToString();
             }
 
             GoalUserControl.Visibility = Visibility.Visible;
+
         }
 
-        private void deleteGoalButtonClick(object sender, RoutedEventArgs e)
+        private void DeleteGoalButtonClick(object sender, RoutedEventArgs e)
         {  
             if(GoalListBox.Items.IndexOf(GoalListBox.SelectedItem) != -1)
             {
@@ -175,47 +176,5 @@ namespace CPSC481WPF
             }
             GoalUserControl.Visibility = Visibility.Hidden;
         }
-
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_3(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_4(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
     }
 }
