@@ -232,8 +232,8 @@
 
             </TabItem>
             <TabItem Header="Graphs" FontSize="40" Height="57" VerticalAlignment="Top">
-                
-                
+
+
                 <Grid Background="AliceBlue">
                     <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="Steps" HorizontalAlignment="Left" Margin="1042,378,0,0" VerticalAlignment="Top" Height="20" Width="100" FontSize="12">
                         <CheckBox.LayoutTransform>
@@ -350,6 +350,9 @@
         </TabControl>
         <Button FontSize="40"
             Content="Log Out" Margin="1742,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.053,-1.116" Click="LogOutButtonClick" Height="60" HorizontalAlignment="Left" Width="154"/>
+
+        <!--print button stub, maybe add a popup if we can get it to work -->
+        <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="BasicPrint.png" Margin="1600,10,0,0"/>
         <!-- example of data binding-->
         <TextBlock FontSize="30" HorizontalAlignment="Left" Margin="1515,65,0,0" Text="{Binding Path=DeviceId}" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>
