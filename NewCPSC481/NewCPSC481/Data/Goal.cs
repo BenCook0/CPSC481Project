@@ -1,34 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NewCPSC481.Data
 {
     public class Goal
     {
-        public string goalName;
-        public DateTime startDate;
-        public DateTime endDate;
-        public string goalMetric;
-        public float current;
-        public float goal;
-        public bool hasProgressBar;
+        public string Name { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string GoalMetric { get; set; }
+        public float Current { get; set; }
+        public float Target { get; set; }
+        public bool ShowProgress { get; set; }
 
         //nullable, if its not checked by the user
-        public bool hasPercentShown;
-        public float percentTowardsGoal;
+        public bool HasPercentShown { get; set; }
+        public float PercentTowardsGoal { get; set; }
 
-        public Goal(string goalName,  DateTime startDate,  DateTime endDate, string goalMetric, float current, float goal, bool hasProgressBar, bool hasPercentShown)
+        public Goal(string name,  DateTime startDate,  DateTime endDate, string goalMetric, float current, float target, bool showProgress, bool hasPercentShown)
         {
-            this.goalName = goalName;
-            this.startDate = startDate;
-            this.endDate = endDate;
-            this.goalMetric = goalMetric;
-            this.current = current;
-            this.goal = goal;
-            this.hasProgressBar = hasProgressBar;
-            this.hasPercentShown = hasPercentShown;
-            this.percentTowardsGoal = current/goal;
+            Name = name;
+            StartDate = startDate;
+            EndDate = endDate;
+            GoalMetric = goalMetric;
+            Current = current;
+            Target = target;
+            ShowProgress = showProgress;
+            HasPercentShown = hasPercentShown;
+            PercentTowardsGoal = current/target;
         }
     }
 }

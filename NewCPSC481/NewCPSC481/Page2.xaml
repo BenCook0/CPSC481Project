@@ -124,7 +124,7 @@
                     <Button Content="View a graphical breakdown of your fitness data"
                             FontSize="40"
                             HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="GraphicalDataButtonClick" Margin="224,578,0,0" Grid.Column="1"/>
-                    <Button Content="Set a goal or view your current progress"
+                    <Button Content="Set a Target or view your current progress"
                             FontSize="40"
                             HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="SetGoalButtonClick" Margin="224,743,0,0" Grid.Column="1"/>
                 </Grid>

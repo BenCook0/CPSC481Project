@@ -96,7 +96,7 @@ namespace CPSC481WPF
             for (var i = user.GoalList.Count - 1; i > -1; i--)
             {
                 var item = new ListBoxItem();
-                item.Content = user.GoalList[i].goalName;
+                item.Content = user.GoalList[i].Name;
                 GoalListBox.Items.Add(item);
             }
 

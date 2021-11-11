@@ -66,7 +66,7 @@ namespace NewCPSC481.Data
 
             //build goals
 
-            //standard goal example
+            //standard Target example
             Goal goalA = new Goal(
                 "Burn Extra Calories",
                 new DateTime(2021, 11, 10),
