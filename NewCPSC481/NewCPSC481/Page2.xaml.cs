@@ -1,16 +1,7 @@
 ﻿using NewCPSC481;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using NewCPSC481.Data;
 
 
@@ -23,18 +14,15 @@ namespace CPSC481WPF
     {
         private User user;
         //stubbed for now, will build one each later
-        GoalUserControl GoalUserControl = new GoalUserControl();
-        WorkoutUserControl WorkoutUserControl = new WorkoutUserControl();
+        readonly GoalUserControl goalUserControl = new GoalUserControl();
+        readonly WorkoutUserControl workoutUserControl = new WorkoutUserControl();
         public Page2()
         {
             InitializeComponent();
 
             //fill recent data with user data
-
-            WorkoutListStackPanel.Children.Add(WorkoutUserControl);
-            CurrentGoalStackPanel.Children.Add(GoalUserControl);
-
-
+            WorkoutListStackPanel.Children.Add(workoutUserControl);
+            CurrentGoalStackPanel.Children.Add(goalUserControl);
         }
 
 
@@ -49,10 +37,10 @@ namespace CPSC481WPF
             InitalizeWeeklyData();
             //fill workout list boxes
             InitalizeWorkoutListBox();
-            WorkoutUserControl.Visibility = Visibility.Hidden;
+            workoutUserControl.Visibility = Visibility.Hidden;
 
             InitalizeGoalListBox();
-            GoalUserControl.Visibility = Visibility.Hidden;
+            goalUserControl.Visibility = Visibility.Hidden;
 
 
         }
@@ -60,9 +48,9 @@ namespace CPSC481WPF
         //initalize page functions
         private void InitalizeRecentData()
         {
-            DailyStepsTaken.Text = user.collectedData[user.collectedData.Count-1].Item2.ToString();
-            DailyCalories.Text = user.collectedData[user.collectedData.Count - 1].Item3.ToString();
-            DailyHeartRate.Text = user.collectedData[user.collectedData.Count - 1].Item4.ToString();
+            DailyStepsTaken.Text = user.CollectedData[user.CollectedData.Count-1].Item2.ToString();
+            DailyCalories.Text = user.CollectedData[user.CollectedData.Count - 1].Item3.ToString();
+            DailyHeartRate.Text = user.CollectedData[user.CollectedData.Count - 1].Item4.ToString();
         }
 
         private void InitalizeWeeklyData()
@@ -72,15 +60,15 @@ namespace CPSC481WPF
             float weeklyHeartRateAvg = 0;
 
             //if this is a new user and they have less than 1 week of data then just count them, otherwise
-            for(int i = Math.Max(user.collectedData.Count -7,0); i < user.collectedData.Count; i++)
+            for(int i = Math.Max(user.CollectedData.Count -7,0); i < user.CollectedData.Count; i++)
             {
-                weeklyStepsAvg += user.collectedData[i].Item2;
-                WeeklyCalorieAvg += user.collectedData[i].Item3;
-                weeklyHeartRateAvg += user.collectedData[i].Item4;
+                weeklyStepsAvg += user.CollectedData[i].Item2;
+                WeeklyCalorieAvg += user.CollectedData[i].Item3;
+                weeklyHeartRateAvg += user.CollectedData[i].Item4;
             }
-            weeklyStepsAvg = weeklyStepsAvg / (Math.Min(7, user.collectedData.Count));
-            WeeklyCalorieAvg = WeeklyCalorieAvg / Math.Min(7, user.collectedData.Count);
-            weeklyHeartRateAvg = weeklyHeartRateAvg / (Math.Min(7, user.collectedData.Count));
+            weeklyStepsAvg = weeklyStepsAvg / (Math.Min(7, user.CollectedData.Count));
+            WeeklyCalorieAvg = WeeklyCalorieAvg / Math.Min(7, user.CollectedData.Count);
+            weeklyHeartRateAvg = weeklyHeartRateAvg / (Math.Min(7, user.CollectedData.Count));
 
             WeeklyStepsTaken.Text = weeklyStepsAvg.ToString();
             WeeklyCalories.Text = WeeklyCalorieAvg.ToString();
@@ -89,11 +77,14 @@ namespace CPSC481WPF
 
         private void InitalizeWorkoutListBox()
         {
+            WorkoutsListBox.Items.Clear();
             //puts them in reverse order by date
-            for (int i = user.WorkoutHistory.Count-1; i > -1; i--)
+            for (var i = user.WorkoutHistory.Count-1; i > -1; i--)
             {
-                ListBoxItem item = new ListBoxItem();
-                item.Content = user.WorkoutHistory[i].workoutDate.ToString();
+                var item = new ListBoxItem
+                {
+                    Content = user.WorkoutHistory[i].WorkoutDate.ToString("g")
+                };
                 WorkoutsListBox.Items.Add(item);
             }
 
@@ -102,9 +93,9 @@ namespace CPSC481WPF
         private void InitalizeGoalListBox()
         {
             //puts them in reverse order by date
-            for (int i = user.GoalList.Count - 1; i > -1; i--)
+            for (var i = user.GoalList.Count - 1; i > -1; i--)
             {
-                ListBoxItem item = new ListBoxItem();
+                var item = new ListBoxItem();
                 item.Content = user.GoalList[i].goalName;
                 GoalListBox.Items.Add(item);
             }
@@ -113,15 +104,15 @@ namespace CPSC481WPF
 
         private void LogOutButtonClick(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Page1());
-            this.NavigationService.RemoveBackEntry();
+            NavigationService.Navigate(new Page1());
+            NavigationService.RemoveBackEntry();
         }
 
         //welcome page click functions
         private void RecentDataButtonClick(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 1;
-                            MessageBox.Show("Invalid Credentials", user.collectedData[0].Item3.ToString(), MessageBoxButton.OK); //remove this just a test
+                            MessageBox.Show("Invalid Credentials", user.CollectedData[0].Item3.ToString(), MessageBoxButton.OK); //remove this just a test
         }
 
         private void WorkoutsButtonClick(object sender, RoutedEventArgs e)
@@ -141,12 +132,23 @@ namespace CPSC481WPF
         //workout functions below
         private void WorkoutListBoxSelection(object sender, SelectionChangedEventArgs e)
         {
-            if (WorkoutsListBox.SelectedItem != null)
+            if (WorkoutsListBox.SelectedItem == null)
             {
-                workoutTestTextbox.Text = ((ListBoxItem)WorkoutsListBox.SelectedItem).Content.ToString();
+                workoutUserControl.Visibility = Visibility.Hidden;
+                return;
             }
-            WorkoutUserControl.Visibility = Visibility.Visible;
 
+            var workoutDate = AsDateTime(((ListBoxItem) WorkoutsListBox.SelectedItem).Content.ToString());
+            workoutTestTextbox.Text = workoutDate.ToString("g");
+
+            workoutUserControl.SetWorkout(user.GetWorkoutForDate(workoutDate));
+
+            workoutUserControl.Visibility = Visibility.Visible;
+        }
+
+        private static DateTime AsDateTime(string value)
+        {
+            return DateTime.Parse(value);
         }
 
         //goals functions below
@@ -162,7 +164,7 @@ namespace CPSC481WPF
                 testTextbox.Text = ((ListBoxItem)GoalListBox.SelectedItem).Content.ToString();
             }
 
-            GoalUserControl.Visibility = Visibility.Visible;
+            goalUserControl.Visibility = Visibility.Visible;
 
         }
 
@@ -174,7 +176,7 @@ namespace CPSC481WPF
                 GoalListBox.Items.RemoveAt(GoalListBox.Items.IndexOf(GoalListBox.SelectedItem));
                 CurrentGoalStackPanel.Children.Clear();
             }
-            GoalUserControl.Visibility = Visibility.Hidden;
+            goalUserControl.Visibility = Visibility.Hidden;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace NewCPSC481.Data
 {
@@ -15,7 +16,7 @@ namespace NewCPSC481.Data
         public List<Goal> GoalList { get; set; }
 
         //collected data, each is made of "Datetime, int (steps taken), float (cals burned) and float (avg bpm)
-        public List<(DateTime, int, float, float)> collectedData;
+        public List<(DateTime, int, float, float)> CollectedData;
 
         public static User Create(string deviceId, string password, List<Workout> workouts, List<Goal> goals, List<(DateTime, int, float, float)> data)
         {
@@ -25,8 +26,14 @@ namespace NewCPSC481.Data
                 Password = password,
                 WorkoutHistory = workouts,
                 GoalList = goals,
-                collectedData = data
+                CollectedData = data
             };
+        }
+
+        public Workout GetWorkoutForDate(DateTime workoutDate)
+        {
+            var found = WorkoutHistory.First(x => x.WorkoutDate == workoutDate);
+            return found;
         }
     }
 }

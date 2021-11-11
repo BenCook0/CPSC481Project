@@ -9,36 +9,16 @@
 
     <Viewbox>
         <Grid>
-            <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="40,38,0,0" 
-                               Text="2021/03/02" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBlock FontSize="30"
-                        HorizontalAlignment="Left" Margin="40,96,0,0" 
-                               Text="Exercise" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
-            <TextBlock FontSize="20"
-                        HorizontalAlignment="Left" Margin="40,157,0,0" 
-                               Text="Pushups" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
-
-            <TextBlock FontSize="30"
-            HorizontalAlignment="Left" Margin="376,104,0,0" 
-            Text="Sets" 
-            TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
-            <TextBlock FontSize="20"
-                        HorizontalAlignment="Left" Margin="375,157,0,0" 
-                               Text="5" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
-
-            <TextBlock FontSize="30"
-            HorizontalAlignment="Left" Margin="655,104,0,0" 
-            Text="Avg Reps" 
-            TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
-            <TextBlock FontSize="20"
-                        HorizontalAlignment="Left" Margin="654,157,0,0" 
-                               Text="12" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Opacity="0.75"/>
+            <DataGrid x:Name="ExerciseGrid" VerticalAlignment="Top"
+                      AutoGenerateColumns="False" CanUserResizeColumns="True"
+                      FontSize="14"
+                      VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="200" FontSize="14" Header="Exercise" Binding="{Binding Path=Name}"/>
+                    <DataGridTextColumn Width="100" FontSize="14" Header="Sets" Binding="{Binding Path=Sets}"/>
+                    <DataGridTextColumn Width="100" FontSize="14" Header="Reps" Binding="{Binding Path=Reps}"/>
+                </DataGrid.Columns>
+            </DataGrid>
 
         </Grid>
     </Viewbox>
