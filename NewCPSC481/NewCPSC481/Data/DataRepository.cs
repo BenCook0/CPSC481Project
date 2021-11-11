@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
-using System.Threading;
 
 namespace NewCPSC481.Data
 {
@@ -33,7 +31,7 @@ namespace NewCPSC481.Data
             var repository = new DataRepository();
 
             //build workouts
-            Workout WorkoutA = new Workout(
+            var workoutA = new Workout(
                 new DateTime(2021, 10, 30, 13,0,0), 
                 new List<Exercise> { 
                     new Exercise("Pushup", 5, 12),
@@ -41,13 +39,13 @@ namespace NewCPSC481.Data
                     new Exercise("Bicep Curls", 4, 10)
                 });
 
-            Workout WorkoutB = new Workout(
+            var workoutB = new Workout(
                 new DateTime(2021, 10, 31, 06, 0,0),
                 new List<Exercise> {
                     new Exercise("Pushup", 8, 9),
                 });
 
-            Workout WorkoutC = new Workout(
+            var workoutC = new Workout(
                 new DateTime(2021, 11, 01, 18,0,0),
                 new List<Exercise> {
                     new Exercise("Bench Press", 4, 10),
@@ -55,23 +53,24 @@ namespace NewCPSC481.Data
                     new Exercise("Lunges", 6, 10),
             });
 
-            Workout WorkoutD = new Workout(
+            var workoutD = new Workout(
                 new DateTime(2021, 11, 05, 12, 30, 0),
                 new List<Exercise> {
                     new Exercise("Situp", 8, 9),
             });
 
-            List <Workout> User1Workouts = new List<Workout> { WorkoutA, WorkoutB, WorkoutC, WorkoutD };
-            List <Workout> User2Workouts = new List<Workout> {WorkoutB, WorkoutD };
+            var user1Workouts = new List<Workout> { workoutA, workoutB, workoutC, workoutD };
+            var user2Workouts = new List<Workout> {workoutB, workoutD };
 
             //build goals
 
             //standard Target example
-            Goal goalA = new Goal(
+            var goalA = new Goal(
                 "Burn Extra Calories",
                 new DateTime(2021, 11, 10),
                 new DateTime(2021, 12, 15),
                 "Calories",
+                100,
                 128,
                 300,
                 true,
@@ -79,11 +78,12 @@ namespace NewCPSC481.Data
                 );
 
             //no progress bar example
-            Goal goalB = new Goal(
+            var goalB = new Goal(
                 "Do More Cardio",
                 new DateTime(2021, 12, 10),
                 new DateTime(2021, 12, 20),
                 "Avg HeartRate",
+                75,
                 90,
                 110,
                 false,
@@ -91,11 +91,12 @@ namespace NewCPSC481.Data
                 );
 
             //progress bar but no percent example
-            Goal goalC = new Goal(
+            var goalC = new Goal(
                 "Run Longer Distances",
                 new DateTime(2021, 11, 10),
                 new DateTime(2021, 12, 15),
                 "Steps Taken",
+                1500,
                 30000,
                 40000,
                 true,
@@ -103,42 +104,44 @@ namespace NewCPSC481.Data
                 );
 
             //no progress bar OR percent example
-            Goal goalD = new Goal(
+            var goalD = new Goal(
                 "Lose Weight",
                 new DateTime(2021, 10, 10),
                 new DateTime(2021, 12, 19),
                 "Calories",
-                128,
-                400,
+                1000,
+                2000,
+                3000,
                 false,
                 false
                 );
 
             //set each users goals
-            List<Goal> User1Goals = new List<Goal> { goalA, goalB, goalC, goalD };
-            List<Goal> User2Goals = new List<Goal> { goalA, goalD };
+            var user1Goals = new List<Goal> { goalA, goalB, goalC, goalD };
+            var user2Goals = new List<Goal> { goalA, goalD };
 
             //user 1 - 60 days of random data
-            List<(DateTime, int, float, float)> User1collectedData = new List<(DateTime, int, float, float)>();
-            DateTime user1Start = new DateTime(2021, 10, 01);
+            var user1CollectedData = new List<(DateTime, int, float, float)>();
+            DateTime user1Start;
+            user1Start = new DateTime(2021, 10, 01);
 
-            Random rnd = new Random();
+            var rnd = new Random();
 
-            for (int i = 0; i < 60; i++)
+            for (var i = 0; i < 60; i++)
             {
                 //generatees 60 days of random data
-                User1collectedData.Add((user1Start, rnd.Next(600, 4000), rnd.Next(50, 600), rnd.Next(80, 140)));
+                user1CollectedData.Add((user1Start, rnd.Next(600, 4000), rnd.Next(50, 600), rnd.Next(80, 140)));
                 user1Start.AddDays(1); //generate 60 days of data starting october 1st
             }
 
-            List<(DateTime, int, float, float)> User2collectedData = new List<(DateTime, int, float, float)>()
+            var user2CollectedData = new List<(DateTime, int, float, float)>()
             {
                 (new DateTime(2021,11,01),2000,300,95),             //date, steps, calories burned, bpm heartrate
             };
 
             //add users to the repository
-            repository.Add(User.Create("User1", "Pass1", User1Workouts, User1Goals, User1collectedData));
-            repository.Add(User.Create("User2", "Pass2", User2Workouts, User2Goals, User2collectedData));
+            repository.Add(User.Create("User1", "Pass1", user1Workouts, user1Goals, user1CollectedData));
+            repository.Add(User.Create("User2", "Pass2", user2Workouts, user2Goals, user2CollectedData));
             return repository;
         }
     }

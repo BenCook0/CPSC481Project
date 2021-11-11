@@ -1,5 +1,6 @@
 ﻿using NewCPSC481;
 using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using NewCPSC481.Data;
@@ -77,29 +78,13 @@ namespace CPSC481WPF
 
         private void InitalizeWorkoutListBox()
         {
-            WorkoutsListBox.Items.Clear();
-            //puts them in reverse order by date
-            for (var i = user.WorkoutHistory.Count-1; i > -1; i--)
-            {
-                var item = new ListBoxItem
-                {
-                    Content = user.WorkoutHistory[i].WorkoutDate.ToString("g")
-                };
-                WorkoutsListBox.Items.Add(item);
-            }
-
+            WorkoutsListBox.ItemsSource = user.WorkoutHistory.OrderByDescending(x => x.WorkoutDate)
+                .Select(x => x.WorkoutDate.ToString("g"));
         }
 
         private void InitalizeGoalListBox()
         {
-            //puts them in reverse order by date
-            for (var i = user.GoalList.Count - 1; i > -1; i--)
-            {
-                var item = new ListBoxItem();
-                item.Content = user.GoalList[i].Name;
-                GoalListBox.Items.Add(item);
-            }
-
+            GoalListBox.ItemsSource = user.GoalList.Select(x => x.Name);
         }
 
         private void LogOutButtonClick(object sender, RoutedEventArgs e)
@@ -138,7 +123,7 @@ namespace CPSC481WPF
                 return;
             }
 
-            var workoutDate = AsDateTime(((ListBoxItem) WorkoutsListBox.SelectedItem).Content.ToString());
+            var workoutDate = AsDateTime(WorkoutsListBox.SelectedItem.ToString());
             workoutTestTextbox.Text = workoutDate.ToString("g");
 
             workoutUserControl.SetWorkout(user.GetWorkoutForDate(workoutDate));
@@ -158,13 +143,17 @@ namespace CPSC481WPF
 
         private void GoalsSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (GoalListBox.SelectedItem != null)
+            if (GoalListBox.SelectedItem == null)
             {
-                testTextbox.Text = ((ListBoxItem)GoalListBox.SelectedItem).Content.ToString();
+                goalUserControl.Visibility = Visibility.Hidden;
+                return;
             }
 
-            goalUserControl.Visibility = Visibility.Visible;
+            var goalName = GoalListBox.SelectedItem.ToString();
+            testTextbox.Text = goalName;
+            goalUserControl.SetGoal(user.GetGoalByName(goalName));
 
+            goalUserControl.Visibility = Visibility.Visible;
         }
 
         private void DeleteGoalButtonClick(object sender, RoutedEventArgs e)

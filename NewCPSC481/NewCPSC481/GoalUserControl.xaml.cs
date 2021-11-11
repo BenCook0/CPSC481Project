@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using NewCPSC481.Data;
 
 namespace NewCPSC481
 {
@@ -18,9 +10,20 @@ namespace NewCPSC481
     /// </summary>
     public partial class GoalUserControl : UserControl
     {
+        private Goal goal;
         public GoalUserControl()
         {
             InitializeComponent();
+        }
+
+        public void SetGoal(Goal goal)
+        {
+            this.goal = goal;
+            DataContext = goal;
+            CurrentDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
+
+            GoalProgressBar.Visibility = goal.ShowProgress ? Visibility.Visible : Visibility.Hidden;
+            GoalPercentLabel.Visibility = goal.HasPercentShown ? Visibility.Visible : Visibility.Hidden;
         }
     }
 }

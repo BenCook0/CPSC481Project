@@ -299,13 +299,7 @@
                             TextWrapping="Wrap" VerticalAlignment="Top" Width="306"  
                                 FontSize="100" 
                                     Background="{x:Null}" Grid.Column="1"><Run Language="en-ca" Text="Goals"/></TextBlock>
-                    <ListBox Name="GoalListBox" Margin="160,165,1430,130" SelectionChanged="GoalsSelectionChanged">
-                        <ListBoxItem Background="#FFF13131" Content="1"/>
-                        <ListBoxItem Background="#FFF13131" Content="awd"/>
-                        <ListBoxItem Background="#FFF13131" Content="a123wd"/>
-                        <ListBoxItem Background="#FFF13131" Content="aw54d"/>
-                        <ListBoxItem Background="#FFF13131" Content="awd33"/>
-                        <ListBoxItem Background="#FFF13131" Content="awd809"/>
+                    <ListBox Name="GoalListBox" FontSize="16" Margin="160,165,1430,130" SelectionChanged="GoalsSelectionChanged">
                     </ListBox>
                     <TextBox Name="testTextbox" Text="TextBox" TextWrapping="Wrap" Margin="879,71,345,750"/>
                     <StackPanel Margin="672,165,68,103" Name="CurrentGoalStackPanel" Background="AliceBlue"/>

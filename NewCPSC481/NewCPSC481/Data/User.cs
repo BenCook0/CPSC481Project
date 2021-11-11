@@ -32,8 +32,12 @@ namespace NewCPSC481.Data
 
         public Workout GetWorkoutForDate(DateTime workoutDate)
         {
-            var found = WorkoutHistory.First(x => x.WorkoutDate == workoutDate);
-            return found;
+            return WorkoutHistory.First(x => x.WorkoutDate == workoutDate);
+        }
+
+        public Goal GetGoalByName(string  goalName)
+        {
+            return GoalList.First(x => x.Name == goalName);
         }
     }
 }
