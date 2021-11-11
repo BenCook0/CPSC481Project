@@ -23,27 +23,21 @@
                                Text="Steps Taken" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
             <!-- will replace the blue rectangles with images-->
-            <Rectangle HorizontalAlignment="Left" Height="100" Margin="88,257,0,0" 
-                               Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+            <Image Height="100" Width="100" HorizontalAlignment="Left" Source="/frontPageIcon1.png" Margin="88,257,0,0"/>
 
             <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="290,178,0,0" 
                                Text="Calories Burned" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
             <!-- will replace the blue rectangles with images-->
-            <Rectangle HorizontalAlignment="Left" Height="100" Margin="379,257,0,0" 
-                               Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+            <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/frontPageIcon2.png" Margin="379,257,0,0"/>
 
             <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="608,178,0,0" 
                                Text="Heartrate" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
             <!-- will replace the blue rectangles with images-->
-            <Rectangle HorizontalAlignment="Left" Height="100" Margin="641,257,0,0" 
-                               Fill="Blue"
-                               Stroke="Blue" VerticalAlignment="Top" Width="100"/>
+            <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/frontPageIcon3.png" Margin="641,257,0,0"/>
 
         </Grid>
     </Viewbox>
