@@ -142,7 +142,6 @@ namespace CPSC481WPF
             workoutTestTextbox.Text = workoutDate.ToString("g");
 
             workoutUserControl.SetWorkout(user.GetWorkoutForDate(workoutDate));
-
             workoutUserControl.Visibility = Visibility.Visible;
         }
 

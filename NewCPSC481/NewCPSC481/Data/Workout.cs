@@ -29,7 +29,6 @@ namespace NewCPSC481.Data
             Sets = sets;
             Reps = reps;
         }
-
     }
 
 }

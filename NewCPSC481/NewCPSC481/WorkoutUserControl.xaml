@@ -11,7 +11,8 @@
         <Grid>
             <DataGrid x:Name="ExerciseGrid" VerticalAlignment="Top"
                       AutoGenerateColumns="False" CanUserResizeColumns="True"
-                      FontSize="14"
+                      FontSize="14" CanUserAddRows="False" CanUserDeleteRows="False"
+                      
                       VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="200" FontSize="14" Header="Exercise" Binding="{Binding Path=Name}"/>
