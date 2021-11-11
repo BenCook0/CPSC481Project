@@ -11,16 +11,32 @@
     <None Remove="BitfitFrontPicture.jpeg" />
     <None Remove="bitfitGraph.png" />
     <None Remove="Hyfic Logo.png" />
+    <None Remove="icons\frontPageIcon1.png" />
+    <None Remove="icons\frontPageIcon2.png" />
+    <None Remove="icons\frontPageIcon3.png" />
     <None Remove="Question.png" />
+	<None Remove="frontPageIcon1.png" />
+	<None Remove="frontPageIcon2.png" />
+	<None Remove="frontPageIcon3.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Bitfit Logo.png" />
     <Resource Include="BitfitFrontPicture.jpeg" />
+	
     <Resource Include="bitfitGraph.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Hyfic Logo.png" />
+    <Resource Include="icons\frontPageIcon1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icons\frontPageIcon2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icons\frontPageIcon3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Question.png" />
   </ItemGroup>
 
