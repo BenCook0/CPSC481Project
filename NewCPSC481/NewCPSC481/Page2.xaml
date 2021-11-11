@@ -300,7 +300,7 @@
                             TextWrapping="Wrap" VerticalAlignment="Top" Width="306"  
                                 FontSize="100" 
                                     Background="{x:Null}" Grid.Column="1"><Run Language="en-ca" Text="Goals"/></TextBlock>
-                    <ListBox Name="GoalListBox" Margin="160,165,1430,130" SelectionChanged="GoalListBoxSelection">
+                    <ListBox Name="GoalListBox" Margin="160,165,1430,130">
                         <ListBoxItem Background="#FFF13131" Content="1"/>
                         <ListBoxItem Background="#FFF13131" Content="awd"/>
                         <ListBoxItem Background="#FFF13131" Content="a123wd"/>

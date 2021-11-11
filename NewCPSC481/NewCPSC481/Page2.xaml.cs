@@ -23,12 +23,16 @@ namespace CPSC481WPF
     {
         private User user;
         //stubbed for now, will build one each later
-        GoalUserControl GoalUserCOntrol = new GoalUserControl();
+        GoalUserControl GoalUserControl = new GoalUserControl();
         WorkoutUserControl WorkoutUserControl = new WorkoutUserControl();
         public Page2()
         {
             InitializeComponent();
 
+            //fill recent data with user data
+
+            WorkoutListStackPanel.Children.Add(WorkoutUserControl);
+            CurrentGoalStackPanel.Children.Add(GoalUserControl);
 
 
         }
@@ -39,14 +43,18 @@ namespace CPSC481WPF
             this.user = user;
             DataContext = user;
 
-            //fill recent data with user data
-
             //Daily data
             //user data is datetime date, int steps, float calories, float bpm
             InitalizeRecentData();
             InitalizeWeeklyData();
+            //fill workout list boxes
             InitalizeWorkoutListBox();
-            InitalizeWorkoutGoalListBox();
+            WorkoutUserControl.Visibility = Visibility.Hidden;
+
+            InitalizeGoalListBox();
+            GoalUserControl.Visibility = Visibility.Hidden;
+
+
         }
 
         //initalize page functions
@@ -91,7 +99,7 @@ namespace CPSC481WPF
 
         }
 
-        private void InitalizeWorkoutGoalListBox()
+        private void InitalizeGoalListBox()
         {
             //puts them in reverse order by date
             for (int i = user.GoalList.Count - 1; i > -1; i--)
@@ -137,15 +145,24 @@ namespace CPSC481WPF
             {
                 workoutTestTextbox.Text = (String)((ListBoxItem)WorkoutsListBox.SelectedItem).Content;
             }
+            WorkoutUserControl.Visibility = Visibility.Visible;
 
-            WorkoutListStackPanel.Children.Clear();
-            WorkoutListStackPanel.Children.Add(WorkoutUserControl);
         }
 
         //goals functions below
         private void setGoalButtonClick(object sender, RoutedEventArgs e)
         {
             setGoalPopup.IsOpen = true;
+        }
+
+        private void GoalListBoxSelected(object sender, RoutedEventArgs e)
+        {
+            if (GoalListBox.SelectedItem != null)
+            {
+                testTextbox.Text = (String)((ListBoxItem)GoalListBox.SelectedItem).Content;
+            }
+
+            GoalUserControl.Visibility = Visibility.Visible;
         }
 
         private void deleteGoalButtonClick(object sender, RoutedEventArgs e)
@@ -156,19 +173,9 @@ namespace CPSC481WPF
                 GoalListBox.Items.RemoveAt(GoalListBox.Items.IndexOf(GoalListBox.SelectedItem));
                 CurrentGoalStackPanel.Children.Clear();
             }
-
+            GoalUserControl.Visibility = Visibility.Hidden;
         }
 
-        private void GoalListBoxSelection(object sender, SelectionChangedEventArgs e)
-        {
-            if(GoalListBox.SelectedItem != null)
-            {
-                testTextbox.Text = (String)((ListBoxItem)GoalListBox.SelectedItem).Content;
-            }
-
-            CurrentGoalStackPanel.Children.Clear();
-            CurrentGoalStackPanel.Children.Add(GoalUserCOntrol);
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -209,5 +216,6 @@ namespace CPSC481WPF
         {
 
         }
+
     }
 }
