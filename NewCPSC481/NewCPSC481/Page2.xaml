@@ -144,7 +144,7 @@
                         HorizontalAlignment="Left" Margin="50,250,0,0" 
                                Text="Steps Taken" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <!-- will replace the blue rectangles with images-->
+                    <!-- ICON 1 -->
                     <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon1.png" Margin="100,320,0,0"/>
                     <TextBlock Name="DailyStepsTaken" FontSize="40"
                         HorizontalAlignment="Left" Margin="105,420,0,0" 
@@ -155,19 +155,18 @@
                         HorizontalAlignment="Left" Margin="330,250,0,0"
                                Text="Calories Burned" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <!-- will replace the blue rectangles with images-->
+                    <!-- ICON 2 -->
                     <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon2.png" Margin="400,320,0,0"/>
                     <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="405,420,0,0" 
                                Name="DailyCalories"
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <!-- will replace the blue rectangles with images-->
 
                     <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="236,500,0,0" 
                                TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="Heartrate"/><LineBreak/><Run Language="en-ca"/></TextBlock>
-                    <!-- will replace the blue rectangles with images-->
+                    <!-- ICON 3 -->
                     <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon3.png" Margin="271,570,0,0"/>
                     <TextBlock FontSize="40"
                         Name="DailyHeartRate"
@@ -183,7 +182,7 @@
                         HorizontalAlignment="Left" Margin="1250,250,0,0" 
                                Text="Steps Taken" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <!-- will replace the blue rectangles with images-->
+                    <!-- ICON 1 -->
                     <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon1.png" Margin="1300,320,0,0"/>
                     <TextBlock FontSize="40"
                         Name="WeeklyStepsTaken"
@@ -195,7 +194,7 @@
                         HorizontalAlignment="Left" Margin="1530,250,0,0" 
                                Text="Calories Burned" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <!-- will replace the blue rectangles with images-->
+                    <!-- ICON 2 -->
                     <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon2.png" Margin="1600,320,0,0"/>
                     <TextBlock FontSize="40"
                         Name="WeeklyCalories"
@@ -207,7 +206,7 @@
                         HorizontalAlignment="Left" Margin="1420,500,0,0" 
                                Text="Heartrate" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <!-- will replace the blue rectangles with images-->
+                    <!-- ICON 3 -->
                     <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon3.png" Margin="1450,570,0,0"/>
                     <TextBlock FontSize="40"
                         Name="WeeklyHeartRate"
