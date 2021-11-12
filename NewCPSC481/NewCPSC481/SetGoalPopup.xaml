@@ -9,48 +9,54 @@
       Title="SetGoalPopup">
     <Grid Background="White">
         <Border BorderThickness="1" BorderBrush="Black" Margin="450,147,96,270">
-            <ComboBox FontSize="20">
-                <ComboBoxItem  Content="Calories"/>
-                <ComboBoxItem  Content="Calories"/>
-                <ComboBoxItem  Content="Calories"/>
+            <ComboBox Name="GoalMetricComboBox" FontSize="20">
+                <ComboBoxItem  Content="Burn Extra Calories"/>
+                <ComboBoxItem  Content="Do More Cardio"/>
+                <ComboBoxItem  Content="Lose Weight"/>
+                <ComboBoxItem  Content="Run Longer Distances"/>
             </ComboBox>
         </Border>
-        <TextBox 
-            Text="Enter Goal Name"
-            FontSize="20"
-            HorizontalAlignment="Center" Margin="0,20,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="608" Height="34" TextChanged="TextBox_TextChanged"/>
-        <DatePicker 
-            Text="Start Date"
-            FontSize="20"
-            HorizontalAlignment="Left" Margin="96,93,0,0" VerticalAlignment="Top" Width="254" Height="34"/>
-        <DatePicker 
-            Text="End Date"
-            FontSize="20"
-            HorizontalAlignment="Left" Margin="450,93,0,0" VerticalAlignment="Top" Width="254" Height="34" />
-        <TextBox 
-            Text="Current Value"
-            FontSize="20"
-            HorizontalAlignment="Left" Margin="96,0,0,0"  TextWrapping="Wrap" VerticalAlignment="Center" Width="254" Height="34"/>
-        <TextBox 
-            Text="Goal Value"
-            FontSize="20"
-            HorizontalAlignment="Left" Margin="450,0,0,0"  TextWrapping="Wrap" VerticalAlignment="Center" Width="254" Height="34"/>
-        <CheckBox 
-            FontSize=" 20"
-            Content="Add Progress Bar" HorizontalAlignment="Center" Margin="0,280,0,0" VerticalAlignment="Top" Height="31" Width="608"/>
-        <CheckBox 
-            FontSize=" 20"
-            Content="Add Percentage Display Towards Goal" HorizontalAlignment="Center" Margin="0,324,0,0" VerticalAlignment="Top" Height="31" Width="608"/>
+        <TextBox Name="GoalNameTextBox" Text="Enter Goal Name" FontSize="20"
+                 HorizontalAlignment="Center" Margin="0,20,0,0"  TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="608" Height="34"/>
+
+        <DatePicker Name="StartDatePicker" Text="Start Date" FontSize="20"
+                    HorizontalAlignment="Left" Margin="96,93,0,0" 
+                    VerticalAlignment="Top" Width="254" Height="34"/>
+
+        <DatePicker Name="EndDatePicker" Text="End Date" FontSize="20"
+                    HorizontalAlignment="Left" Margin="450,93,0,0" 
+                    VerticalAlignment="Top" Width="254" Height="34" />
+
+        <TextBox Name="CurrentValueTextBox" Text="" FontSize="20"
+                 HorizontalAlignment="Left" Margin="96,0,0,0"  TextWrapping="Wrap" 
+                 VerticalAlignment="Center" Width="254" Height="34" PreviewTextInput="DecimalInput"/>
+
+        <TextBox Name="GoalTextBox" FontSize="20" Text=""
+                 HorizontalAlignment="Left" Margin="450,0,0,0"  TextWrapping="Wrap"
+                 VerticalAlignment="Center" Width="254" Height="34" PreviewTextInput="DecimalInput"/>
+
+        <CheckBox Name="ShowProgessCheckBox" FontSize=" 20"
+                  Content="Add Progress Bar" HorizontalAlignment="Center" Margin="0,280,0,0" 
+                  VerticalAlignment="Top" Height="31" Width="608"/>
+
+        <CheckBox Name="AddPercentageCheckBox" FontSize=" 20"
+                  Content="Add Percentage Display Towards Goal" 
+                  HorizontalAlignment="Center" Margin="0,324,0,0" 
+                  VerticalAlignment="Top" Height="31" Width="608"/>
+
+        <TextBlock FontSize="20"
+                   HorizontalAlignment="Left" Margin="96,153,0,0" Text="Choose a Goal Metric:" 
+                   TextWrapping="Wrap" VerticalAlignment="Top"/>
+
         <Button 
             FontSize="20"
             Content="Cancel" 
-            HorizontalAlignment="Left" Margin="160,382,0,0" VerticalAlignment="Top" Height="41" Width="126"/>
+            HorizontalAlignment="Left" Margin="160,382,0,0" VerticalAlignment="Top" Height="41" Width="126" Click="Button_Click_1"/>
+
         <Button 
             FontSize="20"
             Content="Set Goal" 
-            HorizontalAlignment="Left" Margin="475,382,0,0" VerticalAlignment="Top" Height="41" Width="126"/>
-        <TextBlock FontSize="20"
-            HorizontalAlignment="Left" Margin="96,153,0,0" Text="Choose a Goal Metric:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-
+            HorizontalAlignment="Left" Margin="475,382,0,0" VerticalAlignment="Top" Height="41" Width="126" Click="Button_Click"/>
     </Grid>
 </Page>

@@ -5,7 +5,6 @@ using System.Windows;
 using System.Windows.Controls;
 using NewCPSC481.Data;
 
-
 namespace CPSC481WPF
 {
     /// <summary>
@@ -17,6 +16,7 @@ namespace CPSC481WPF
         //stubbed for now, will build one each later
         readonly GoalUserControl goalUserControl = new GoalUserControl();
         readonly WorkoutUserControl workoutUserControl = new WorkoutUserControl();
+
         public Page2()
         {
             InitializeComponent();
@@ -25,7 +25,6 @@ namespace CPSC481WPF
             WorkoutListStackPanel.Children.Add(workoutUserControl);
             CurrentGoalStackPanel.Children.Add(goalUserControl);
         }
-
 
         public Page2(User user) : this()
         {
@@ -43,15 +42,16 @@ namespace CPSC481WPF
             InitalizeGoalListBox();
             goalUserControl.Visibility = Visibility.Hidden;
 
-
+            Events.UserGoalCreated += OnGoalCreated;
+            Events.CloseGoalControl += CloseGoalControl;
         }
 
         //initalize page functions
         private void InitalizeRecentData()
         {
-            DailyStepsTaken.Text = user.CollectedData[user.CollectedData.Count-1].Item2.ToString();
-            DailyCalories.Text = user.CollectedData[user.CollectedData.Count - 1].Item3.ToString();
-            DailyHeartRate.Text = user.CollectedData[user.CollectedData.Count - 1].Item4.ToString();
+            DailyStepsTaken.Text = user.CollectedData[^1].Item2.ToString();
+            DailyCalories.Text = user.CollectedData[^1].Item3.ToString();
+            DailyHeartRate.Text = user.CollectedData[^1].Item4.ToString();
         }
 
         private void InitalizeWeeklyData()
@@ -112,6 +112,7 @@ namespace CPSC481WPF
         private void SetGoalButtonClick(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 4;
+            setGoalPopup.IsOpen = true;
         }
 
         //workout functions below
@@ -136,9 +137,17 @@ namespace CPSC481WPF
         }
 
         //goals functions below
-        private void setGoalButtonClick(object sender, RoutedEventArgs e)
+
+        private void OnGoalCreated(Goal goal)
         {
-            setGoalPopup.IsOpen = true;
+            setGoalPopup.IsOpen = false;
+            user.AddNewGoal(goal);
+            InitalizeGoalListBox();
+        }
+
+        private void CloseGoalControl()
+        {
+            setGoalPopup.IsOpen = false;
         }
 
         private void GoalsSelectionChanged(object sender, SelectionChangedEventArgs e)

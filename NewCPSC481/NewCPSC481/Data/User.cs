@@ -45,5 +45,12 @@ namespace NewCPSC481.Data
             var goal = GetGoalByName(goalName);
             GoalList.Remove(goal);
         }
+
+        public void AddNewGoal(Goal newGoal)
+        {
+            if (GoalList.Exists(x => x.Name == newGoal.Name))
+                throw new ArgumentException($"Goal with name: {newGoal.Name} already exists");
+            GoalList.Add(newGoal);
+        }
     }
 }

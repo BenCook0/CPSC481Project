@@ -290,24 +290,27 @@
                     <TextBlock HorizontalAlignment="Left" Margin="586,720,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
                 </Grid>
             </TabItem>
-
             <TabItem Header="Goals" FontSize="40" HorizontalAlignment="Left" Margin="-2,-2,0,2" Width="114">
 
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="773*"/>
+                        <ColumnDefinition Width="1141*"/>
+                    </Grid.ColumnDefinitions>
                     <TextBlock 
                         HorizontalAlignment="Left" Margin="44,27,0,0" 
                             TextWrapping="Wrap" VerticalAlignment="Top" Width="306"  
                                 FontSize="100" 
-                                    Background="{x:Null}" Grid.Column="1"><Run Language="en-ca" Text="Goals"/></TextBlock>
-                    <ListBox Name="GoalListBox" FontSize="16" Margin="160,165,1430,130" SelectionChanged="GoalsSelectionChanged">
+                                    Background="{x:Null}"><Run Language="en-ca" Text="Goals"/></TextBlock>
+                    <ListBox Name="GoalListBox" FontSize="16" Margin="160,165,289,130" SelectionChanged="GoalsSelectionChanged">
                     </ListBox>
-                    <TextBox Name="testTextbox" Text="TextBox" TextWrapping="Wrap" Margin="879,71,345,750"/>
-                    <StackPanel Margin="672,165,68,103" Name="CurrentGoalStackPanel" Background="AliceBlue"/>
-                    <Button Content="Set New Goal" FontSize="23" HorizontalAlignment="Left" Margin="160,790,0,0" VerticalAlignment="Top" Click="setGoalButtonClick" Height="82" Width="162"/>
+                    <TextBox Name="testTextbox" Text="TextBox" TextWrapping="Wrap" Margin="106,71,345,750" Grid.Column="1"/>
+                    <StackPanel Margin="672,165,68,103" Name="CurrentGoalStackPanel" Background="AliceBlue" Grid.ColumnSpan="2"/>
+                    <Button Content="Set New Goal" FontSize="23" HorizontalAlignment="Left" Margin="160,790,0,0" VerticalAlignment="Top" Click="SetGoalButtonClick" Height="82" Width="162"/>
                     <Button Content="Delete Goal" FontSize="23" HorizontalAlignment="Left" Margin="322,790,0,0" VerticalAlignment="Top" Click="DeleteGoalButtonClick" Height="82" Width="162"/>
 
                     <Popup Margin="0,0,0,0" Name="setGoalPopup" HorizontalAlignment="Left"   
-                        VerticalAlignment="Top" Width="800" Height="450" Placement="Center" IsOpen="False" Grid.ColumnSpan="3">
+                        VerticalAlignment="Top" Width="800" Height="450" Placement="Center" IsOpen="False" Grid.ColumnSpan="2">
                         <Grid>
                             <Frame Source="SetGoalPopup.xaml">
                             </Frame>

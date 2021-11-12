@@ -17,6 +17,8 @@ namespace NewCPSC481.Data
         public bool HasPercentShown { get; set; }
         public double PercentTowardsGoal { get; set; }
 
+        public Goal() { }
+
         public Goal(string name,  DateTime startDate,  DateTime endDate, string goalMetric, float start, float current, float target, bool showProgress, bool hasPercentShown)
         {
             Name = name;

@@ -18,16 +18,14 @@ namespace NewCPSC481.Data
 
         public static DataRepository Instance => singleton ??= InitializeData();
 
-
         public static User Login(string deviceId, string password)
         {
-            return Instance.Users.FirstOrDefault(x => x.DeviceId == deviceId && x.Password == password);            
+            return Instance.Users.FirstOrDefault(x => x.DeviceId == deviceId && x.Password == password);      
         }
-
 
         private static DataRepository InitializeData()
         {
-            //initalize repository
+            //initialize repository
             var repository = new DataRepository();
 
             //build workouts
@@ -129,7 +127,7 @@ namespace NewCPSC481.Data
 
             for (var i = 0; i < 60; i++)
             {
-                //generatees 60 days of random data
+                //generated 60 days of random data
                 user1CollectedData.Add((user1Start, rnd.Next(600, 4000), rnd.Next(50, 600), rnd.Next(80, 140)));
                 user1Start.AddDays(1); //generate 60 days of data starting october 1st
             }
