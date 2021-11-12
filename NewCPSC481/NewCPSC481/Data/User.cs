@@ -39,5 +39,11 @@ namespace NewCPSC481.Data
         {
             return GoalList.First(x => x.Name == goalName);
         }
+
+        public void RemoveGoal(string goalName)
+        {
+            var goal = GetGoalByName(goalName);
+            GoalList.Remove(goal);
+        }
     }
 }

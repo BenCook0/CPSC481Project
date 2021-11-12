@@ -157,13 +157,14 @@ namespace CPSC481WPF
         }
 
         private void DeleteGoalButtonClick(object sender, RoutedEventArgs e)
-        {  
-            if(GoalListBox.Items.IndexOf(GoalListBox.SelectedItem) != -1)
-            {
-                testTextbox.Text = "Item Just Got Deleted";
-                GoalListBox.Items.RemoveAt(GoalListBox.Items.IndexOf(GoalListBox.SelectedItem));
-                CurrentGoalStackPanel.Children.Clear();
-            }
+        {
+            if (GoalListBox.Items.IndexOf(GoalListBox.SelectedItem) == -1) return;
+
+            testTextbox.Text = "Item Just Got Deleted";
+            var goalName = GoalListBox.SelectedItem.ToString();
+            user.RemoveGoal(goalName);
+
+            InitalizeGoalListBox();
             goalUserControl.Visibility = Visibility.Hidden;
         }
     }
