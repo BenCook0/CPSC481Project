@@ -7,17 +7,20 @@
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Page1">
-    <Grid Margin="0,0,0,0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+    <Grid Margin="0">
 
         <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="0,0,1857,0"/>
         <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="316,0,1573,0"/>
 
-        <TextBox Name ="deviceId" Text="Device ID" TextWrapping="NoWrap" Margin="61,307,1606,712" FontSize="30"/>
 
-        <PasswordBox x:Name="passwordField" HorizontalAlignment="Left" Margin="63,447,0,565" Width="251"/>
+        <TextBlock HorizontalAlignment="Left" Margin="62,250,0,792" 
+                   Text="Device ID" TextWrapping="Wrap" FontSize ="20" Width="214"/>
+        <TextBox Name ="deviceId" Text="" TextWrapping="NoWrap" Margin="62,293,1605,747" Height="40" FontSize="20"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="62,356,0,686" 
+                   Text="Device Password" TextWrapping="Wrap" FontSize ="20" Width="214"/>
+        <PasswordBox x:Name="passwordField" HorizontalAlignment="Left" Margin="62,399,0,641" FontSize="20"
+                     Width="251" Height="40"/>
 
         <Button Name="loginButton" Content="Login" Click="LoginButtonClick" Margin="63,607,1602,407" FontSize="30" RenderTransformOrigin="0.5,0.5"/>
 
@@ -34,11 +37,10 @@
         <TextBlock HorizontalAlignment="Left" Margin="68,958,0,84" Text="Developed by" TextWrapping="Wrap" FontSize ="20" Width="214"/>
         <Image Height="62" Source="/Bitfit Logo.png" Margin="-7,4,1725,1014"/>
 
-        <Ellipse Name="elipse1" HorizontalAlignment="Left" Height="50" Margin="990,990,0,40" Stroke="#44acc2" Fill="#44acc2" Width="50" MouseDown="elipse1MouseDown"/>
-        <Ellipse Name="elipse2" HorizontalAlignment="Left" Height="50" Margin="1063,990,0,40" Stroke="#44acc2" Width="50" MouseDown="elipse2MouseDown"/>
-
-        <TextBlock HorizontalAlignment="Left" Margin="71,250,0,792" Text="Device ID Number" TextWrapping="Wrap" FontSize ="20" Width="214"/>
-        <TextBlock HorizontalAlignment="Left" Margin="71,414,0,628" Text="Device Password" TextWrapping="Wrap" FontSize ="20" Width="214"/>
+        <Ellipse Name="elipse1" HorizontalAlignment="Left" Height="50" Margin="990,990,0,40" 
+                 Stroke="#44acc2" Fill="#44acc2" Width="50" MouseDown="elipse1MouseDown"/>
+        <Ellipse Name="elipse2" HorizontalAlignment="Left" Height="50" Margin="1063,990,0,40" 
+                 Stroke="#44acc2" Width="50" MouseDown="elipse2MouseDown"/>
 
         <Image Width="40" Height="40" Source="/question.png" Margin="257,241,1623,799"  MouseDown="ToggleUsernamePopup" RenderTransformOrigin="0.523,0.5"/>
 

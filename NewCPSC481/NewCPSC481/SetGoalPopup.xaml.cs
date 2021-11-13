@@ -22,7 +22,7 @@ namespace NewCPSC481
             InitializeComponent();
         }
         
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OnAddGoalClick(object sender, RoutedEventArgs e)
         {
             if (!IsValid()) return;
             try
@@ -120,11 +120,6 @@ namespace NewCPSC481
 
             if (!(char.IsDigit(e.Text, e.Text.Length - 1) || approvedDecimalPoint))
                 e.Handled = true;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Events.RaiseCloseGoalPopup();
         }
     }
 }

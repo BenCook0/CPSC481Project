@@ -18,6 +18,9 @@
     <Compile Update="GoalUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="GoalWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Page1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -36,6 +39,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GoalUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GoalWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

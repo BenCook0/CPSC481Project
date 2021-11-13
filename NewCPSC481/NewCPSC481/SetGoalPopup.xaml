@@ -51,12 +51,7 @@
 
         <Button 
             FontSize="20"
-            Content="Cancel" 
-            HorizontalAlignment="Left" Margin="160,382,0,0" VerticalAlignment="Top" Height="41" Width="126" Click="Button_Click_1"/>
-
-        <Button 
-            FontSize="20"
             Content="Set Goal" 
-            HorizontalAlignment="Left" Margin="475,382,0,0" VerticalAlignment="Top" Height="41" Width="126" Click="Button_Click"/>
+            HorizontalAlignment="Center" Margin="0,382,0,0" VerticalAlignment="Top" Height="41" Width="126" Click="OnAddGoalClick"/>
     </Grid>
 </Page>

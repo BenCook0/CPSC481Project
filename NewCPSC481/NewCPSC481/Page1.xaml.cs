@@ -1,16 +1,9 @@
 ﻿using NewCPSC481;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 using NewCPSC481.Data;
 
@@ -25,8 +18,8 @@ namespace CPSC481WPF
         private int seconds = 0;
         private DispatcherTimer timer;
 
-        FrontPageFirst first = new FrontPageFirst();
-        FrontPageSecond second = new FrontPageSecond();
+        readonly FrontPageFirst first = new FrontPageFirst();
+        readonly FrontPageSecond second = new FrontPageSecond();
 
         public Page1()
         {
@@ -99,14 +92,7 @@ namespace CPSC481WPF
 
         private void ToggleUsernamePopup(object sender, MouseButtonEventArgs e)
         {
-            if (UsernameAndPasswordPopup.IsOpen)
-            {
-                UsernameAndPasswordPopup.IsOpen = false;
-            }
-            else
-            {
-                UsernameAndPasswordPopup.IsOpen = true;
-            }
+            UsernameAndPasswordPopup.IsOpen = !UsernameAndPasswordPopup.IsOpen;
         }
     }
 }

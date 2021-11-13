@@ -12,7 +12,7 @@ namespace CPSC481WPF
     /// </summary>
     public partial class Page2 : Page
     {
-        private User user;
+        private readonly User user;
         //stubbed for now, will build one each later
         readonly GoalUserControl goalUserControl = new GoalUserControl();
         readonly WorkoutUserControl workoutUserControl = new WorkoutUserControl();
@@ -33,56 +33,55 @@ namespace CPSC481WPF
 
             //Daily data
             //user data is datetime date, int steps, float calories, float bpm
-            InitalizeRecentData();
-            InitalizeWeeklyData();
-            //fill workout list boxes
-            InitalizeWorkoutListBox();
-            workoutUserControl.Visibility = Visibility.Hidden;
+            InitializeRecentData();
+            InitializeWeeklyData();
+            InitializeWorkoutListBox();
+            InitializeGoalListBox();
 
-            InitalizeGoalListBox();
+            workoutUserControl.Visibility = Visibility.Hidden;
             goalUserControl.Visibility = Visibility.Hidden;
 
             Events.UserGoalCreated += OnGoalCreated;
-            Events.CloseGoalControl += CloseGoalControl;
         }
 
-        //initalize page functions
-        private void InitalizeRecentData()
+        //initialize page functions
+        private void InitializeRecentData()
         {
             DailyStepsTaken.Text = user.CollectedData[^1].Item2.ToString();
             DailyCalories.Text = user.CollectedData[^1].Item3.ToString();
             DailyHeartRate.Text = user.CollectedData[^1].Item4.ToString();
         }
 
-        private void InitalizeWeeklyData()
+        private void InitializeWeeklyData()
         {
             float weeklyStepsAvg = 0;
             float WeeklyCalorieAvg = 0;
             float weeklyHeartRateAvg = 0;
 
             //if this is a new user and they have less than 1 week of data then just count them, otherwise
-            for(int i = Math.Max(user.CollectedData.Count -7,0); i < user.CollectedData.Count; i++)
+            for(var i = Math.Max(user.CollectedData.Count -7,0); i < user.CollectedData.Count; i++)
             {
                 weeklyStepsAvg += user.CollectedData[i].Item2;
                 WeeklyCalorieAvg += user.CollectedData[i].Item3;
                 weeklyHeartRateAvg += user.CollectedData[i].Item4;
             }
-            weeklyStepsAvg = weeklyStepsAvg / (Math.Min(7, user.CollectedData.Count));
-            WeeklyCalorieAvg = WeeklyCalorieAvg / Math.Min(7, user.CollectedData.Count);
-            weeklyHeartRateAvg = weeklyHeartRateAvg / (Math.Min(7, user.CollectedData.Count));
+
+            weeklyStepsAvg /= Math.Min(7, user.CollectedData.Count);
+            WeeklyCalorieAvg /= Math.Min(7, user.CollectedData.Count);
+            weeklyHeartRateAvg /= Math.Min(7, user.CollectedData.Count);
 
             WeeklyStepsTaken.Text = weeklyStepsAvg.ToString();
             WeeklyCalories.Text = WeeklyCalorieAvg.ToString();
             WeeklyHeartRate.Text = weeklyHeartRateAvg.ToString();
         }
 
-        private void InitalizeWorkoutListBox()
+        private void InitializeWorkoutListBox()
         {
             WorkoutsListBox.ItemsSource = user.WorkoutHistory.OrderByDescending(x => x.WorkoutDate)
                 .Select(x => x.WorkoutDate.ToString("g"));
         }
 
-        private void InitalizeGoalListBox()
+        private void InitializeGoalListBox()
         {
             GoalListBox.ItemsSource = user.GoalList.Select(x => x.Name);
         }
@@ -97,7 +96,6 @@ namespace CPSC481WPF
         private void RecentDataButtonClick(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 1;
-                            MessageBox.Show("Invalid Credentials", user.CollectedData[0].Item3.ToString(), MessageBoxButton.OK); //remove this just a test
         }
 
         private void WorkoutsButtonClick(object sender, RoutedEventArgs e)
@@ -113,7 +111,7 @@ namespace CPSC481WPF
         private void SetGoalButtonClick(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 4;
-            setGoalPopup.IsOpen = true;
+            new GoalWindow().Show();
         }
 
         //workout functions below
@@ -141,16 +139,10 @@ namespace CPSC481WPF
 
         private void OnGoalCreated(Goal goal)
         {
-            setGoalPopup.IsOpen = false;
             user.AddNewGoal(goal);
-            InitalizeGoalListBox();
+            InitializeGoalListBox();
         }
-
-        private void CloseGoalControl()
-        {
-            setGoalPopup.IsOpen = false;
-        }
-
+        
         private void GoalsSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (GoalListBox.SelectedItem == null)
@@ -160,7 +152,6 @@ namespace CPSC481WPF
             }
 
             var goalName = GoalListBox.SelectedItem.ToString();
-            testTextbox.Text = goalName;
             goalUserControl.SetGoal(user.GetGoalByName(goalName));
 
             goalUserControl.Visibility = Visibility.Visible;
@@ -170,11 +161,10 @@ namespace CPSC481WPF
         {
             if (GoalListBox.Items.IndexOf(GoalListBox.SelectedItem) == -1) return;
 
-            testTextbox.Text = "Item Just Got Deleted";
             var goalName = GoalListBox.SelectedItem.ToString();
             user.RemoveGoal(goalName);
 
-            InitalizeGoalListBox();
+            InitializeGoalListBox();
             goalUserControl.Visibility = Visibility.Hidden;
         }
     }
