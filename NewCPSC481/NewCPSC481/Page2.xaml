@@ -329,10 +329,10 @@
                         HorizontalAlignment="Left" Margin="44,27,0,0" 
                             TextWrapping="Wrap" VerticalAlignment="Top" Width="306"  
                                 FontSize="80"><Run Language="en-ca" Text="Goals"/></TextBlock>
-                    <ListBox Name="GoalListBox"  FontSize="16" Margin="304,63,145,431" SelectionChanged="GoalsSelectionChanged"/>
-                    <StackPanel Margin="672,63,68,10" Name="CurrentGoalStackPanel" Background="AliceBlue" Grid.ColumnSpan="2"/>
-                    <Button Content="Set New Goal" FontSize="23" HorizontalAlignment="Left" Margin="278,560,0,0" VerticalAlignment="Top" Click="SetGoalButtonClick" Height="82" Width="162"/>
-                    <Button Content="Delete Goal" FontSize="23" HorizontalAlignment="Left" Margin="484,560,0,0" VerticalAlignment="Top" Click="DeleteGoalButtonClick" Height="82" Width="162"/>
+                    <ListBox Name="GoalListBox"  FontSize="16" Margin="304,63,145,209" SelectionChanged="GoalsSelectionChanged"/>
+                    <StackPanel Margin="672,63,68,95" Name="CurrentGoalStackPanel" Background="AliceBlue" Grid.ColumnSpan="2"/>
+                    <Button Content="Set New Goal" FontSize="23" HorizontalAlignment="Center" Margin="0,706,0,0" VerticalAlignment="Top" Click="SetGoalButtonClick" Height="82" Width="162"/>
+                    <Button Content="Delete Goal" FontSize="23" HorizontalAlignment="Left" Margin="466,706,0,0" VerticalAlignment="Top" Click="DeleteGoalButtonClick" Height="82" Width="162"/>
                 </Grid>
 
             </TabItem>
