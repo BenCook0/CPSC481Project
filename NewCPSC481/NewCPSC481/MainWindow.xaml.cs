@@ -15,8 +15,12 @@ namespace CPSC481WPF
 
         private void myWindow_loaded(object sender, RoutedEventArgs e)
         {
-            frame.NavigationService.Navigate(new Page1());
+            Frame.NavigationService.Navigate(new Page1());
         }
 
+        private void OnExit(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

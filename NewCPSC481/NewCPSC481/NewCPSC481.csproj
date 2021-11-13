@@ -14,6 +14,7 @@
     <None Remove="icons\frontPageIcon1.png" />
     <None Remove="icons\frontPageIcon2.png" />
     <None Remove="icons\frontPageIcon3.png" />
+    <None Remove="icons\Login.ico" />
     <None Remove="Question.png" />
 	<None Remove="frontPageIcon1.png" />
 	<None Remove="frontPageIcon2.png" />
@@ -37,7 +38,10 @@
     <Resource Include="icons\frontPageIcon3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Question.png" />
+    <Resource Include="icons\Login.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icons\Question.png" />
   </ItemGroup>
 
 </Project>

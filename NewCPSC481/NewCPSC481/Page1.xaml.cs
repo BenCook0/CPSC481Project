@@ -70,8 +70,8 @@ namespace CPSC481WPF
 
         private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
-            var deviceId = this.deviceId.Text;
-            var psw = this.passwordField.Password;
+            var deviceId = this.DeviceId.Text;
+            var psw = this.PasswordField.Password;
 
             var found = DataRepository.Login(deviceId, psw);
             if (found == null)
@@ -88,11 +88,6 @@ namespace CPSC481WPF
         {
             FrontPagePanel.Children.Clear();
             FrontPagePanel.Children.Add(first);
-        }
-
-        private void ToggleUsernamePopup(object sender, MouseButtonEventArgs e)
-        {
-            UsernameAndPasswordPopup.IsOpen = !UsernameAndPasswordPopup.IsOpen;
         }
     }
 }

@@ -6,5 +6,31 @@
         xmlns:local="clr-namespace:NewCPSC481"
         mc:Ignorable="d"
         Title="Bit Fit" Height="1080" Width="1920" WindowStartupLocation="CenterScreen">
-    <Frame x:Name="frame" Content="Frame" Source="/Page1.xaml" Width="1920" Height="1080" VerticalAlignment="Center" />
+
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="RoundButton">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15" />
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Grid.Column="0"  HorizontalAlignment="Left" Source="/Bitfit Logo.png" Width="300"/>
+
+        <Frame Grid.Row="1" x:Name="Frame" Content="Frame" Source="/Page1.xaml" />
+
+        <DockPanel  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Width="1900">
+            <Image  Width="200" HorizontalAlignment="Left" Source="/Hyfic Logo.png"/>
+            <Button Style="{DynamicResource RoundButton}" HorizontalAlignment="right" Width="100" Height="50"  FontSize="30" Click="OnExit">Exit</Button>
+        </DockPanel>
+    </Grid>
 </Window>
