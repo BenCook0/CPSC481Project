@@ -82,7 +82,7 @@ namespace NewCPSC481
                 return true;
             }
 
-            MessageBox.Show(FormatErrors(), "Errors", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+            MessageBoxWrapper.Show(FormatErrors(), "Errors", MessageBoxButton.OK, MessageBoxImage.Error);
             return false;
 
         }

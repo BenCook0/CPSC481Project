@@ -109,6 +109,7 @@ namespace CPSC481WPF
         {
             MainTabControl.SelectedIndex = 3;
         }
+
         private void SetGoalButtonClick(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 4;
