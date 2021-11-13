@@ -105,15 +105,9 @@
         </Style>
     </Page.Resources>
     <Grid>
-        <Rectangle Stroke="#44acc2" Fill="#44acc2" HorizontalAlignment="Stretch" Grid.Column="0"/>
         <TabControl Name="MainTabControl" Margin="0,100,0,0" BorderBrush="#FF343537">
             <TabItem Header="Welcome" FontSize="40">
                 <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="251*"/>
-                        <ColumnDefinition Width="497*"/>
-                        <ColumnDefinition Width="1166*"/>
-                    </Grid.ColumnDefinitions>
                     <TextBlock FontSize="45"
                         HorizontalAlignment="Left" Margin="95,20,0,0" 
                                Text="Welcome To Your Personal Fitness Breakdown!" 
@@ -250,7 +244,7 @@
                     <TextBlock 
                         HorizontalAlignment="Left" Margin="44,27,0,0" 
                             TextWrapping="Wrap" VerticalAlignment="Top" Width="440"  
-                                FontSize="100" 
+                                FontSize="80" 
                                     Background="{x:Null}"><Run Language="en-ca" Text="Workouts"/></TextBlock>
                     <ListBox Name="WorkoutsListBox" Margin="160,165,1430,130"
                              FontSize="20" SelectionChanged="WorkoutListBoxSelection">
@@ -321,18 +315,15 @@
             <TabItem Header="Goals" FontSize="40" HorizontalAlignment="Left" Margin="-2,-2,0,2" Width="114">
 
                 <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="773*"/>
-                        <ColumnDefinition Width="1141*"/>
-                    </Grid.ColumnDefinitions>
+
                     <TextBlock 
                         HorizontalAlignment="Left" Margin="44,27,0,0" 
                             TextWrapping="Wrap" VerticalAlignment="Top" Width="306"  
                                 FontSize="80"><Run Language="en-ca" Text="Goals"/></TextBlock>
-                    <ListBox Name="GoalListBox"  FontSize="16" Margin="304,63,145,209" SelectionChanged="GoalsSelectionChanged"/>
-                    <StackPanel Margin="672,63,68,95" Name="CurrentGoalStackPanel" Background="AliceBlue" Grid.ColumnSpan="2"/>
-                    <Button Content="Set New Goal" FontSize="23" HorizontalAlignment="Center" Margin="0,706,0,0" VerticalAlignment="Top" Click="SetGoalButtonClick" Height="82" Width="162"/>
-                    <Button Content="Delete Goal" FontSize="23" HorizontalAlignment="Left" Margin="466,706,0,0" VerticalAlignment="Top" Click="DeleteGoalButtonClick" Height="82" Width="162"/>
+                    <ListBox Name="GoalListBox"  FontSize="16" Margin="160,165,1430,216" SelectionChanged="GoalsSelectionChanged"/>
+                    <StackPanel Margin="672,165,68,103" Name="CurrentGoalStackPanel" Background="AliceBlue"/>
+                    <Button Content="Set New Goal" FontSize="23" HorizontalAlignment="Left" Margin="160,699,0,0" VerticalAlignment="Top" Click="SetGoalButtonClick" Height="82" Width="162"/>
+                    <Button Content="Delete Goal" FontSize="23" HorizontalAlignment="Left" Margin="322,699,0,0" VerticalAlignment="Top" Click="DeleteGoalButtonClick" Height="82" Width="162"/>
                 </Grid>
 
             </TabItem>
