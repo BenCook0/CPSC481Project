@@ -124,7 +124,7 @@
 
                     <Button Style="{DynamicResource RoundButton}"
                             FontSize="30"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="63"
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="50"
                             Click="RecentDataButtonClick" Margin="224,250,0,0" Grid.Column="1">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/icons/Fitness.ico"  HorizontalAlignment="Left"/>
@@ -133,15 +133,15 @@
                     </Button>
                     <Button FontSize="30" Style="{DynamicResource RoundButton}"
                             HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="50" Click="WorkoutsButtonClick" 
-                            Margin="224,372,0,0" Grid.Column="1">
+                            Margin="224,346,0,0" Grid.Column="1">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/icons/ViewHistory.ico"/>
                             <Label Padding="10, 0" VerticalAlignment="Center">Workout History</Label>
                         </StackPanel>
                     </Button>
                     <Button Style="{DynamicResource RoundButton}" FontSize="30"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="50" Click="GraphicalDataButtonClick" 
-                            Margin="224,466,0,0" Grid.Column="1">
+                            HorizontalAlignment="Left" VerticalAlignment="Center" Width="359" Height="50" Click="GraphicalDataButtonClick" 
+                            Margin="224,0,0,0" Grid.Column="1">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/icons/Person.ico"/>
                             <Label Padding="10, 0" VerticalAlignment="Center">Your fitness data</Label>
@@ -149,7 +149,7 @@
                     </Button>
                     <Button Style="{DynamicResource RoundButton}" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" 
                             Height="50" Click="SetGoalButtonClick" 
-                            Margin="224,578,0,0" Grid.Column="1">
+                            Margin="224,522,0,0" Grid.Column="1">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/icons/Create Goal.ico"/>
                             <Label Padding="10, 0" VerticalAlignment="Center">Add/View Goals</Label>
