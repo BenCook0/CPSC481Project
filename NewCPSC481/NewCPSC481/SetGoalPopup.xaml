@@ -20,10 +20,9 @@
     <Grid Background="White">
         <Border BorderThickness="1" BorderBrush="Black" Margin="450,147,96,270">
             <ComboBox Name="GoalMetricComboBox" FontSize="20">
-                <ComboBoxItem  Content="Burn Extra Calories"/>
-                <ComboBoxItem  Content="Do More Cardio"/>
-                <ComboBoxItem  Content="Lose Weight"/>
-                <ComboBoxItem  Content="Run Longer Distances"/>
+                <ComboBoxItem  Content="Calories"/>
+                <ComboBoxItem  Content="Heartrate (Avg BPM)"/>
+                <ComboBoxItem  Content="Steps"/>
             </ComboBox>
         </Border>
         <TextBox Name="GoalNameTextBox" Text="Enter Goal Name" FontSize="20"
