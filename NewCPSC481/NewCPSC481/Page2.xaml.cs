@@ -110,7 +110,6 @@ namespace CPSC481WPF
 
         private void SetGoalButtonClick(object sender, RoutedEventArgs e)
         {
-            MainTabControl.SelectedIndex = 4;
             new GoalWindow().Show();
         }
 
@@ -164,6 +163,11 @@ namespace CPSC481WPF
 
             InitializeGoalListBox();
             goalUserControl.Visibility = Visibility.Hidden;
+        }
+
+        private void ViewGoalsTab(object sender, RoutedEventArgs e)
+        {
+            MainTabControl.SelectedIndex = 4;
         }
     }
 }

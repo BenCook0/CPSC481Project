@@ -54,21 +54,21 @@
             </StackPanel>
         </Border>
 
-        <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="0,0,1857,0"/>
-        <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="316,0,1573,0"/>
+        <Grid Grid.Column="1">
+            <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="0,0,1857,0"/>
+            <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="316,0,1573,0"/>
 
-        <StackPanel Grid.Column="1" Grid.Row="0"  Name="FrontPagePanel" Background="AliceBlue"/>
+            <StackPanel Grid.Column="1" Name="FrontPagePanel" Background="AliceBlue"/>
 
-        <Rectangle Stroke="#44acc2" Fill="#44acc2" Grid.Column="0" Margin="20,0,0,1000"/>
+            <Rectangle Stroke="#44acc2" Fill="#44acc2"  Margin="20,0,0,1000"/>
 
-        <TextBlock HorizontalAlignment="Left" Margin="68,958,0,84" Text="Developed by" 
-                   TextWrapping="Wrap" FontSize ="20" Width="214"/>
+            <TextBlock HorizontalAlignment="Left" Margin="68,958,0,84" Text="Developed by" 
+                       TextWrapping="Wrap" FontSize ="20" Width="214"/>
 
-        <Ellipse Name="elipse1" HorizontalAlignment="Left" Height="50" Margin="990,990,0,40" 
-                 Stroke="#44acc2" Fill="#44acc2" Width="50" MouseDown="elipse1MouseDown"/>
-        <Ellipse Name="elipse2" HorizontalAlignment="Left" Height="50" Margin="1063,990,0,40" 
-                 Stroke="#44acc2" Width="50" MouseDown="elipse2MouseDown"/>
-
-        <Image Width="40" Height="40" Source="/icons/Question.png" Margin="257,241,1623,799"  RenderTransformOrigin="0.523,0.5"/>
+            <Ellipse Name="elipse1" HorizontalAlignment="Left" Height="50" Margin="990,990,0,40" 
+                     Stroke="#44acc2" Fill="#44acc2" Width="50" MouseDown="elipse1MouseDown"/>
+            <Ellipse Name="elipse2" HorizontalAlignment="Left" Height="50" Margin="1063,990,0,40" 
+                     Stroke="#44acc2" Width="50" MouseDown="elipse2MouseDown"/>
+        </Grid>
     </Grid>
 </Page>
