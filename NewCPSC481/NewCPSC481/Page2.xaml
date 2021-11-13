@@ -8,6 +8,13 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Page2">
     <Page.Resources>
+        <Style TargetType="Button" x:Key="RoundButton">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15" />
+                </Style>
+            </Style.Resources>
+        </Style>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -106,111 +113,132 @@
                         <ColumnDefinition Width="251*"/>
                         <ColumnDefinition Width="1663*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock FontSize="60"
+                    <TextBlock FontSize="45"
                         HorizontalAlignment="Left" Margin="95,20,0,0" 
                                Text="Welcome To Your Personal Fitness Breakdown!" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBlock FontSize="50"
+                    <TextBlock FontSize="40"
                         HorizontalAlignment="Left" Margin="224,120,0,0" 
                                Text="Begin by Choosing What you Want to View!" 
                                TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
 
-                    <Button Content="Take a look at your recent fitness data"
-                            FontSize="40"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="RecentDataButtonClick" Margin="224,250,0,0" Grid.Column="1"/>
-                    <Button Content="View your Workout History"
-                            FontSize="40"
-                            HorizontalAlignment="Left" VerticalAlignment="Center" Width="964" Height="98" Click="WorkoutsButtonClick" Margin="224,0,0,0" Grid.Column="1"/>
-                    <Button Content="View a graphical breakdown of your fitness data"
-                            FontSize="40"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="GraphicalDataButtonClick" Margin="224,578,0,0" Grid.Column="1"/>
-                    <Button Content="Set a Target or view your current progress"
-                            FontSize="40"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="964" Height="98" Click="SetGoalButtonClick" Margin="224,743,0,0" Grid.Column="1"/>
+                    <Button Style="{DynamicResource RoundButton}"
+                            FontSize="30"
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="63"
+                            Click="RecentDataButtonClick" Margin="224,250,0,0" Grid.Column="1">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/icons/Fitness.ico"  HorizontalAlignment="Left"/>
+                            <Label Padding="10, 0" VerticalAlignment="Center">Recent Fitness Data</Label>
+                        </StackPanel>
+                    </Button>
+                    <Button FontSize="30" Style="{DynamicResource RoundButton}"
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="50" Click="WorkoutsButtonClick" 
+                            Margin="224,372,0,0" Grid.Column="1">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/icons/ViewHistory.ico"/>
+                            <Label Padding="10, 0" VerticalAlignment="Center">Workout History</Label>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{DynamicResource RoundButton}" FontSize="30"
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="50" Click="GraphicalDataButtonClick" 
+                            Margin="224,466,0,0" Grid.Column="1">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/icons/Person.ico"/>
+                            <Label Padding="10, 0" VerticalAlignment="Center">Your fitness data</Label>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{DynamicResource RoundButton}" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" 
+                            Height="50" Click="SetGoalButtonClick" 
+                            Margin="224,578,0,0" Grid.Column="1">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/icons/Create Goal.ico"/>
+                            <Label Padding="10, 0" VerticalAlignment="Center">Add/View Goals</Label>
+                        </StackPanel>
+                    </Button>
                 </Grid>
             </TabItem>
             <TabItem Name ="RecentDataTab" Header="Recent Data" FontSize="40">
                 <Grid Background="White">
-                    <TextBlock FontSize="70"
-                        HorizontalAlignment="Left" Margin="50,50,0,0" 
+                    <TextBlock FontSize="60"
+                        HorizontalAlignment="Left" Margin="44,34,0,0" 
                                Text="Recent Data" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock FontSize="60"
-                        HorizontalAlignment="Left" Margin="50,160,0,0" 
+                    <TextBlock FontSize="45"
+                        HorizontalAlignment="Left" Margin="252,135,0,0" 
                                Text="Daily" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
 
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="50,250,0,0" 
+                    <TextBlock FontSize="35"
+                        HorizontalAlignment="Left" Margin="36,203,0,0" 
                                Text="Steps Taken" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- ICON 1 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon1.png" Margin="100,320,0,0"/>
-                    <TextBlock Name="DailyStepsTaken" FontSize="40"
-                        HorizontalAlignment="Left" Margin="105,420,0,0" 
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon1.png" Margin="86,273,0,0"/>
+                    <TextBlock Name="DailyStepsTaken" FontSize="35"
+                        HorizontalAlignment="Left" Margin="92,373,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
 
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="330,250,0,0"
+                    <TextBlock FontSize="35"
+                        HorizontalAlignment="Left" Margin="316,203,0,0"
                                Text="Calories Burned" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- ICON 2 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon2.png" Margin="400,320,0,0"/>
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="405,420,0,0" 
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon2.png" Margin="386,273,0,0"/>
+                    <TextBlock FontSize="35"
+                        HorizontalAlignment="Left" Margin="392,373,0,0" 
                                Name="DailyCalories"
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
 
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="236,500,0,0" 
+                    <TextBlock FontSize="35"
+                        HorizontalAlignment="Left" Margin="227,443,0,0" 
                                TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="Heartrate"/><LineBreak/><Run Language="en-ca"/></TextBlock>
                     <!-- ICON 3 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon3.png" Margin="271,570,0,0"/>
-                    <TextBlock FontSize="40"
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon3.png" Margin="250,518,0,0"/>
+                    <TextBlock FontSize="35"
                         Name="DailyHeartRate"
-                        HorizontalAlignment="Left" Margin="276,670,0,0" 
+                        HorizontalAlignment="Left" Margin="262,623,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!---->
-                    <TextBlock FontSize="60"
-                        HorizontalAlignment="Left" Margin="1250,160,0,0" 
+                    <TextBlock FontSize="45"
+                        HorizontalAlignment="Left" Margin="954,128,0,0" 
                                TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="Weekly"/></TextBlock>
 
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="1250,250,0,0" 
+                    <TextBlock FontSize="35"
+                        HorizontalAlignment="Left" Margin="814,207,0,0" 
                                Text="Steps Taken" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- ICON 1 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon1.png" Margin="1300,320,0,0"/>
-                    <TextBlock FontSize="40"
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon1.png" Margin="854,277,0,0" RenderTransformOrigin="-3.19,0.488"/>
+                    <TextBlock FontSize="35"
                         Name="WeeklyStepsTaken"
-                        HorizontalAlignment="Left" Margin="1305,420,0,0" 
+                        HorizontalAlignment="Left" Margin="854,391,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
 
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="1530,250,0,0" 
+                    <TextBlock FontSize="35"
+                        HorizontalAlignment="Left" Margin="1114,207,0,0" 
                                Text="Calories Burned" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- ICON 2 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon2.png" Margin="1600,320,0,0"/>
-                    <TextBlock FontSize="40"
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon2.png" Margin="1186,277,0,0"/>
+                    <TextBlock FontSize="35"
                         Name="WeeklyCalories"
-                        HorizontalAlignment="Left" Margin="1605,420,0,0" 
+                        HorizontalAlignment="Left" Margin="1186,391,0,0" 
                                Text="1234" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+                               TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.697,0.769"/>
 
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="1420,500,0,0" 
+                    <TextBlock FontSize="35"
+                        HorizontalAlignment="Left" Margin="980,457,0,0" 
                                Text="Heartrate" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- ICON 3 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon3.png" Margin="1450,570,0,0"/>
-                    <TextBlock FontSize="40"
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon3.png" Margin="1004,518,0,0" RenderTransformOrigin="-3.04,0.448"/>
+                    <TextBlock FontSize="35"
                         Name="WeeklyHeartRate"
-                        HorizontalAlignment="Left" Margin="1455,670,0,0" 
+                        HorizontalAlignment="Left" Margin="1016,623,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
 
@@ -226,7 +254,6 @@
                     <ListBox Name="WorkoutsListBox" Margin="160,165,1430,130"
                              FontSize="20" SelectionChanged="WorkoutListBoxSelection">
                     </ListBox>
-                    <TextBox Name="workoutTestTextbox" Text="TextBox" TextWrapping="Wrap" Margin="879,71,345,750"/>
                     <StackPanel Margin="672,165,68,103" Name="WorkoutListStackPanel" Background="AliceBlue"/>
                 </Grid>
 
@@ -342,11 +369,17 @@
 
 
         </TabControl>
-        <Button FontSize="40"
-            Content="Log Out" Margin="1742,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.053,-1.116" Click="LogOutButtonClick" Height="60" HorizontalAlignment="Left" Width="154"/>
+        <Button Style="{DynamicResource RoundButton}" FontSize="25" Margin="1718,35,0,0" VerticalAlignment="Top" 
+                RenderTransformOrigin="1.053,-1.116" Click="LogOutButtonClick" 
+            Height="60" HorizontalAlignment="Left" Width="175">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/icons/Logout.ico"  HorizontalAlignment="Left"/>
+                <Label Padding="10, 0" VerticalAlignment="Center">Log out</Label>
+            </StackPanel>
+        </Button>
 
         <!--print button stub, maybe add a popup if we can get it to work -->
-        <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="BasicPrint.png" Margin="1600,10,0,0"/>
+        <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="BasicPrint.png" Margin="1554,15,0,0"/>
         <!-- example of data binding-->
         <TextBlock FontSize="30" HorizontalAlignment="Left" Margin="1515,65,0,0" Text="{Binding Path=DeviceId}" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>

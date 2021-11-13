@@ -30,7 +30,12 @@
 
         <DockPanel  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Width="1900">
             <Image  Width="200" HorizontalAlignment="Left" Source="/Hyfic Logo.png"/>
-            <Button Style="{DynamicResource RoundButton}" HorizontalAlignment="right" Width="100" Height="50"  FontSize="30" Click="OnExit">Exit</Button>
+            <Button Style="{DynamicResource RoundButton}" HorizontalAlignment="right" Width="125" Height="50"  FontSize="30" Click="OnExit">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/icons/Exit.ico"/>
+                    <Label Padding="10, 0" VerticalAlignment="Center">Exit</Label>
+                </StackPanel>
+            </Button>
         </DockPanel>
     </Grid>
 </Window>

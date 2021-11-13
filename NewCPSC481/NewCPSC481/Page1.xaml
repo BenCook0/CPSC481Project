@@ -47,7 +47,7 @@
                 <Button Style="{DynamicResource RoundButton}" FontSize="20" Height="50" 
                         Width="125" Click="LoginButtonClick">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/icons/Login.ico"/>
+                        <Image Source="/icons/Signin.ico"/>
                         <Label Padding="10, 0" VerticalAlignment="Center">Login</Label>
                     </StackPanel>
                 </Button>

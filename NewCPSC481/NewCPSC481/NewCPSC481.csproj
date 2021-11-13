@@ -11,10 +11,19 @@
     <None Remove="BitfitFrontPicture.jpeg" />
     <None Remove="bitfitGraph.png" />
     <None Remove="Hyfic Logo.png" />
+    <None Remove="icons\Create Goal.ico" />
+    <None Remove="icons\Exit.ico" />
+    <None Remove="icons\Fitness.ico" />
+    <None Remove="icons\Fitness.png" />
+    <None Remove="icons\FitnessData.ico" />
     <None Remove="icons\frontPageIcon1.png" />
     <None Remove="icons\frontPageIcon2.png" />
     <None Remove="icons\frontPageIcon3.png" />
     <None Remove="icons\Login.ico" />
+    <None Remove="icons\Logout.ico" />
+    <None Remove="icons\Person.ico" />
+    <None Remove="icons\Signin.ico" />
+    <None Remove="icons\ViewHistory.ico" />
     <None Remove="Question.png" />
 	<None Remove="frontPageIcon1.png" />
 	<None Remove="frontPageIcon2.png" />
@@ -29,6 +38,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Hyfic Logo.png" />
+    <Resource Include="icons\Create Goal.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icons\Exit.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icons\Fitness.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="icons\frontPageIcon1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -38,10 +56,19 @@
     <Resource Include="icons\frontPageIcon3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="icons\Login.ico">
+    <Resource Include="icons\Logout.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icons\Person.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="icons\Question.png" />
+    <Resource Include="icons\Signin.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icons\ViewHistory.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

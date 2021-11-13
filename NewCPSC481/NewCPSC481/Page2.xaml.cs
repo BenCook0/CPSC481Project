@@ -124,8 +124,6 @@ namespace CPSC481WPF
             }
 
             var workoutDate = AsDateTime(WorkoutsListBox.SelectedItem.ToString());
-            workoutTestTextbox.Text = workoutDate.ToString("g");
-
             workoutUserControl.SetWorkout(user.GetWorkoutForDate(workoutDate));
             workoutUserControl.Visibility = Visibility.Visible;
         }
