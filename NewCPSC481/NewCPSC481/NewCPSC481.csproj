@@ -25,6 +25,8 @@
     <Resource Include="BasicPrint.png" />
     <Resource Include="Bitfit Logo.png" />
     <Resource Include="BitfitFrontPicture.jpeg" />
+	<Resource Include="timeline.png"/>
+	  <Resource Include="testGraph.png" />
 	
     <Resource Include="bitfitGraph.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -40,8 +42,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Question.png" />
-	<Resource Include="testGraph.png"/>
-	  <Resource Include="timeline.png"/>
   </ItemGroup>
 
 </Project>

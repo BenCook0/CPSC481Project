@@ -1,18 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using NewCPSC481.Data;
+﻿using System.Windows;
 
 namespace CPSC481WPF
 {
@@ -29,9 +15,12 @@ namespace CPSC481WPF
 
         private void myWindow_loaded(object sender, RoutedEventArgs e)
         {
-            frame.NavigationService.Navigate(new Page1());
+            Frame.NavigationService.Navigate(new Page1());
         }
 
-
+        private void OnExit(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

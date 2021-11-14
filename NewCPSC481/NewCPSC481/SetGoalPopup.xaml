@@ -7,6 +7,16 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SetGoalPopup">
+
+    <Page.Resources>
+        <Style TargetType="Button" x:Key="RoundButton">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15" />
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Page.Resources>
     <Grid Background="White">
         <Border BorderThickness="1" BorderBrush="Black" Margin="450,147,96,270">
             <ComboBox Name="GoalMetricComboBox" FontSize="20">
@@ -48,14 +58,12 @@
                    HorizontalAlignment="Left" Margin="96,153,0,0" Text="Choose a Goal Metric:" 
                    TextWrapping="Wrap" VerticalAlignment="Top"/>
 
-        <Button 
-            FontSize="20"
-            Content="Cancel" 
-            HorizontalAlignment="Left" Margin="160,382,0,0" VerticalAlignment="Top" Height="41" Width="126" Click="Button_Click_1"/>
-
-        <Button 
-            FontSize="20"
-            Content="Set Goal" 
-            HorizontalAlignment="Left" Margin="475,382,0,0" VerticalAlignment="Top" Height="41" Width="126" Click="Button_Click"/>
+        <Button Style="{DynamicResource RoundButton}" FontSize="20" 
+            HorizontalAlignment="Center" Margin="0,382,0,0" VerticalAlignment="Top" Height="41" Width="150" Click="OnAddGoalClick">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/icons/SaveGoal.ico"/>
+                <Label Padding="10, 0" VerticalAlignment="Center">Set Goal</Label>
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>
