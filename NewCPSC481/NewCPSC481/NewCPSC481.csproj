@@ -40,6 +40,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Question.png" />
+	<Resource Include="testGraph.png"/>
+	  <Resource Include="timeline.png"/>
   </ItemGroup>
 
 </Project>

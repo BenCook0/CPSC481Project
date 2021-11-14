@@ -235,46 +235,39 @@
 
 
                 <Grid Background="AliceBlue">
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="Steps" HorizontalAlignment="Left" Margin="1042,378,0,0" VerticalAlignment="Top" Height="20" Width="100" FontSize="12">
+					<Border BorderThickness="1" BorderBrush="Black" Margin="1342,300,200,530">
+                        <ComboBox Name="GoalMetricComboBox" FontSize="25">
+                            <ComboBoxItem  Content="Calories"/>
+                            <ComboBoxItem  Content="Heartrate (Avg BPM)"/>
+                            <ComboBoxItem  Content="Steps"/>
+                        </ComboBox>
+                    </Border>
+                   
+                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Name="oneDay" HorizontalAlignment="Left" Margin="795,90,0,0" VerticalAlignment="Top" Height="20" Width="20" FontSize="12">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="Calories" HorizontalAlignment="Left" Margin="1042,460,0,0" VerticalAlignment="Top" Height="20" Width="100" FontSize="12">
+                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Name="threeDay" HorizontalAlignment="Left" Margin="895,90,0,0" VerticalAlignment="Top" Height="20" Width="20" FontSize="12" RenderTransformOrigin="5.363,-1.265">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="Heartrate" HorizontalAlignment="Left" Margin="1042,542,0,0" VerticalAlignment="Top" Height="20" Width="100" FontSize="12">
+                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Name="oneWeek" HorizontalAlignment="Left" Margin="1000,90,0,0" VerticalAlignment="Top" Height="20" Width="20" FontSize="12">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="" HorizontalAlignment="Left" Margin="598,248,0,0" VerticalAlignment="Top" Height="20" Width="20" FontSize="12">
+                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Name="oneMonth" HorizontalAlignment="Left" Margin="1101,90,0,0" VerticalAlignment="Top" Height="20" Width="20" FontSize="12" RenderTransformOrigin="5.125,-0.215">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="4" ScaleY="4" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="" HorizontalAlignment="Left" Margin="683,250,0,0" VerticalAlignment="Top" Height="20" Width="20" FontSize="12" RenderTransformOrigin="5.363,-1.265">
-                        <CheckBox.LayoutTransform>
-                            <ScaleTransform ScaleX="4" ScaleY="4" />
-                        </CheckBox.LayoutTransform>
-                    </CheckBox>
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="" HorizontalAlignment="Left" Margin="838,248,0,0" VerticalAlignment="Top" Height="20" Width="20" FontSize="12">
-                        <CheckBox.LayoutTransform>
-                            <ScaleTransform ScaleX="4" ScaleY="4" />
-                        </CheckBox.LayoutTransform>
-                    </CheckBox>
-                    <CheckBox Style="{DynamicResource CheckBoxStyle1}" Content="" HorizontalAlignment="Left" Margin="758,248,0,0" VerticalAlignment="Top" Height="20" Width="20" FontSize="12" RenderTransformOrigin="5.125,-0.215">
-                        <CheckBox.LayoutTransform>
-                            <ScaleTransform ScaleX="4" ScaleY="4" />
-                        </CheckBox.LayoutTransform>
-                    </CheckBox>
-                    <TextBlock HorizontalAlignment="Left" Margin="136,87,0,0" Text="Graphs" TextWrapping="Wrap" VerticalAlignment="Top" Width="373"  FontSize="100" Background="{x:Null}"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="598,193,0,0" Text="1D" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="678,193,0,0" Text="3D" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="758,193,0,0" Text="1W" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="840,193,0,0" Text="1M" TextWrapping="Wrap" VerticalAlignment="Top" Width="76"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="100,50,0,0" Text="Graphs" TextWrapping="Wrap" VerticalAlignment="Top" Width="373"  FontSize="100" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="800,30,0,0" Text="1D" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="900,30,0,0" Text="3D" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="1000,30,0,0" Text="1W" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="1100,30,0,0" Text="1M" TextWrapping="Wrap" VerticalAlignment="Top" Width="76"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
                     <Button Content="?" HorizontalAlignment="Left" Margin="1011,210,0,0" VerticalAlignment="Top" Background="{x:Null}" Height="50" Width="50" BorderBrush="{x:Null}" >
                         <Button.Template>
                             <ControlTemplate TargetType="{x:Type Button}">
@@ -285,9 +278,41 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    <Image HorizontalAlignment="Left" Height="366" Margin="395,349,0,0" VerticalAlignment="Top" Source="/bitfitGraph.png" Width="663"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="272,497,0,0" Text="Value" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="586,720,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
+                    <Image HorizontalAlignment="Left" Height="450" Width="1100" Margin="200,200,0,0" VerticalAlignment="Top">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Setter Property="Source" Value="/testGraph.png"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Path=SelectedItem.Content, ElementName=GoalMetricComboBox}" Value="Calories">
+                                        <Setter Property="Source" Value="/bitfitGraph.png"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=SelectedItem.Content, ElementName=GoalMetricComboBox}" Value="Heartrate (Avg BPM)">
+                                        <Setter Property="Source" Value="/bitfitGraph.png"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=SelectedItem.Content, ElementName=GoalMetricComboBox}" Value="Steps">
+                                        <Setter Property="Source" Value="/bitfitGraph.png"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsChecked, ElementName=oneDay}" Value="True">
+                                        <Setter Property="Source" Value="/timeline.png"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsChecked, ElementName=threeDay}" Value="True">
+                                        <Setter Property="Source" Value="/timeline.png"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsChecked, ElementName=oneWeek}" Value="True">
+                                        <Setter Property="Source" Value="/timeline.png"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsChecked, ElementName=oneMonth}" Value="True">
+                                        <Setter Property="Source" Value="/timeline.png"></Setter>
+                                    </DataTrigger>
+                                    
+                                </Style.Triggers>
+                            </Style>
+                            
+                        </Image.Style>
+                    </Image>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="50,497,0,0" Text="Value" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="650,660,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Goals" FontSize="40" HorizontalAlignment="Left" Margin="-2,-2,0,2" Width="114">
