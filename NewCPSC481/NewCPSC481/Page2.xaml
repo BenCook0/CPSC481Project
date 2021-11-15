@@ -257,8 +257,8 @@
 
 
                 <Grid Background="AliceBlue">
-					<Border BorderThickness="1" BorderBrush="Black" Margin="1342,300,200,530">
-                        <ComboBox Name="GoalMetricComboBox" FontSize="25">
+					<Border BorderThickness="1" BorderBrush="Black" Margin="1342,300,200,500">
+                        <ComboBox Name="graphMetric" FontSize="25">
                             <ComboBoxItem  Content="Calories"/>
                             <ComboBoxItem  Content="Heartrate (Avg BPM)"/>
                             <ComboBoxItem  Content="Steps"/>
@@ -303,33 +303,67 @@
                     <Image HorizontalAlignment="Left" Height="450" Width="1100" Margin="200,200,0,0" VerticalAlignment="Top">
                         <Image.Style>
                             <Style TargetType="{x:Type Image}">
-                                <Setter Property="Source" Value="/testGraph.png"/>
+                                <Setter Property="Source" Value="/defaultGraph.png"/>
                                 <Style.Triggers>
-                                    <DataTrigger Binding="{Binding Path=SelectedItem.Content, ElementName=GoalMetricComboBox}" Value="Calories">
-                                        <Setter Property="Source" Value="/bitfitGraph.png"></Setter>
-                                    </DataTrigger>
-                                    <DataTrigger Binding="{Binding Path=SelectedItem.Content, ElementName=GoalMetricComboBox}" Value="Heartrate (Avg BPM)">
-                                        <Setter Property="Source" Value="/bitfitGraph.png"></Setter>
-                                    </DataTrigger>
-                                    <DataTrigger Binding="{Binding Path=SelectedItem.Content, ElementName=GoalMetricComboBox}" Value="Steps">
-                                        <Setter Property="Source" Value="/bitfitGraph.png"></Setter>
-                                    </DataTrigger>
-                                    <DataTrigger Binding="{Binding Path=IsChecked, ElementName=oneDay}" Value="True">
-                                        <Setter Property="Source" Value="/timeline.png"></Setter>
-                                    </DataTrigger>
-                                    <DataTrigger Binding="{Binding Path=IsChecked, ElementName=threeDay}" Value="True">
-                                        <Setter Property="Source" Value="/timeline.png"></Setter>
-                                    </DataTrigger>
-                                    <DataTrigger Binding="{Binding Path=IsChecked, ElementName=oneWeek}" Value="True">
-                                        <Setter Property="Source" Value="/timeline.png"></Setter>
-                                    </DataTrigger>
-                                    <DataTrigger Binding="{Binding Path=IsChecked, ElementName=oneMonth}" Value="True">
-                                        <Setter Property="Source" Value="/timeline.png"></Setter>
-                                    </DataTrigger>
-                                    
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding Path=SelectedItem.Content, ElementName=graphMetric}" Value="Calories"/>
+                                            <Condition Binding="{Binding Path=IsChecked, ElementName=oneDay}" Value="True"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="Source" Value="/1DGraphCal.png"/>
+                                    </MultiDataTrigger>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding Path=SelectedItem.Content, ElementName=graphMetric}" Value="Calories"/>
+                                            <Condition Binding="{Binding Path=IsChecked, ElementName=threeDay}" Value="True"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="Source" Value="/3DGraphCal.png"/>
+                                    </MultiDataTrigger>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding Path=SelectedItem.Content, ElementName=graphMetric}" Value="Calories"/>
+                                            <Condition Binding="{Binding Path=IsChecked, ElementName=oneWeek}" Value="True"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="Source" Value="/1WGraphCal.png"/>
+                                    </MultiDataTrigger>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding Path=SelectedItem.Content, ElementName=graphMetric}" Value="Calories"/>
+                                            <Condition Binding="{Binding Path=IsChecked, ElementName=oneMonth}" Value="True"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="Source" Value="/1MGraphCal.png"/>
+                                    </MultiDataTrigger>
+
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding Path=SelectedItem.Content, ElementName=graphMetric}" Value="Steps"/>
+                                            <Condition Binding="{Binding Path=IsChecked, ElementName=oneDay}" Value="True"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="Source" Value="/1DGraphSteps.png"/>
+                                    </MultiDataTrigger>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding Path=SelectedItem.Content, ElementName=graphMetric}" Value="Steps"/>
+                                            <Condition Binding="{Binding Path=IsChecked, ElementName=threeDay}" Value="True"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="Source" Value="/3DGraphSteps.png"/>
+                                    </MultiDataTrigger>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding Path=SelectedItem.Content, ElementName=graphMetric}" Value="Steps"/>
+                                            <Condition Binding="{Binding Path=IsChecked, ElementName=oneWeek}" Value="True"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="Source" Value="/1WGraphSteps.png"/>
+                                    </MultiDataTrigger>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding Path=SelectedItem.Content, ElementName=graphMetric}" Value="Steps"/>
+                                            <Condition Binding="{Binding Path=IsChecked, ElementName=oneMonth}" Value="True"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="Source" Value="/1MGraphSteps.png"/>
+                                    </MultiDataTrigger>
                                 </Style.Triggers>
                             </Style>
-                            
                         </Image.Style>
                     </Image>
 

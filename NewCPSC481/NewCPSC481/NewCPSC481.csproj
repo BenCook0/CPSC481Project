@@ -26,7 +26,16 @@
     <Resource Include="Bitfit Logo.png" />
     <Resource Include="BitfitFrontPicture.jpeg" />
 	<Resource Include="timeline.png"/>
-	  <Resource Include="testGraph.png" />
+	<Resource Include="testGraph.png"/>
+	<Resource Include="1DGraphCal.png"/>
+	<Resource Include="3DGraphCal.png"/>
+	<Resource Include="1WGraphCal.png"/>
+	<Resource Include="1MGraphCal.png"/>
+	<Resource Include="1DGraphSteps.png"/>
+	<Resource Include="3DGraphSteps.png"/>
+	<Resource Include="1WGraphSteps.png"/>
+	<Resource Include="1MGraphSteps.png"/>
+	<Resource Include="defaultGraph.png"/>
 	
     <Resource Include="bitfitGraph.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
