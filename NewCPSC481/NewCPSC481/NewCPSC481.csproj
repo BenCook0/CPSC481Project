@@ -11,6 +11,7 @@
     <None Remove="Bitfit Logo.png" />
     <None Remove="BitfitFrontPicture.jpeg" />
     <None Remove="bitfitGraph.png" />
+    <None Remove="Bitfit_logo_dark.jpg" />
     <None Remove="Hyfic Logo.png" />
     <None Remove="icons\frontPageIcon1.png" />
     <None Remove="icons\frontPageIcon2.png" />
@@ -28,6 +29,7 @@
     <Resource Include="BasicPrint.png" />
     <Resource Include="Bitfit Logo.png" />
     <Resource Include="BitfitFrontPicture.jpeg" />
+	<Resource Include="Bitfit_logo_dark.jpg" />
 	<Resource Include="timeline.png" />
 	<Resource Include="testGraph.png" />
 	<Resource Include="1DGraphCal.png" />
