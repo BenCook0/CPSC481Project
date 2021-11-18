@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Viewbox>
-        <Grid Background="AliceBlue" Height="440">
+        <Grid Background="#FF192122" Height="410" Width="1256" VerticalAlignment="Bottom" HorizontalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="87*"/>
                 <RowDefinition Height="200*"/>
@@ -23,25 +23,25 @@
             <TextBlock Grid.Column="0" Grid.ColumnSpan="3" FontSize="40"
                        HorizontalAlignment="Center" 
                        Text="Track your Fitness Today!" 
-                       TextWrapping="Wrap" VerticalAlignment="Center" Height="53" Width="334"/>
+                       TextWrapping="Wrap" VerticalAlignment="Center" Height="53" Width="334" Foreground="White"/>
 
             <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontSize="35"
                         HorizontalAlignment="Left" 
                                Text="View your Bitfit Data:" 
-                               TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350"/>
+                               TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350" Foreground="White"/>
 
             <TextBlock Grid.Row="2" Grid.Column="0" FontSize="35"
                        HorizontalAlignment="Center" 
                        Text="Steps Taken" 
-                       TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350"/>
+                       TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350" Foreground="White"/>
             <TextBlock Grid.Row="2" Grid.Column="1" FontSize="35"
                        HorizontalAlignment="Center" 
                        Text="Calories Burned" 
-                       TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350"/>
+                       TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350" Foreground="White"/>
 
             <TextBlock Grid.Row="2" Grid.Column="2" FontSize="35"
                        HorizontalAlignment="Center" Text="Heart rate" 
-                       TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350"/>
+                       TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350" Foreground="White"/>
             <!-- ICON 1 -->
             <Image Grid.Row="3" Grid.Column="0" Width="80" HorizontalAlignment="Center" 
                    Source="/icons/frontPageIcon1.png" />
