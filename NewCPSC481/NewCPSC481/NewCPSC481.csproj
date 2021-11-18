@@ -16,6 +16,9 @@
     <None Remove="icons\frontPageIcon2.png" />
     <None Remove="icons\frontPageIcon3.png" />
     <None Remove="icons\Question.png" />
+	<None Remove="icons\dark_shoe_icon" />
+	<None Remove="icons\dark_weight_icon" />
+	<None Remove="icons\dark_heartbeat_icon" />
 	<None Remove="frontPageIcon1.png" />
 	<None Remove="frontPageIcon2.png" />
 	<None Remove="frontPageIcon3.png" />
@@ -25,17 +28,17 @@
     <Resource Include="BasicPrint.png" />
     <Resource Include="Bitfit Logo.png" />
     <Resource Include="BitfitFrontPicture.jpeg" />
-	<Resource Include="timeline.png"/>
-	<Resource Include="testGraph.png"/>
-	<Resource Include="1DGraphCal.png"/>
-	<Resource Include="3DGraphCal.png"/>
-	<Resource Include="1WGraphCal.png"/>
-	<Resource Include="1MGraphCal.png"/>
-	<Resource Include="1DGraphSteps.png"/>
-	<Resource Include="3DGraphSteps.png"/>
-	<Resource Include="1WGraphSteps.png"/>
-	<Resource Include="1MGraphSteps.png"/>
-	<Resource Include="defaultGraph.png"/>
+	<Resource Include="timeline.png" />
+	<Resource Include="testGraph.png" />
+	<Resource Include="1DGraphCal.png" />
+	<Resource Include="3DGraphCal.png" />
+	<Resource Include="1WGraphCal.png" />
+	<Resource Include="1MGraphCal.png" />
+	<Resource Include="1DGraphSteps.png" />
+	<Resource Include="3DGraphSteps.png" />
+	<Resource Include="1WGraphSteps.png" />
+	<Resource Include="1MGraphSteps.png" />
+	<Resource Include="defaultGraph.png" />
 	
     <Resource Include="bitfitGraph.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -51,6 +54,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="icons\Question.png" />
+	<Resource Include="icons\dark_shoe_icon.png">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="icons\dark_weight_icon.png">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icons\drak_heartbeat_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
