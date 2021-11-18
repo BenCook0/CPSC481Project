@@ -17,6 +17,8 @@ namespace CPSC481WPF
         readonly GoalUserControl goalUserControl = new GoalUserControl();
         readonly WorkoutUserControl workoutUserControl = new WorkoutUserControl();
 
+        Boolean captured = false;
+
         public Page2()
         {
             InitializeComponent();
@@ -168,6 +170,40 @@ namespace CPSC481WPF
         private void ViewGoalsTab(object sender, RoutedEventArgs e)
         {
             MainTabControl.SelectedIndex = 4;
+        }
+
+        private void Rect_MouseDown_1(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            captured = true;
+        }
+
+        private void Rect_MouseMove_1(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if (captured)
+            {
+                Thickness margin = scrollBar.Margin;
+                double passed = e.GetPosition(graphGrid).X - (scrollBar.Width / 2);
+                if (passed < 192)
+                {
+                    margin.Left = 192;
+                }
+
+                else if (passed > 1506)
+                {
+                    margin.Left = 1506;
+                }
+
+                else
+                {
+                    margin.Left = passed;
+                }
+                scrollBar.Margin = margin;
+            }
+        }
+
+        private void Rect_MouseUp_1(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            captured = false;
         }
     }
 }
