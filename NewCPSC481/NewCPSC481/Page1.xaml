@@ -30,16 +30,16 @@
 
         <Border BorderBrush="Black" BorderThickness="1" Name="MyBorder"  
                 Grid.Row="0" Grid.Column="0" CornerRadius="20" Background="Black">
-            <StackPanel Background="White" Margin="-1,76,-1,0">
+            <StackPanel Background="White" Margin="-1,-1,-59,0">
                 <TextBlock Padding="5,25, 5, 5"/>
-                <Image  Width="307" Height="143" Source="/Bitfit Logo.png" HorizontalAlignment="Right"  RenderTransformOrigin="0.523,0.5"/>
+                <Image  Width="337" Height="160" Source="/Bitfit Logo.png" HorizontalAlignment="Left"  RenderTransformOrigin="0.523,0.5" Margin="9,0,0,0"/>
 
-                <TextBlock Padding="5,5, 5, 5"  Text="  Device ID" TextWrapping="Wrap" FontSize ="20" Foreground="Black" Margin="0,150,0,10" />
+                <TextBlock Padding="5,5, 5, 5"  Text="  Device ID" TextWrapping="Wrap" FontSize ="25" Foreground="Black" Margin="15,150,0,10" />
                 <TextBox Padding="5, 0, 0, 0" x:Name ="DeviceId" TextWrapping="NoWrap" 
-                         Height="40" Width="266" FontSize="20" Background="#FF484C4D" Margin="0,0,0,30" BorderBrush="#FF484C4D"/>
-                <TextBlock Padding="5,5, 5, 5"  Text="  Password" TextWrapping="Wrap" FontSize ="20" Foreground="Black" Margin="0,0,0,10" />
+                         Height="40" Width="292" FontSize="20" Background="#FFDADFE0" Margin="0,0,0,30" BorderBrush="#FF484C4D"/>
+                <TextBlock Padding="5,5, 5, 5"  Text="  Password" TextWrapping="Wrap" FontSize ="25" Foreground="Black" Margin="15,0,0,10" />
                 <PasswordBox Padding="5, 0, 0, 0" x:Name="PasswordField"  
-                             FontSize="20" Height="40" Width="266" Background="#FF484C4D" BorderBrush="#FF484C4D"/>
+                             FontSize="20" Height="40" Width="290" Background="#FFDADFE0" BorderBrush="#FF484C4D"/>
 
                 <TextBlock Padding="5,25"  Text="" TextWrapping="Wrap" FontSize ="20" />
                 <Button Style="{DynamicResource RoundButton}" FontSize="20" Height="50" 
@@ -53,17 +53,27 @@
 
         </Border>
 
-        <Grid Background="#FF192122" Grid.Column="1">
-            <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="0,0,1857,0"/>
+        <Grid Background="#FF192122" Grid.Column="1" Margin="59,0,0,0">
+
+            <Rectangle Stroke="#FF192122" Fill="#FF192122"  Margin="0,0,0,1000"/>
+
+            <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="58,0,1554,0" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
             <Rectangle Stroke="#44acc2" Fill="#44acc2" Margin="316,0,1573,0"/>
 
-            <StackPanel Name="FrontPagePanel" Background="#FF192122" Margin="6,0,0,0"/>
+            <StackPanel x:Name="FrontPagePanel" Background="#FF192122" Margin="44,0,0,0"/>
 
-            <Rectangle Stroke="#FF192122" Fill="#FF192122"  Margin="-306,0,0,1000"/>
-
-            <Ellipse Name="elipse1" HorizontalAlignment="Left" Height="50" Margin="736,990,0,40" 
+            <Ellipse x:Name="elipse1" HorizontalAlignment="Left" Height="50" Margin="736,990,0,40" 
                      Stroke="#44acc2" Fill="#44acc2" Width="50" MouseDown="elipse1MouseDown"/>
-            <Ellipse Name="elipse2" HorizontalAlignment="Left" Height="50" Margin="809,990,0,40" 
+            <Ellipse x:Name="elipse2" HorizontalAlignment="Left" Height="50" Margin="809,990,0,40" 
                      Stroke="#44acc2" Width="50" MouseDown="elipse2MouseDown"/>
         </Grid>
     </Grid>
