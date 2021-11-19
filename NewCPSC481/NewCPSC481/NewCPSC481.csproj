@@ -12,6 +12,9 @@
     <None Remove="BitfitFrontPicture.jpeg" />
     <None Remove="bitfitGraph.png" />
     <None Remove="Bitfit_logo_dark.jpg" />
+    <None Remove="dark_shoe_icon.png" />
+    <None Remove="dark_weight_icon.png" />
+    <None Remove="drak_heartbeat_icon.png" />
     <None Remove="Hyfic Logo.png" />
     <None Remove="icons\drak_heartbeat_icon.png" />
     <None Remove="icons\frontPageIcon1.png" />
@@ -31,6 +34,9 @@
     <Resource Include="Bitfit Logo.png" />
     <Resource Include="BitfitFrontPicture.jpeg" />
 	<Resource Include="Bitfit_logo_dark.jpg" />
+	<Resource Include="dark_shoe_icon.png" />
+	<Resource Include="dark_weight_icon.png" />
+	<Resource Include="drak_heartbeat_icon.png" />
 	<Resource Include="icons\drak_heartbeat_icon.png">
 	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</Resource>

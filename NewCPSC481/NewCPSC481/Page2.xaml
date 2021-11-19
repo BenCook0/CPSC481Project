@@ -108,10 +108,10 @@
                 <Border 
                       Name="Border"
                       Margin="0,0,-4,0" 
-                      Background="#FF192122"
-                      BorderBrush="#FF192122" 
+                      Background="Black"
+                      BorderBrush="Black" 
                       BorderThickness="1,1,1,1" 
-                      CornerRadius="0,0,0,0" >
+                      CornerRadius="25,25,0,0" >
                     <ContentPresenter x:Name="ContentSite"
                           VerticalAlignment="Center"
                           HorizontalAlignment="Center"
@@ -123,8 +123,8 @@
             <ControlTemplate.Triggers>
                 <Trigger Property="IsSelected" Value="True">
                     <Setter Property="Panel.ZIndex" Value="100" />
-                    <Setter TargetName="Border" Property="Background" Value="#4c545c" />
-                    <Setter TargetName="Border" Property="BorderBrush" Value="#4c545c"/>
+                    <Setter TargetName="Border" Property="Background" Value="#192122" />
+                    <Setter TargetName="Border" Property="BorderBrush" Value="#192122"/>
                     <Setter TargetName="Border" Property="BorderThickness" Value="1,1,1,0" />
                 </Trigger>
                 <Trigger Property="IsEnabled" Value="False">
@@ -136,157 +136,164 @@
     </Page.Resources>
     <Grid Background="Black">
         <TabControl Name="MainTabControl" Margin="0,100,0,0" BorderBrush="#FF343537">
-            <TabItem Template="{DynamicResource TabItemTemplate1}" Header="Welcome" FontSize="40" Margin="-1,1,-134,-1" Height="60" OpacityMask="Black" Background="#FF192122" Foreground="White" BorderBrush="#FF192122" IsSelected="True">
-                <Grid>
+            <TabItem x:Name="WelcomeTab" Template="{DynamicResource TabItemTemplate1}" Header="Welcome" FontSize="40" Margin="-4,1,-134,-1" Height="60" OpacityMask="Black" Background="Black" Foreground="White" BorderBrush="Black" IsSelected="True">
+                <Grid Background="#FF192122" Height="917" Margin="-2,-2,-2,-2">
                     <TextBlock FontSize="45"
-                        HorizontalAlignment="Left" Margin="95,20,0,0" 
+                        HorizontalAlignment="Center" Margin="0,87,0,0" 
                                Text="Welcome To Your Personal Fitness Breakdown!" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <TextBlock FontSize="40"
-                        HorizontalAlignment="Left" Margin="224,120,0,0" 
-                               Text="Begin by Choosing What you Want to View!" 
-                               TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
+                               TextWrapping="Wrap" VerticalAlignment="Top"/>
 
                     <Button Style="{DynamicResource RoundButton}"
                             FontSize="30"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="50"
-                            Click="RecentDataButtonClick" Margin="224,250,0,0" Grid.Column="1" Grid.ColumnSpan="2">
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="420" Height="75"
+                            Click="RecentDataButtonClick" Margin="501,316,0,0" Background="#FF3084A4" OpacityMask="#FF3C3C3C" BorderBrush="#FF3084A4" Foreground="White">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/icons/Fitness.ico"  HorizontalAlignment="Left"/>
-                            <Label Padding="10, 0" VerticalAlignment="Center">Recent Fitness Data</Label>
+                            <Label Style="{DynamicResource LabelStyle1}" Padding="10, 0" VerticalAlignment="Center" Foreground="Black">Recent Fitness Data</Label>
                         </StackPanel>
                     </Button>
                     <Button FontSize="30" Style="{DynamicResource RoundButton}"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="50" Click="WorkoutsButtonClick" 
-                            Margin="224,362,0,0" Grid.Column="1" Grid.ColumnSpan="2">
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="420" Height="75" Click="WorkoutsButtonClick" 
+                            Margin="1241,318,0,0" Background="#FF3084A4" OpacityMask="#FF3C3C3C" BorderBrush="#FF3084A4" Foreground="White">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/icons/ViewHistory.ico"/>
-                            <Label Padding="10, 0" VerticalAlignment="Center">Workout History</Label>
+                            <Label Padding="10, 0" Content="Workout History" Foreground="Black" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
                     <Button Style="{DynamicResource RoundButton}" FontSize="30"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="50" Click="GraphicalDataButtonClick" 
-                            Margin="224,457,0,0" Grid.Column="1" Grid.ColumnSpan="2">
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="420" Height="75" Click="GraphicalDataButtonClick" 
+                            Margin="502,661,0,0" Background="#FF3084A4" OpacityMask="#FF3C3C3C" BorderBrush="#FF3084A4" Foreground="Black">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/icons/Person.ico"/>
-                            <Label Padding="10, 0" VerticalAlignment="Center">Your fitness data</Label>
+                            <Label Padding="10, 0" VerticalAlignment="Center" Foreground="Black">Your fitness data</Label>
                         </StackPanel>
                     </Button>
-                    <Button Style="{DynamicResource RoundButton}" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" 
-                            Height="50" Click="ViewGoalsTab" 
-                            Margin="224,552,0,0" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Button Style="{DynamicResource RoundButton}" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Width="420" 
+                            Height="75" Click="ViewGoalsTab" 
+                            Margin="1241,661,0,0" Background="#FF3084A4" OpacityMask="#FF3C3C3C" BorderBrush="#FF3084A4" Foreground="Black">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/icons/Create Goal.ico"/>
-                            <Label Padding="10, 0" VerticalAlignment="Center">Add/View Goals</Label>
+                            <Label Padding="10, 0" VerticalAlignment="Center" Foreground="Black" OpacityMask="#FF8D8D8D">Add/View Goals</Label>
                         </StackPanel>
                     </Button>
+                    <Image HorizontalAlignment="Left" Height="180" Margin="290,260,0,0" VerticalAlignment="Top" Width="180" Source="/dark_weight_icon.png"/>
+                    <Image HorizontalAlignment="Left" Height="180" Margin="290,600,0,0" VerticalAlignment="Top" Width="180" OpacityMask="White" Source="/dark_weight_icon.png"/>
+                    <Image HorizontalAlignment="Left" Height="180" Margin="1043,260,0,0" VerticalAlignment="Top" Width="180" Source="/dark_weight_icon.png"/>
+                    <Image HorizontalAlignment="Left" Height="180" Margin="1043,600,0,0" VerticalAlignment="Top" Width="180" OpacityMask="White" Source="/dark_weight_icon.png"/>
                 </Grid>
             </TabItem>
-            <TabItem Name ="RecentDataTab" Header="Recent Data" FontSize="40" Margin="133,1,-135,-1" Height="60" OpacityMask="Black" Foreground="White" Background="#FF192122" BorderBrush="#FF192122" Width="320">
-                <Grid Background="White">
-                    <TextBlock FontSize="60"
-                        HorizontalAlignment="Left" Margin="44,34,0,0" 
-                               Text="Recent Data" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TabItem Template="{DynamicResource TabItemTemplate1}" Name ="RecentDataTab" Header="Recent Data" FontSize="40" Margin="133,1,-135,-1" Height="60" OpacityMask="Black" Foreground="White" Background="#FF192122" BorderBrush="#FF192122" Width="320">
+                <Grid Background="#FF192122" Margin="-2,-2,-2,-2">
                     <TextBlock FontSize="45"
-                        HorizontalAlignment="Left" Margin="252,135,0,0" 
-                               Text="Daily" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+                        HorizontalAlignment="Left" Margin="480,86,0,0" 
+                               TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Daily Summary"/><LineBreak/><Run/></TextBlock>
 
                     <TextBlock FontSize="35"
-                        HorizontalAlignment="Left" Margin="36,203,0,0" 
+                        HorizontalAlignment="Left" Margin="444,545,0,0" 
                                Text="Steps Taken" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- ICON 1 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon1.png" Margin="86,273,0,0"/>
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/dark_shoe_icon.png" Margin="484,435,0,0"/>
                     <TextBlock Name="DailyStepsTaken" FontSize="35"
-                        HorizontalAlignment="Left" Margin="92,373,0,0" 
+                        HorizontalAlignment="Left" Margin="705,471,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
 
                     <TextBlock FontSize="35"
-                        HorizontalAlignment="Left" Margin="316,203,0,0"
+                        HorizontalAlignment="Left" Margin="412,749,0,0"
                                Text="Calories Burned" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- ICON 2 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon2.png" Margin="386,273,0,0"/>
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/dark_weight_icon.png" Margin="483,644,0,0"/>
                     <TextBlock FontSize="35"
-                        HorizontalAlignment="Left" Margin="392,373,0,0" 
+                        HorizontalAlignment="Left" Margin="705,677,0,0" 
                                Name="DailyCalories"
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
 
                     <TextBlock FontSize="35"
-                        HorizontalAlignment="Left" Margin="227,443,0,0" 
+                        HorizontalAlignment="Left" Margin="460,335,0,0" 
                                TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="Heartrate"/><LineBreak/><Run Language="en-ca"/></TextBlock>
                     <!-- ICON 3 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon3.png" Margin="250,518,0,0"/>
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/drak_heartbeat_icon.png" Margin="484,227,0,0"/>
                     <TextBlock FontSize="35"
                         Name="DailyHeartRate"
-                        HorizontalAlignment="Left" Margin="262,623,0,0" 
+                        HorizontalAlignment="Left" Margin="705,254,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!---->
                     <TextBlock FontSize="45"
-                        HorizontalAlignment="Left" Margin="954,128,0,0" 
-                               TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-ca" Text="Weekly"/></TextBlock>
+                        HorizontalAlignment="Left" Margin="1175,86,0,0" 
+                               TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Weekly Summary"/><LineBreak/><Run/></TextBlock>
 
                     <TextBlock FontSize="35"
-                        HorizontalAlignment="Left" Margin="814,207,0,0" 
+                        HorizontalAlignment="Left" Margin="1155,545,0,0" 
                                Text="Steps Taken" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- ICON 1 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon1.png" Margin="854,277,0,0" RenderTransformOrigin="-3.19,0.488"/>
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/dark_shoe_icon.png" Margin="1196,435,0,0" RenderTransformOrigin="-3.19,0.488"/>
                     <TextBlock FontSize="35"
                         Name="WeeklyStepsTaken"
-                        HorizontalAlignment="Left" Margin="854,391,0,0" 
+                        HorizontalAlignment="Left" Margin="1441,471,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
 
                     <TextBlock FontSize="35"
-                        HorizontalAlignment="Left" Margin="1114,207,0,0" 
+                        HorizontalAlignment="Left" Margin="1125,749,0,0" 
                                Text="Calories Burned" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- ICON 2 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon2.png" Margin="1186,277,0,0"/>
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/dark_weight_icon.png" Margin="1196,644,0,0"/>
                     <TextBlock FontSize="35"
                         Name="WeeklyCalories"
-                        HorizontalAlignment="Left" Margin="1186,391,0,0" 
+                        HorizontalAlignment="Left" Margin="1441,671,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.697,0.769"/>
 
                     <TextBlock FontSize="35"
-                        HorizontalAlignment="Left" Margin="980,457,0,0" 
+                        HorizontalAlignment="Left" Margin="1173,335,0,0" 
                                Text="Heartrate" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
                     <!-- ICON 3 -->
-                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/icons/frontPageIcon3.png" Margin="1004,518,0,0" RenderTransformOrigin="-3.04,0.448"/>
+                    <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/drak_heartbeat_icon.png" Margin="1196,227,0,0" RenderTransformOrigin="-3.04,0.448"/>
                     <TextBlock FontSize="35"
                         Name="WeeklyHeartRate"
-                        HorizontalAlignment="Left" Margin="1016,623,0,0" 
+                        HorizontalAlignment="Left" Margin="1441,254,0,0" 
                                Text="1234" 
                                TextWrapping="Wrap" VerticalAlignment="Top"/>
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Workouts" FontSize="40" Height="60" VerticalAlignment="Top" Width="321.7" Margin="134,1,-134,0" OpacityMask="Black" Background="#FF192122" Foreground="White" BorderBrush="#FF192122">
-                <Grid>
+            <TabItem Template="{DynamicResource TabItemTemplate1}" Header="Workouts" FontSize="40" Height="60" VerticalAlignment="Top" Width="321.7" Margin="134,1,-134,-1" OpacityMask="Black" Background="#FF192122" Foreground="White" BorderBrush="#FF192122">
+                <Grid Background="#192122" Margin="-2,-2,-2,-2">
                     <TextBlock 
                         HorizontalAlignment="Left" Margin="44,27,0,0" 
                             TextWrapping="Wrap" VerticalAlignment="Top" Width="440"  
                                 FontSize="80" 
                                     Background="{x:Null}"><Run Language="en-ca" Text="Workouts"/></TextBlock>
                     <ListBox Name="WorkoutsListBox" Margin="160,165,1430,130"
-                             FontSize="20" SelectionChanged="WorkoutListBoxSelection">
+                             FontSize="20" SelectionChanged="WorkoutListBoxSelection" Background="#FF192122" Foreground="White">
                     </ListBox>
-                    <StackPanel Margin="672,165,68,103" Name="WorkoutListStackPanel" Background="AliceBlue"/>
+                    <StackPanel Margin="672,165,68,103" Name="WorkoutListStackPanel" Background="#FF192122"/>
                 </Grid>
 
             </TabItem>
-            <TabItem Header="Graphs" FontSize="40" Height="60" VerticalAlignment="Top" Width="320" Margin="132,1,-132,0" OpacityMask="Black" Background="#FF192122" Foreground="White" BorderBrush="#FF192122">
+            <TabItem Template="{DynamicResource TabItemTemplate1}" Header="Graphs" FontSize="40" Height="60" VerticalAlignment="Top" Width="320" Margin="132,1,-132,-1" OpacityMask="Black" Background="#FF192122" Foreground="White" BorderBrush="#FF192122">
 
 
-                <Grid Name="graphGrid" Background="AliceBlue">
+                <Grid Name="graphGrid" Background="#FF192122" Margin="-2,-2,-2,-2">
                     <Border BorderThickness="1" BorderBrush="Black" Margin="1342,300,200,500">
                         <ComboBox Name="graphMetric" FontSize="25">
                             <ComboBoxItem  Content="Calories"/>
@@ -407,9 +414,10 @@
                     <TextBlock HorizontalAlignment="Left" Margin="650,660,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Goals" FontSize="40" Margin="0,1,-131,-1" Width="320" HorizontalAlignment="Right" OpacityMask="Black" Foreground="White" Background="#FF192122" BorderBrush="#FF192122">
+            <TabItem Template="{DynamicResource TabItemTemplate1}" Header="Goals" FontSize="40" Margin="0,1,-131,-1" Width="320" HorizontalAlignment="Right" OpacityMask="Black" Foreground="White" Background="#FF192122" BorderBrush="#FF192122">
 
-                <Grid>
+                <Grid Background="#192122
+" Margin="-2,-2,-2,-2">
 
                     <TextBlock 
                         HorizontalAlignment="Left" Margin="44,27,0,0" 
@@ -424,8 +432,8 @@
             </TabItem>
 
 
-            <TabItem Header="Settings" FontSize="40" Width="320" Margin="131,1,-131,-1" Height="60" OpacityMask="Black" Background="#FF192122" Foreground="White" BorderBrush="#FF192122">
-                <Grid Background="White">
+            <TabItem Template="{DynamicResource TabItemTemplate1}" Header="Settings" FontSize="40" Margin="131,1,-131,-1" Height="60" OpacityMask="Black" Background="#FF192122" Foreground="White" BorderBrush="#FF192122" Width="317">
+                <Grid Background="#FF192122" Margin="-2,-2,-2,-2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="197*"/>
                         <ColumnDefinition Width="441*"/>
@@ -454,7 +462,7 @@
 
 
         </TabControl>
-        <Button Style="{DynamicResource RoundButton}" FontSize="25" Margin="1724,20,0,0" VerticalAlignment="Top" 
+        <Button Style="{DynamicResource RoundButton}" FontSize="25" Margin="1708,20,0,0" VerticalAlignment="Top" 
                 RenderTransformOrigin="1.053,-1.116" Click="LogOutButtonClick" 
             Height="60" HorizontalAlignment="Left" Width="175">
             <StackPanel Orientation="Horizontal">
@@ -464,7 +472,7 @@
         </Button>
 
         <!--print button stub, maybe add a popup if we can get it to work -->
-        <Image Height="70" Width="85" HorizontalAlignment="Left" VerticalAlignment="Top" Source="BasicPrint.png" Margin="1625,15,0,0" OpacityMask="Black"/>
+        <Image Height="70" Width="85" HorizontalAlignment="Left" VerticalAlignment="Top" Source="BasicPrint.png" Margin="1611,15,0,0" OpacityMask="White"/>
         <!-- example of data binding-->
         <TextBlock FontSize="30" HorizontalAlignment="Left" Margin="1515,65,0,0" Text="{Binding Path=DeviceId}" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>
