@@ -302,7 +302,7 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    <Image HorizontalAlignment="Left" Height="450" Width="1100" Margin="200,200,0,0" VerticalAlignment="Top">
+                    <Image Name="graphImage" HorizontalAlignment="Left" Height="450" Width="1100" Margin="200,200,0,0" VerticalAlignment="Top">
                         <Image.Style>
                             <Style TargetType="{x:Type Image}">
                                 <Setter Property="Source" Value="/defaultGraph.png"/>

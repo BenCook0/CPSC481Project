@@ -198,6 +198,11 @@ namespace CPSC481WPF
                     margin.Left = passed;
                 }
                 scrollBar.Margin = margin;
+
+                if(margin.Left >= 0 && margin.Left <= 500)
+                {
+                    graphImage.SetValue = 
+                }
             }
         }
 

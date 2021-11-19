@@ -45,6 +45,9 @@
 	  <Resource Include="1WGraphSteps.png" />
 	  <Resource Include="1MGraphSteps.png" />
 	  <Resource Include="defaultGraph.png" />
+	  <Resource Include="timeline1.png" />
+	  <Resource Include="timeline2.png" />
+	  <Resource Include="timeline3.png" />
 	
     <Resource Include="bitfitGraph.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
