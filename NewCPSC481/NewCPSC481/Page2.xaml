@@ -399,6 +399,10 @@
                         </Image.Style>
                     </Image>
 
+                    <Image x:Name="timeline1" HorizontalAlignment="Left" Height="450" Width="1100" Margin="200,200,0,0" VerticalAlignment="Top" Source="/timeline1.png" Visibility="Hidden"/>
+                    <Image x:Name="timeline2" HorizontalAlignment="Left" Height="450" Width="1100" Margin="200,200,0,0" VerticalAlignment="Top" Source="/timeline2.png" Visibility="Hidden"/>
+                    <Image x:Name="timeline3" HorizontalAlignment="Left" Height="450" Width="1100" Margin="200,200,0,0" VerticalAlignment="Top" Source="/timeline3.png" Visibility="Hidden"/>
+
                     <TextBlock HorizontalAlignment="Left" Margin="50,497,0,0" Text="Value" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
                     <TextBlock HorizontalAlignment="Left" Margin="650,660,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
                 </Grid>
