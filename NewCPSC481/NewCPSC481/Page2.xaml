@@ -260,7 +260,6 @@
                     <Border BorderThickness="1" BorderBrush="Black" Margin="1342,300,200,500">
                         <ComboBox Name="graphMetric" FontSize="25">
                             <ComboBoxItem  Content="Calories"/>
-                            <ComboBoxItem  Content="Heartrate (Avg BPM)"/>
                             <ComboBoxItem  Content="Steps"/>
                         </ComboBox>
                     </Border>
