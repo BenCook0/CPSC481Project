@@ -199,10 +199,7 @@ namespace CPSC481WPF
                 }
                 scrollBar.Margin = margin;
 
-                if(margin.Left >= 0 && margin.Left <= 500)
-                {
-                    graphImage.SetValue = 
-                }
+                
             }
         }
 
@@ -210,5 +207,6 @@ namespace CPSC481WPF
         {
             captured = false;
         }
+
     }
 }

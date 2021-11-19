@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Viewbox>
-        <Grid Background="#FF192122" Height="431" Width="1203" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15,70,15,0">
+        <Grid Background="#FF192122" Height="477" Width="1203" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,70,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="87*"/>
                 <RowDefinition Height="200*"/>
@@ -20,39 +20,34 @@
                 <ColumnDefinition Width="200*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="0" Grid.ColumnSpan="3" FontSize="40"
+            <TextBlock Grid.Column="1" FontSize="40"
                        HorizontalAlignment="Center" 
                        Text="Track your Fitness Today!" 
-                       TextWrapping="Wrap" VerticalAlignment="Center" Height="53" Width="334" Foreground="White"/>
+                       TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="334" Foreground="White" Margin="0,20,0,0" Grid.RowSpan="2"/>
 
-            <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontSize="35"
-                        HorizontalAlignment="Left" 
-                               Text="View your Bitfit Data:" 
-                               TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350" Foreground="White" Margin="87,15,0,15"/>
-
-            <TextBlock Grid.Row="2" Grid.Column="0" FontSize="35"
+            <TextBlock Grid.Row="1" Grid.Column="1" FontSize="35"
                        HorizontalAlignment="Left" 
                        Text="Steps Taken" 
-                       TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350" Foreground="White" Grid.ColumnSpan="2" Margin="103,0,0,0"/>
+                       TextWrapping="Wrap" VerticalAlignment="Top" Height="47" Width="350" Foreground="White" Grid.ColumnSpan="2" Margin="135,76,0,0"/>
             <TextBlock Grid.Row="2" Grid.Column="1" FontSize="35"
                        HorizontalAlignment="Left" 
                        Text="Calories Burned" 
-                       TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350" Foreground="White" Grid.ColumnSpan="2" Margin="68,0,0,0"/>
+                       TextWrapping="Wrap" VerticalAlignment="Top" Height="47" Width="350" Foreground="White" Grid.ColumnSpan="2" Margin="135,76,0,0"/>
 
-            <TextBlock Grid.Row="2" Grid.Column="2" FontSize="35"
+            <TextBlock Grid.Row="3" Grid.Column="1" FontSize="35"
                        HorizontalAlignment="Left" Text="Heart rate" 
-                       TextWrapping="Wrap" VerticalAlignment="Center" Height="47" Width="350" Foreground="White" Margin="122,0,0,0"/>
+                       TextWrapping="Wrap" VerticalAlignment="Top" Height="47" Width="350" Foreground="White" Margin="135,76,0,0" Grid.ColumnSpan="2"/>
             <!-- ICON 1 -->
-            <Image Grid.Row="3" Grid.Column="0" Width="80" HorizontalAlignment="Center" 
-                   Source="/icons/dark_shoe_icon.png" />
+            <Image Grid.Row="1" Grid.Column="1" Width="80" HorizontalAlignment="Left" 
+                   Source="/icons/dark_shoe_icon.png" Margin="10,30,0,109" Grid.RowSpan="2" />
 
             <!-- ICON 2 -->
-            <Image Grid.Row="3" Grid.Column="1" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                   Source="/icons/dark_weight_icon.png" Height="80" />
+            <Image Grid.Row="2" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                   Source="/icons/dark_weight_icon.png" Height="80" Margin="10,60,0,0" Grid.Column="1" Grid.RowSpan="2" />
 
             <!-- ICON 3 -->
-            <Image Grid.Row="3" Grid.Column="2" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                   Source="/icons/drak_heartbeat_icon.png" />
+            <Image Grid.Row="3" Height="80" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                   Source="/icons/drak_heartbeat_icon.png" Margin="10,60,0,0" Grid.Column="1" />
 
         </Grid>
     </Viewbox>
