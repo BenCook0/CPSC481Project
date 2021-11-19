@@ -226,8 +226,8 @@ namespace CPSC481WPF
             if (margin.Left > 500 && margin.Left <= 1506)
             {
                 timeline1.Visibility = Visibility.Hidden;
-                timeline1.Visibility = Visibility.Hidden;
-                timeline1.Visibility = Visibility.Visible;
+                timeline2.Visibility = Visibility.Hidden;
+                timeline3.Visibility = Visibility.Visible;
             }
         }
 
