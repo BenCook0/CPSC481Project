@@ -198,17 +198,34 @@ namespace CPSC481WPF
                     margin.Left = passed;
                 }
                 scrollBar.Margin = margin;
-
-                if(margin.Left >= 0 && margin.Left <= 500)
-                {
-                    graphImage.SetValue = 
-                }
             }
         }
 
         private void Rect_MouseUp_1(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             captured = false;
+
+            Thickness margin = scrollBar.Margin;
+            if ((margin.Left >= 0 && margin.Left < 200) || (margin.Left > 200 && margin.Left <= 500))
+            {
+                timeline1.Visibility = Visibility.Visible;
+                timeline2.Visibility = Visibility.Hidden;
+                timeline3.Visibility = Visibility.Hidden;
+
+            }
+
+            if (margin.Left > 500 && margin.Left <= 1000)
+            {
+                timeline2.Visibility = Visibility.Visible;
+                timeline1.Visibility = Visibility.Hidden;
+                timeline3.Visibility = Visibility.Hidden;
+            }
+            if(margin.Left > 1000 && margin.Left <= 1506)
+            {
+                timeline3.Visibility = Visibility.Visible;
+                timeline1.Visibility = Visibility.Hidden;
+                timeline2.Visibility = Visibility.Hidden;
+            }
         }
     }
 }
