@@ -206,6 +206,29 @@ namespace CPSC481WPF
         private void Rect_MouseUp_1(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             captured = false;
+            Thickness margin = scrollBar.Margin;
+            margin.Left = e.GetPosition(graphGrid).X - (scrollBar.Width / 2);
+
+            if(margin.Left >= 0 && margin.Left <= 500)
+            {
+                timeline1.Visibility = Visibility.Visible;
+                timeline2.Visibility = Visibility.Hidden;
+                timeline3.Visibility = Visibility.Hidden;
+            }
+
+            if (margin.Left > 500 && margin.Left <= 1000)
+            {
+                timeline1.Visibility = Visibility.Hidden;
+                timeline2.Visibility = Visibility.Visible;
+                timeline3.Visibility = Visibility.Hidden;
+            }
+
+            if (margin.Left > 500 && margin.Left <= 1506)
+            {
+                timeline1.Visibility = Visibility.Hidden;
+                timeline1.Visibility = Visibility.Hidden;
+                timeline1.Visibility = Visibility.Visible;
+            }
         }
 
     }
