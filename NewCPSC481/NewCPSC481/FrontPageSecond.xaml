@@ -8,7 +8,8 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
-        <Image Height="440" VerticalAlignment="Top" Source="/BitfitFrontPicture.jpeg" />
+        <Image Height="756" VerticalAlignment="Center" Source="/testimonials.png" />
+        <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" Text="What people are saying" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="45"/>
 
     </Grid>
 

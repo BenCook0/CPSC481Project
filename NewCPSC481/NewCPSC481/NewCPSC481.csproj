@@ -27,6 +27,7 @@
 	<None Remove="frontPageIcon1.png" />
 	<None Remove="frontPageIcon2.png" />
 	<None Remove="frontPageIcon3.png" />
+	<None Remove="testimonials.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,6 +41,7 @@
 	<Resource Include="icons\drak_heartbeat_icon.png">
 	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</Resource>
+	<Resource Include="testimonials.png" />
 	<Resource Include="timeline.png" />
 	<Resource Include="testGraph.png" />
 	  <Resource Include="1DGraphCal.png" />
