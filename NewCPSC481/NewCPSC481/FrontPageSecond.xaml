@@ -9,7 +9,7 @@
 
     <Grid>
         <Image Height="756" VerticalAlignment="Center" Source="/testimonials.png" />
-        <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" Text="What people are saying" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="45"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,38,0,0" Text="What people are saying" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="45"/>
 
     </Grid>
 
