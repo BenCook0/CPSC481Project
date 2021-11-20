@@ -17,9 +17,11 @@
     <None Remove="drak_heartbeat_icon.png" />
     <None Remove="Hyfic Logo.png" />
     <None Remove="icons\drak_heartbeat_icon.png" />
+    <None Remove="icons\fitness_data_icon.png" />
     <None Remove="icons\frontPageIcon1.png" />
     <None Remove="icons\frontPageIcon2.png" />
     <None Remove="icons\frontPageIcon3.png" />
+    <None Remove="icons\goal_icon.png" />
     <None Remove="icons\Question.png" />
 	<None Remove="icons\dark_shoe_icon" />
 	<None Remove="icons\dark_weight_icon" />
@@ -27,6 +29,8 @@
 	<None Remove="frontPageIcon1.png" />
 	<None Remove="frontPageIcon2.png" />
 	<None Remove="frontPageIcon3.png" />
+	<None Remove="icons\recent_fitness_icon.png" />
+	<None Remove="icons\workout_icon.png" />
 	<None Remove="testimonials.png" />
   </ItemGroup>
 
@@ -41,6 +45,10 @@
 	<Resource Include="icons\drak_heartbeat_icon.png">
 	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</Resource>
+	<Resource Include="icons\fitness_data_icon.png" />
+	<Resource Include="icons\goal_icon.png" />
+	<Resource Include="icons\recent_fitness_icon.png" />
+	<Resource Include="icons\workout_icon.png" />
 	<Resource Include="testimonials.png" />
 	<Resource Include="timeline.png" />
 	<Resource Include="testGraph.png" />
