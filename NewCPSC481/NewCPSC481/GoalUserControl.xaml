@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Viewbox Margin="0,0,0,0">
-        <Grid Height="442" Background="AliceBlue">
+        <Grid Height="442" Background="#FF192122">
             <TextBlock FontSize="30" Name="GoalTextBlock" Width="400"
                        Text="{Binding Name}"
                        HorizontalAlignment="Left" Margin="40,38,0,0" 
