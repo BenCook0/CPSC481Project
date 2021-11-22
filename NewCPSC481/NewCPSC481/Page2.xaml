@@ -298,6 +298,7 @@
                         <ComboBox Name="graphMetric" FontSize="25">
                             <ComboBoxItem  Content="Calories"/>
                             <ComboBoxItem  Content="Steps"/>
+                            <ComboBoxItem  Content="Heartrate (BPM)"/>
                         </ComboBox>
                     </Border>
 
