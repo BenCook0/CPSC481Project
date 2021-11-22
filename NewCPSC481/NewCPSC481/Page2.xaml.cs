@@ -183,9 +183,9 @@ namespace CPSC481WPF
             {
                 Thickness margin = scrollBar.Margin;
                 double passed = e.GetPosition(graphGrid).X - (scrollBar.Width / 2);
-                if (passed < 192)
+                if (passed < 193)
                 {
-                    margin.Left = 192;
+                    margin.Left = 193;
                 }
 
                 else if (passed > 1506)
