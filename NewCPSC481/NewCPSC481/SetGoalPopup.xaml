@@ -31,7 +31,7 @@
 
         <DatePicker Name="StartDatePicker" Text="Start Date" FontSize="20"
                     HorizontalAlignment="Left" Margin="96,93,0,0" 
-                    VerticalAlignment="Top" Width="254" Height="34" Background="{TemplateBinding Background}" Foreground="White">
+                    VerticalAlignment="Top" Width="254" Height="34" Foreground="White">
             <DatePicker.CalendarStyle>
                 <Style TargetType="{x:Type Calendar}">
                     <Setter Property="Background" Value="#4c545c"/>
@@ -47,7 +47,7 @@
 
         <DatePicker Name="EndDatePicker" Text="End Date" FontSize="20"
                     HorizontalAlignment="Left" Margin="450,93,0,0" 
-                    VerticalAlignment="Top" Width="254" Height="34" Background="{TemplateBinding Background}" Foreground="White">
+                    VerticalAlignment="Top" Width="254" Height="34" Foreground="White">
             <DatePicker.CalendarStyle>
                 <Style TargetType="{x:Type Calendar}">
                     <Setter Property="Background" Value="#4c545c"/>
