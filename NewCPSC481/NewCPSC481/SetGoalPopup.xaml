@@ -17,9 +17,9 @@
             </Style.Resources>
         </Style>
     </Page.Resources>
-    <Grid Background="White">
+    <Grid Background="#FF192122">
         <Border BorderThickness="1" BorderBrush="Black" Margin="450,147,96,270">
-            <ComboBox Name="GoalMetricComboBox" FontSize="20">
+            <ComboBox Name="GoalMetricComboBox" FontSize="20" >
                 <ComboBoxItem  Content="Calories"/>
                 <ComboBoxItem  Content="Heartrate (Avg BPM)"/>
                 <ComboBoxItem  Content="Steps"/>
@@ -27,36 +27,59 @@
         </Border>
         <TextBox Name="GoalNameTextBox" Text="Enter Goal Name" FontSize="20"
                  HorizontalAlignment="Center" Margin="0,20,0,0"  TextWrapping="Wrap" 
-                 VerticalAlignment="Top" Width="608" Height="34"/>
+                 VerticalAlignment="Top" Width="608" Height="34" Foreground="White" Background="#4c545c"/>
 
         <DatePicker Name="StartDatePicker" Text="Start Date" FontSize="20"
                     HorizontalAlignment="Left" Margin="96,93,0,0" 
-                    VerticalAlignment="Top" Width="254" Height="34"/>
+                    VerticalAlignment="Top" Width="254" Height="34" Background="{TemplateBinding Background}" Foreground="White">
+            <DatePicker.CalendarStyle>
+                <Style TargetType="{x:Type Calendar}">
+                    <Setter Property="Background" Value="#4c545c"/>
+                </Style>
+            </DatePicker.CalendarStyle>
+            <DatePicker.Resources>
+                <Style TargetType="DatePickerTextBox">
+                    <Setter Property="Background" Value="#4c545c"/>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+        
 
         <DatePicker Name="EndDatePicker" Text="End Date" FontSize="20"
                     HorizontalAlignment="Left" Margin="450,93,0,0" 
-                    VerticalAlignment="Top" Width="254" Height="34" />
+                    VerticalAlignment="Top" Width="254" Height="34" Background="{TemplateBinding Background}" Foreground="White">
+            <DatePicker.CalendarStyle>
+                <Style TargetType="{x:Type Calendar}">
+                    <Setter Property="Background" Value="#4c545c"/>
+                </Style>
+            </DatePicker.CalendarStyle>
+            <DatePicker.Resources>
+                <Style TargetType="DatePickerTextBox">
+                    <Setter Property="Background" Value="#4c545c"/>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
 
         <TextBox Name="CurrentValueTextBox" Text="" FontSize="20"
                  HorizontalAlignment="Left" Margin="96,0,0,0"  TextWrapping="Wrap" 
-                 VerticalAlignment="Center" Width="254" Height="34" PreviewTextInput="DecimalInput"/>
+                 VerticalAlignment="Center" Width="254" Height="34" PreviewTextInput="DecimalInput" Foreground="White" Background="#4c545c"/>
 
         <TextBox Name="GoalTextBox" FontSize="20" Text=""
                  HorizontalAlignment="Left" Margin="450,0,0,0"  TextWrapping="Wrap"
-                 VerticalAlignment="Center" Width="254" Height="34" PreviewTextInput="DecimalInput"/>
+                 VerticalAlignment="Center" Width="254" Height="34" PreviewTextInput="DecimalInput" Foreground="White" Background="#4c545c"/>
 
         <CheckBox Name="ShowProgessCheckBox" FontSize=" 20"
                   Content="Add Progress Bar" HorizontalAlignment="Center" Margin="0,280,0,0" 
-                  VerticalAlignment="Top" Height="31" Width="608"/>
+                  VerticalAlignment="Top" Height="31" Width="608" Foreground="White"/>
 
         <CheckBox Name="AddPercentageCheckBox" FontSize=" 20"
                   Content="Add Percentage Display Towards Goal" 
                   HorizontalAlignment="Center" Margin="0,324,0,0" 
-                  VerticalAlignment="Top" Height="31" Width="608"/>
+                  VerticalAlignment="Top" Height="31" Width="608" Foreground="White"/>
 
         <TextBlock FontSize="20"
                    HorizontalAlignment="Left" Margin="96,153,0,0" Text="Choose a Goal Metric:" 
-                   TextWrapping="Wrap" VerticalAlignment="Top"/>
+                   TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
 
         <Button Style="{DynamicResource RoundButton}" FontSize="20" 
             HorizontalAlignment="Center" Margin="0,382,0,0" VerticalAlignment="Top" Height="41" Width="150" Click="OnAddGoalClick">
