@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewCPSC481"
         mc:Ignorable="d"
-        Title="GoalWindow" Height="650" Width="850" WindowStartupLocation="CenterScreen">
+        Title="GoalWindow" Height="650" Width="850" WindowStartupLocation="CenterScreen"
+        Background="#FF192122">
 
     <Window.Resources>
         <Style TargetType="Button" x:Key="RoundButton">
@@ -18,7 +19,7 @@
     </Window.Resources>
 
     <StackPanel>
-        <Label FontSize="30">Set New Goal</Label>
+        <Label Foreground="White" FontSize="30">Set New Goal</Label>
 
         <Frame x:Name="Frame" Content="Frame" Source="/SetGoalPopup.xaml" Width="800" Height="500" VerticalAlignment="Center" />
 
