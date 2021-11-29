@@ -284,7 +284,7 @@
                                 FontSize="80" 
                                     Background="{x:Null}"><Run Language="en-ca" Text="Workouts"/></TextBlock>
                     <ListBox Name="WorkoutsListBox" Margin="160,165,1430,130"
-                             FontSize="20" SelectionChanged="WorkoutListBoxSelection" Background="#FF192122" Foreground="White">
+                             FontSize="20" SelectionChanged="WorkoutListBoxSelection" Background="White" Foreground="White">
                     </ListBox>
                     <StackPanel Margin="672,165,68,103" Name="WorkoutListStackPanel" Background="#FF192122"/>
                 </Grid>
