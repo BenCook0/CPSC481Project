@@ -231,5 +231,16 @@ namespace CPSC481WPF
             }
         }
 
+        private void toggleGraphPopup(object sender, RoutedEventArgs e)
+        {
+            if(graphPopup.IsOpen)
+            {
+                graphPopup.IsOpen = false;
+            }
+            else
+            {
+                graphPopup.IsOpen = true;
+            }
+        }
     }
 }

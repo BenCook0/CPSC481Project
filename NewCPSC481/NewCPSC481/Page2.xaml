@@ -304,7 +304,14 @@
 
                     <Rectangle Name="fullBar" Fill="#FF3084A4" HorizontalAlignment="Center" Height="80" Width="1514" Margin="0,718,0,97" Stroke="LightBlue" StrokeThickness="2"/>
                     <Rectangle Name="scrollBar" Fill="GhostWhite" HorizontalAlignment="Left" Height="80" Width="200" Margin="200,718,0,97" Stroke="LightBlue" StrokeThickness="2" MouseDown="Rect_MouseDown_1" MouseMove="Rect_MouseMove_1" MouseUp="Rect_MouseUp_1"/>
-
+                    <Button Margin="473,105,1387,785" Content="?" Background="GhostWhite" Click="toggleGraphPopup">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    
                     <CheckBox Style="{DynamicResource CheckBoxStyle1}" Name="oneDay" HorizontalAlignment="Left" Margin="795,90,0,0" VerticalAlignment="Top" Height="20" Width="20" FontSize="12">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="4" ScaleY="4" />
@@ -340,6 +347,8 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
+
+                    
                     <Image Name="graphImage" HorizontalAlignment="Left" Height="450" Width="1100" Margin="200,200,0,0" VerticalAlignment="Top">
                         <Image.Style>
                             <Style TargetType="{x:Type Image}">
@@ -410,6 +419,12 @@
                     <Image x:Name="timeline1" HorizontalAlignment="Left" Height="450" Width="1100" Margin="200,200,0,0" VerticalAlignment="Top" Source="/timeline1.png" Visibility="Hidden"/>
                     <Image x:Name="timeline2" HorizontalAlignment="Left" Height="450" Width="1100" Margin="200,200,0,0" VerticalAlignment="Top" Source="/timeline2.png" Visibility="Hidden"/>
                     <Image x:Name="timeline3" HorizontalAlignment="Left" Height="450" Width="1100" Margin="200,200,0,0" VerticalAlignment="Top" Source="/timeline3.png" Visibility="Hidden"/>
+
+                    <Popup Name="graphPopup" IsOpen="False" Margin="900, 300, 900, 300">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Background="Gray">
+                            Hello
+                        </TextBlock>
+                    </Popup>
 
                     <TextBlock HorizontalAlignment="Left" Margin="77,390,0,0" Text="Value" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
                     <TextBlock HorizontalAlignment="Left" Margin="650,660,0,0" Text="Timeline" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"  RenderTransformOrigin="0.983,0.703" Background="{x:Null}"/>
