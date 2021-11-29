@@ -294,7 +294,7 @@
 
 
                 <Grid Name="graphGrid" Background="#FF192122" Margin="-2,0,-2,0" Height="940">
-                    <Border BorderThickness="1" BorderBrush="Black" Margin="1342,300,200,500">
+                    <Border BorderThickness="1" BorderBrush="Black" Margin="1342,300,200,550">
                         <ComboBox Name="graphMetric" FontSize="25">
                             <ComboBoxItem  Content="Calories"/>
                             <ComboBoxItem  Content="Steps"/>
@@ -302,8 +302,8 @@
                         </ComboBox>
                     </Border>
 
-                    <Rectangle Name="fullBar" Fill="AntiqueWhite" HorizontalAlignment="Center" Height="100" Width="1514" Margin="0,718,0,97" Stroke="Orange" StrokeThickness="2"/>
-                    <Rectangle Name="scrollBar" Fill="GhostWhite" HorizontalAlignment="Left" Height="100" Width="200" Margin="200,718,0,97" Stroke="Orange" StrokeThickness="2" MouseDown="Rect_MouseDown_1" MouseMove="Rect_MouseMove_1" MouseUp="Rect_MouseUp_1"/>
+                    <Rectangle Name="fullBar" Fill="#FF3084A4" HorizontalAlignment="Center" Height="80" Width="1514" Margin="0,718,0,97" Stroke="LightBlue" StrokeThickness="2"/>
+                    <Rectangle Name="scrollBar" Fill="GhostWhite" HorizontalAlignment="Left" Height="80" Width="200" Margin="200,718,0,97" Stroke="LightBlue" StrokeThickness="2" MouseDown="Rect_MouseDown_1" MouseMove="Rect_MouseMove_1" MouseUp="Rect_MouseUp_1"/>
 
                     <CheckBox Style="{DynamicResource CheckBoxStyle1}" Name="oneDay" HorizontalAlignment="Left" Margin="795,90,0,0" VerticalAlignment="Top" Height="20" Width="20" FontSize="12">
                         <CheckBox.LayoutTransform>
