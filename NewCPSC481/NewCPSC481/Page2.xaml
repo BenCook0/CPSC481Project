@@ -475,6 +475,6 @@
         <!--print button stub, maybe add a popup if we can get it to work -->
         <Image Height="70" Width="85" HorizontalAlignment="Left" VerticalAlignment="Top" Source="BasicPrint.png" Margin="1611,15,0,0" OpacityMask="White"/>
         <!-- example of data binding-->
-        <TextBlock FontSize="30" HorizontalAlignment="Left" Margin="1515,65,0,0" Text="{Binding Path=DeviceId}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock FontSize="40" HorizontalAlignment="Left" Margin="1515,65,0,0" Text="{Binding Path=DeviceId}" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
     </Grid>
 </Page>
