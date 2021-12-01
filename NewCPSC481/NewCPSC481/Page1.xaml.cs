@@ -89,5 +89,10 @@ namespace CPSC481WPF
             FrontPagePanel.Children.Clear();
             FrontPagePanel.Children.Add(first);
         }
+
+        private void toggleLoginPopup(object sender, RoutedEventArgs e)
+        {
+            loginPopup.IsOpen = !loginPopup.IsOpen;
+        }
     }
 }

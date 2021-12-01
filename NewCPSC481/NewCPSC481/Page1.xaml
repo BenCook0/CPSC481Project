@@ -49,6 +49,21 @@
                         <Label Padding="10, 0" VerticalAlignment="Center" Content="Login" Foreground="White"/>
                     </StackPanel>
                 </Button>
+                <Button Name="loginInfo" Margin="280,-395,35,360" Content="?" FontSize="25" Background="GhostWhite" Click="toggleLoginPopup">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Popup Name="loginPopup" IsOpen="False" PlacementTarget="{Binding ElementName=loginInfo}" Placement="Right">
+                    <Border BorderThickness="2" BorderBrush="#44acc2">
+                        <TextBlock Name="graphDescription" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Background="GhostWhite" >
+                                Please login using your<LineBreak/>bitfit tracker ID and your<LineBreak/>
+                                bitfit associated password
+                        </TextBlock>
+                    </Border>
+                </Popup>
             </StackPanel>
 
         </Border>
@@ -75,6 +90,7 @@
                      Stroke="#44acc2" Fill="#44acc2" Width="50" MouseDown="elipse1MouseDown"/>
             <Ellipse x:Name="elipse2" HorizontalAlignment="Left" Height="50" Margin="809,954,0,76" 
                      Stroke="#44acc2" Width="50" MouseDown="elipse2MouseDown"/>
+            
         </Grid>
     </Grid>
 </Page>
