@@ -293,7 +293,7 @@
             <TabItem Template="{DynamicResource TabItemTemplate1}" Header="Graphs" FontSize="40" Height="60" VerticalAlignment="Top" Width="320" Margin="132,1,-132,-1" OpacityMask="Black" Background="#FF192122" Foreground="White" BorderBrush="#FF192122">
 
 
-                <Grid Name="graphGrid" Background="#FF192122" Margin="-2,0,-2,0" Height="940">
+                <Grid Name="graphGrid" Background="#FF192122" Margin="-2,-2,-2,-2" Height="940">
                     <Border BorderThickness="1" BorderBrush="Black" Margin="1342,300,200,550">
                         <ComboBox Name="graphMetric" FontSize="25">
                             <ComboBoxItem  Content="Calories"/>
