@@ -7,21 +7,22 @@ To run this code, open the solution file in visual studio and run the code throu
 
 Current Functionality and Future adjustments/additions
 
-Home/logging in page - Allows for click the black "?" to toggle a popup. This popup currently has stubbed in text and will be used as a template for all other information popup. Also allows the user to click login to navigate to the main welcome page. The device ID and device password boxes currently have no functionality but this will be implemented later
+Home/logging in page - The main page includes a view interchanging pages taht can be chosen through the circle listed at the bottm of the page. The page also has a button marked with "?" to view how the process regarding logging in would be. To simplify the process, the User just needs to input the following credentials for device ID and password.
+Device ID: User1
+Password: Pass1
+After the user has inputed the following credentials, he/she just nees to proceed by clicking the login button.
 
-Welcome page - Currently has buttons, these will likely be implemented later to open specific tabs
+Welcome page - After logging in the user will land on the welcome page. The welcome page includes 4 buttons that will send you to the respective tabs or pages that can also be seen at the top bar. Proceed by clicking one of the 4 buttons or any of the tabs at the top.
 
-Recent Data page - Currently has stubbed in data for daily and weekly. Also has blue boxes stubbed in for where the icons will go. These icons will either be created by us, or taken digitally from somewhere else. Furthermore, the "Workouts" section has been stubbed in for a textbox. We are still figuring out the best way to display an individual's workouts (popup, scrollable menu etc).
+Recent Data page - The recent data page hardly has any functionality as it is meant to simply display some weekly and daily data. The data will be displayed as average values pulled directly from the bitfit tracker. 
 
-Graphs - Currently the graphs page just has a simple picture of a graph. This will later display actual data and will be adjustable based on the toggleable boxes. Furthermore, the "?" popup has no functionality but will later have behavior similar to the "?" on the home/loggin in page.
+Graphs - Once landed on the graph page, the user is able to view multiple graphical displays of their tracked data. To use the graph page the user can simply click the button with a "?" as it will explain how to use it. If that still is difficult to understand, the user can simply choose either steps of calories from the drop down menu on the right of the page and individually choose a timeframe listed by the checkboxes at the top. When fixed viewing one timeframe, uncheck the box before clicking the next timeframe. The user can also get a more accurate timing display based on the scroll bar at the bottom of the screen. The user can simply click and hold the white bar and drag to a location along the blue bar. Once the user releases the bar, they can view the updated graph.
 
-Goals - The goals page currently hasa few goals stubbed in temporarily. Eventually users will be able to view a list of all their goals, delete existing goals, or add goals through the set new goal popup.
+Goals - The goals page allows the user to click on one of their previous goals to view what timeframe they gave themselves along with their start values, end values, and current values. The goals also have an optional display of percentages and a percentage bar to visualize their progress. if the user wishes to add a new goal, they can simply just click the add new goal button at the bottom and a pop up page then comes up. Once in the popup page, the user can create the goal by adding a goal name (cant repeat a name), a start date and end date (start date must be after current date and end date after start date), a metric (steps, calories), start and end values (can be any numbers), and optional checkboxes. Once everything is filled out, the user simply clicks set new goal and the goal will be added. Once finished the user simply clicks cancel as he is done with the page and will then be sent back to the goals page to view all previous goals. (besides optional checkboxes, all fields must have an input)
 
-Set New Goal Popup - Opened by clicking the set new goal popup. NOTE: currently CANNOT BE CLOSED without just pressing the log out button and then logging back in. The way we are coding this section is different to the information popups as it has more functionality to be implemented and will require more complex interaction design. To close this popup just press Log Out and then log back in.
+Settings - This settings page has no functionality but displays some user data
 
-Settings - This settings page was just stubbed in as we feel it is necessary to include in the final project. These buttons are unlikely to be given any functionality even for our final submission.
-
-Log out button - Takes the user back to the home/logging in page. NOTE: there is currently a bug that causes some spacing/size issues to occur when navigating back to the login page
+Log out button - Takes the user back to the home/logging in page. 
 
 Overall considerations:
 
