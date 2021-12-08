@@ -445,7 +445,7 @@
                             TextWrapping="Wrap" VerticalAlignment="Top" Width="306"  
                                 FontSize="80"><Run Language="en-ca" Text="Goals"/></TextBlock>
                     <ListBox Name="GoalListBox"  FontSize="16" Margin="160,165,1430,216" SelectionChanged="GoalsSelectionChanged"/>
-                    <StackPanel Margin="672,165,68,103" Name="CurrentGoalStackPanel" Background="#FF192122"/>
+                    <StackPanel Margin="672,165,68,37" Name="CurrentGoalStackPanel" Background="#FF192122"/>
                     <Button Content="Set New Goal" FontSize="23" HorizontalAlignment="Left" Margin="160,699,0,0" VerticalAlignment="Top" Click="SetGoalButtonClick" Height="82" Width="162"/>
                     <Button Content="Delete Goal" FontSize="23" HorizontalAlignment="Left" Margin="322,699,0,0" VerticalAlignment="Top" Click="DeleteGoalButtonClick" Height="82" Width="162"/>
                 </Grid>
