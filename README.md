@@ -24,6 +24,3 @@ Settings - This settings page has no functionality but displays some user data
 
 Log out button - Takes the user back to the home/logging in page. 
 
-Overall considerations:
-
-There are still several bugs and design problems with this setup. However these are primarily minute details such as better handling of whitespace, sizing etc. (the recent data page for example has way too much white space between the daily and weekly sections). The only major design problem that we still have to address on a macro level is the mechanism for viewing workouts on the recent data page. The current hand-drawn prototypes have this information displayed directly on the page, whereas the online version has a stubbed-in textbox/button that may allow users to view a popup. This will be modified and changed by the final project based on feedback from users, as well as our instructions/classmates.
